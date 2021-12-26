@@ -47,3 +47,19 @@ export const SORT_MODE = {
   INDEX: { name: 'index' },
   VALUE: { name: 'value' }
 }
+/**
+* @constant 存储类型常量
+*/
+export const STORAGE_TYPE = {
+  LOCAL: 'local',
+  SESSION: 'session'
+}
+/**
+ * @constant 存储配置常量
+ */
+export const DEFAULT_STORAGE_OPTIONS = {
+  storageType: STORAGE_TYPE.LOCAL,
+  cryptoType: SYMMETRIC_CRYPTO_TYPE.NONE,
+  cryptoKey: 'mate-key',
+  cryptoIv: 'mate-iv'
+}
