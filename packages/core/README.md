@@ -2,8 +2,22 @@
 
 > 核心基础库，包含但不限于：存储，网络，加密，类型检测等
 
-## Usage
+## 全局引用
 
 ```
-const mate = require('@mate-ui/core');
+import mat from '@mate-ui/core'
+```
+
+## 按需引用
+
+```
+import { Type, Storage, Crypto } from '@mate-ui/core'
+```
+
+## 按分体包引用
+
+```
+import Type from '@mate-ui.type'
+import Storage from '@mate-ui.storage'
+import Crypto from '@mate-ui.crypto'
 ```
