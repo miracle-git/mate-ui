@@ -14,7 +14,7 @@ import mat from '@mate-ui/core'
 import { Type, Storage, Crypto } from '@mate-ui/core'
 ```
 
-## 按分体包引用
+## 按分包引用
 
 ```
 import Type from '@mate-ui.type'
