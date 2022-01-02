@@ -2,26 +2,21 @@
  * @file Api
  * @description 获取应用Api配置映射
  */
-import Storage from '../storage'
-import Type from '../type'
+import Crypto from '../crypto'
 import { mocking, mapping } from '../.internal/api'
-import { SYMMETRIC_CRYPTO_TYPE, CACHE_TYPE } from '../config'
+import { SYMMETRIC_CRYPTO_TYPE } from '../config'
 
 export default class Api {
-  static map(config, prefix = '', mock = null) {
-    let api = {}
-    mock = mocking(mock)
-    const _cacheKey = CACHE_TYPE.api
-    const cache = Type.isString(prefix) || (Type.isObject(prefix) && prefix.cache)
-    if (cache) {
-      api = Storage.get(_cacheKey, { cryptoType: SYMMETRIC_CRYPTO_TYPE.DES })
-      if (!api) {
-        api = mapping(config, prefix, mock)
-        Storage.set(_cacheKey, api, { cryptoType: SYMMETRIC_CRYPTO_TYPE.DES })
-      }
+  static map(config, prefix = '', { mock, crypto = false } = {}) {
+    if (crypto) {
+      const cryptoType = SYMMETRIC_CRYPTO_TYPE.DES
+      if (window.__mate_api__) return JSON.parse(Crypto.decrypt(window.__mate_api__, cryptoType))
+      window.__mate_api__ = Crypto.encrypt(JSON.stringify(mapping(config, prefix, mocking(mock))), cryptoType)
+      return JSON.parse(Crypto.decrypt(window.__mate_api__, cryptoType))
     } else {
-      api = mapping(config, prefix, mock)
+      if (window.__mate_api__) return window.__mate_api__
+      window.__mate_api__ = mapping(config, prefix, mocking(mock))
+      return window.__mate_api__
     }
-    return api
   }
 }
