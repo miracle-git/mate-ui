@@ -1,7 +1,7 @@
 {
   "name": "@mate-ui/core",
   "version": "0.0.0",
-  "description": "> TODO: description",
+  "description": "核心基础库",
   "author": "Miracle He <hmiinyu@sina.com>",
   "homepage": "https://github.com/miracle-git/mate-ui#readme",
   "license": "MIT",
