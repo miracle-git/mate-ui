@@ -77,3 +77,9 @@ export const DATA_REGEX_PATTERN = {
   letterNumberChar: '^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9]).{min,max}$',
   letterNumberCharCase: '^(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[^a-zA-Z0-9]).{min,max}$'
 }
+/**
+ * @constant 缓存类型
+ */
+export const CACHE_TYPE = {
+  api: 'mat:app_api_mapping'
+}

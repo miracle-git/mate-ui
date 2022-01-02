@@ -1,4 +1,3 @@
-'use strict'
 import Crypto from '../src/crypto'
 import { ASYMMETRIC_CRYPTO_TYPE, SYMMETRIC_CRYPTO_TYPE } from '../src/config'
 

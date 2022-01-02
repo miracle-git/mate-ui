@@ -13,7 +13,7 @@ export default class Storage {
    * @param options[def] 默认值
    * @param options[cryptoType] 加密类型（默认：SYMMETRIC_CRYPTO_TYPE.NONE, 仅限于AES,DES,RC4）
    * @desc 值可能为简单类型，对象或数组
-   * @returns 返回当前本地存储key对应的值
+   * @returns String
    */
   static get(key, options = null) {
     const { storageType, cryptoType, def } = { ...DEFAULT_STORAGE_OPTIONS, ...options }
