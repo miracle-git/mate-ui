@@ -77,3 +77,13 @@ export const DATA_REGEX_PATTERN = {
   letterNumberChar: '^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9]).{min,max}$',
   letterNumberCharCase: '^(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[^a-zA-Z0-9]).{min,max}$'
 }
+/**
+ * @constant 时间格式化常量
+ */
+export const DATE_FORMATTER = {
+  date: 'yyyy-MM-dd',
+  datetime: 'yyyy-MM-dd HH:mm:ss',
+  datetimeShort: 'yyyy-MM-dd HH:mm',
+  time: 'HH:mm:ss',
+  timeShort: 'HH:mm'
+}
