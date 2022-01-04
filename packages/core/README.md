@@ -11,7 +11,7 @@ import mat from '@mate-ui/core'
 ## 按需引用
 
 ```
-import { Type, Storage, Crypto } from '@mate-ui/core'
+import { Type, Storage, Crypto, Http } from '@mate-ui/core'
 ```
 
 ## 按分包引用
@@ -20,4 +20,5 @@ import { Type, Storage, Crypto } from '@mate-ui/core'
 import Type from '@mate-ui/type'
 import Storage from '@mate-ui/storage'
 import Crypto from '@mate-ui/crypto'
+import Crypto from '@mate-ui/http'
 ```
