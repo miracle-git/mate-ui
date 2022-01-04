@@ -17,7 +17,7 @@ import { Type, Storage, Crypto } from '@mate-ui/core'
 ## 按分包引用
 
 ```
-import Type from '@mate-ui.mainEsm'
-import Storage from '@mate-ui.mainUmd'
-import Crypto from '@mate-ui.main'
+import Type from '@mate-ui/type'
+import Storage from '@mate-ui/storage'
+import Crypto from '@mate-ui/crypto'
 ```
