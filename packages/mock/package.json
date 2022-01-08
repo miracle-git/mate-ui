@@ -1,0 +1,31 @@
+{
+  "name": "@mate-ui/mock",
+  "version": "0.0.0",
+  "description": "前端模拟接口和数据",
+  "author": "Miracle He <hmiinyu@sina.com>",
+  "homepage": "https://github.com/miracle-git/mate-ui#readme",
+  "license": "ISC",
+  "main": "lib/main.esm.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miracle-git/mate-ui.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/miracle-git/mate-ui/issues"
+  },
+  "dependencies": {
+    "json-server": "^0.17.0",
+    "mockjs": "^1.1.0",
+    "underscore": "^1.13.2"
+  }
+}
