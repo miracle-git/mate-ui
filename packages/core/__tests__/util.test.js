@@ -91,6 +91,7 @@ test('测试：limitOf', () => {
 test('测试：indexOf', () => {
   expect(indexOf('@mate-ui/core', 'core')).toBeTruthy()
   expect(indexOf('@mate-ui/core', 'Core')).toBeTruthy()
+  expect(indexOf('@mate-ui/core', 'Core', false)).toBeFalsy()
   expect(indexOf('@mate-ui/core', 'web')).toBeFalsy()
 })
 

@@ -132,9 +132,10 @@ export const limitOf = (current, field = '') => {
  * @method 按关键字模糊搜索(忽略大小写)
  * @param {String} str 需要处理的字符串
  * @param {String} keyword 需要搜索的关键字
+ * @param {Boolean} ignore 是否忽略大小写
  */
-export const indexOf = (str, keyword) => {
-  return str.toLowerCase().indexOf(keyword.toLowerCase()) > -1
+export const indexOf = (str, keyword, ignore = true) => {
+  return ignore ? str.toLowerCase().indexOf(keyword.toLowerCase()) > -1 : str.indexOf(keyword) > -1
 }
 /**
  * @method 清除所有的字符串空格
