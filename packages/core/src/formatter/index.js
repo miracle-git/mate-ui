@@ -75,7 +75,7 @@ export default class Formatter {
    * @returns {String} 格式化后的字符串
    */
   static positive(num) {
-    return (num + '').replace(/[^\d]/g, '') // 清除非数字和小数点的字符
+    return (num + '').replace(/[^\d]/g, '') // 清除非数字的字符
       .replace(/^(0)(\d+)/g, '$1') // 验证第一个字符是否为0且不能连续输入
   }
   /**
@@ -115,7 +115,8 @@ export default class Formatter {
    * @returns {String} 转化后的字符串
    */
   static camel(str) {
-    return Formatter.lowerFirst(str.replace(DATA_REGEX_PATTERN.camel, (_, sep, letter, offset) => offset ? letter.toUpperCase() : letter))
+    return Formatter.lowerFirst(str.replace(DATA_REGEX_PATTERN.camel,
+      (_, sep, letter, offset) => offset ? letter.toUpperCase() : letter))
   }
   /**
    * @method 将驼峰字符串转化为按(:,-,_)拆分
@@ -125,7 +126,8 @@ export default class Formatter {
    * @returns {String} 转化后的字符串
    */
   static uncamel(str, sep = '_', textcase = '') {
-    const result = str.replace(/([a-z\d])([A-Z])/g, '$1' + sep + '$2').replace(/([A-Z]+)([A-Z][a-z\d]+)/g, '$1' + sep + '$2')
+    const result = str.replace(/([a-z\d])([A-Z])/g, '$1' + sep + '$2')
+      .replace(/([A-Z]+)([A-Z][a-z\d]+)/g, '$1' + sep + '$2')
     textcase = ['upper', 'lower'].includes(textcase) ? textcase : ''
     return textcase ? result[`to${Formatter.upperFirst(textcase)}Case`]() : result
   }

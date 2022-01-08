@@ -67,7 +67,8 @@ export const secure = (item, { stars = 4, ignore = false, before = 3, after = 4 
   for (let i = 1; i <= stars; i++) {
     secure += '*'
   }
-  const pattern = DATA_REGEX_PATTERN.secure.replace('{before}', `{${before}}`).replace('{after}', `{${after}}`)
+  const pattern = DATA_REGEX_PATTERN.secure.replace('{before}', `{${before}}`)
+    .replace('{after}', `{${after}}`)
   return item.replace(new RegExp(pattern), '$1' + secure + '$2')
 }
 /**
