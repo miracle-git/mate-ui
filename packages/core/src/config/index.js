@@ -75,7 +75,14 @@ export const DATA_REGEX_PATTERN = {
   secure: '^(.{before})(?:\\w+)(.{after})$',
   letterNumber: '^(?=.*[0-9])(?=.*[a-zA-Z]).{min,max}$',
   letterNumberChar: '^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9]).{min,max}$',
-  letterNumberCharCase: '^(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[^a-zA-Z0-9]).{min,max}$'
+  letterNumberCharCase: '^(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[^a-zA-Z0-9]).{min,max}$',
+  encode: /(["'<>]|&(?:(amp|lt|gt|#39|nbsp|quot|#\d+);)?)/g,
+  decode: /&(amp|lt|gt|#39|nbsp|quot);/g,
+  highlight: /[.[*?+^$|()/]|\\]|\\/g,
+  trim: /^[\s\uFEFF]+|[\s\uFEFF]+$/g,
+  kebab: /([^-])([A-Z])/g,
+  camel: /([\\:\-\\_]+(.))/g,
+  uncamel: /([a-z\d])([A-Z])/g
 }
 /**
  * @constant 时间格式化常量

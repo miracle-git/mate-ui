@@ -43,7 +43,9 @@
     "url": "https://github.com/miracle-git/mate-ui/issues"
   },
   "dependencies": {
-    "crypto-js": "^4.1.1"
+    "axios": "^0.24.0",
+    "crypto-js": "^4.1.1",
+    "qs": "^6.10.2"
   },
   "devDependencies": {
     "babel-jest": "^23.6.0",
