@@ -205,5 +205,4 @@ export const highlight = (str, keyword) => {
  */
 export const frozen = (prop = '', val = '') => {
   Object.defineProperty(window, prop, { value: val, writable: false, configurable: false })
-  return window[prop]
 }

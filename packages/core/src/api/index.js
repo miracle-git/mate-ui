@@ -15,7 +15,7 @@ export default class Api {
    * @param prefix 前缀(可为字符串或对象，默认为'/api')
    * @param app api归属应用(一般用于区分不同项目，防止多项目相互覆盖)
    * @param mock mock接口相关配置(自动将前缀修改为'/api/mock')
-   * @param crypto 是否在客户端加密存储(自动将存储到window.__MATE_API__或__MATE_XXX_API__变量中)
+   * @param crypto 是否在客户端加密存储(自动将存储到window.__MATE_API__或window.__MATE_XXX_API__变量中)
    */
   static map(config, prefix = '', { app = '', mock, crypto = false } = {}) {
     const globalApiKey = (app ? `__MATE_${app}_API__` : '__MATE_API__').toUpperCase()

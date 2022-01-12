@@ -11,7 +11,8 @@ import {
   trimEnd,
   encode,
   decode,
-  highlight
+  highlight,
+  frozen
 } from '../src/util'
 
 test('测试：pick', () => {
@@ -112,4 +113,13 @@ test('测试：encode&decode', () => {
 test('测试：highlight', () => {
   expect(highlight('@mate-ui/core', 'core')).toEqual('@mate-ui/<span style="color:#f81d22;">core</span>')
   expect(highlight('@mate-ui/core', 'web')).toEqual('@mate-ui/core')
+})
+
+test('测试：frozen', () => {
+  frozen('mate', 'mate-ui')
+  expect(window.mate).toEqual('mate-ui')
+  // window.mate = '@mate-ui'
+  // expect(window.mate).toEqual('mate-ui')
+  delete window.mate
+  expect(window.mate).toEqual('mate-ui')
 })
