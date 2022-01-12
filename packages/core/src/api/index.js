@@ -33,7 +33,7 @@ export default class Api {
    * @param config 参数的配置(即需要替换成的真实对象，一般以{xx:'yy'}形式存在)
    */
   static format(url, config) {
-    if (Type.isEmptyString(String(url)) || !Type.isObject(config)) return url
+    if (Type.isEmptyString(url) || !Type.isObject(config)) return url
     return Object.keys(config).reduce((r, s) => r = r.replace(new RegExp(`\\[${s}\\]`), config[s]), url)
   }
 }
