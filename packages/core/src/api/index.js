@@ -4,6 +4,7 @@
  */
 import Crypto from '../crypto'
 import Type from '../type'
+import { frozen } from '../util'
 import { mocking, mapping } from '../.internal/api'
 import { SYMMETRIC_CRYPTO_TYPE } from '../config'
 
@@ -17,15 +18,15 @@ export default class Api {
    * @param crypto 是否在客户端加密存储(自动将存储到window.__MATE_API__或__MATE_XXX_API__变量中)
    */
   static map(config, prefix = '', { app = '', mock, crypto = false } = {}) {
-    const globalApiKey = app ? `__MATE_${app}_API__` : '__MATE_API__'
+    const globalApiKey = (app ? `__MATE_${app}_API__` : '__MATE_API__').toUpperCase()
     if (crypto) {
       const cryptoType = SYMMETRIC_CRYPTO_TYPE.DES
       if (window[globalApiKey]) return JSON.parse(Crypto.decrypt(window[globalApiKey], cryptoType))
-      window[globalApiKey] = Crypto.encrypt(JSON.stringify(mapping(config, prefix, mocking(mock))), cryptoType)
+      frozen(globalApiKey, Crypto.encrypt(JSON.stringify(mapping(config, prefix, mocking(mock))), cryptoType))
       return JSON.parse(Crypto.decrypt(window[globalApiKey], cryptoType))
     } else {
       if (window[globalApiKey]) return window[globalApiKey]
-      window[globalApiKey] = mapping(config, prefix, mocking(mock))
+      frozen(globalApiKey, mapping(config, prefix, mocking(mock)))
       return window[globalApiKey]
     }
   }
