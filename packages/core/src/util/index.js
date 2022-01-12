@@ -198,3 +198,12 @@ export const highlight = (str, keyword) => {
     return str.replace(reg, text => `<span style="color:#f81d22;">${text}</span>`)
   }
 }
+/**
+ * @method 新增并冻结window属性(无法修改也无法删除)
+ * @param {String} prop 新增属性名称
+ * @param {String|Number|...} val 属性值
+ */
+export const frozen = (prop = '', val = '') => {
+  Object.defineProperty(window, prop, { value: val, writable: false, configurable: false })
+  return window[prop]
+}
