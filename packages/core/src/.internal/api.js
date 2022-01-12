@@ -19,7 +19,7 @@ export const mapping = (config, _prefix, mock) => {
       prefix = _prefix[key] || ''
     }
     if (Type.isString(val)) {
-      if (!val.startsWith('/')) {
+      if (!val.startsWith('/') && prefix) {
         config[key] = `/${val}`
       }
       if (mock && mock.urls.indexOf(config[key]) > -1) {
