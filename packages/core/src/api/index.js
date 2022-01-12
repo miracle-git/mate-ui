@@ -12,19 +12,21 @@ export default class Api {
    * @method 根据当前的地址配置生成Api对象
    * @param config 地址配置(可按照模块划分)
    * @param prefix 前缀(可为字符串或对象，默认为'/api')
+   * @param app api归属应用(一般用于区分不同项目，防止多项目相互覆盖)
    * @param mock mock接口相关配置(自动将前缀修改为'/api/mock')
    * @param crypto 是否在客户端加密存储(自动将存储到window.__mate_api__变量中)
    */
-  static map(config, prefix = '', { mock, crypto = false } = {}) {
+  static map(config, prefix = '', { app = '', mock, crypto = false } = {}) {
+    const globalApiKey = app ? `__mate_${app}_api__` : '__mate_api__'
     if (crypto) {
       const cryptoType = SYMMETRIC_CRYPTO_TYPE.DES
-      if (window.__mate_api__) return JSON.parse(Crypto.decrypt(window.__mate_api__, cryptoType))
-      window.__mate_api__ = Crypto.encrypt(JSON.stringify(mapping(config, prefix, mocking(mock))), cryptoType)
-      return JSON.parse(Crypto.decrypt(window.__mate_api__, cryptoType))
+      if (window[globalApiKey]) return JSON.parse(Crypto.decrypt(window[globalApiKey], cryptoType))
+      window[globalApiKey] = Crypto.encrypt(JSON.stringify(mapping(config, prefix, mocking(mock))), cryptoType)
+      return JSON.parse(Crypto.decrypt(window[globalApiKey], cryptoType))
     } else {
-      if (window.__mate_api__) return window.__mate_api__
-      window.__mate_api__ = mapping(config, prefix, mocking(mock))
-      return window.__mate_api__
+      if (window[globalApiKey]) return window[globalApiKey]
+      window[globalApiKey] = mapping(config, prefix, mocking(mock))
+      return window[globalApiKey]
     }
   }
   /**
