@@ -1,4 +1,4 @@
-import { getUrl, getInstance, handleParams } from '../.internal/http'
+import { getUrl, getInstance, handleParam } from '../.internal/http'
 
 export default class Http {
   constructor({ base = {}, interceptor = {}, config = {} } = {}) {
@@ -7,13 +7,15 @@ export default class Http {
     this.instance = getInstance(interceptor, config)
   }
 
-  get(url, params, config) {
-    url = getUrl(url, config, this.base)
-    const { _params, _config } = handleParams(params, config)
-    return this.instance.get(url, _params)
+  get(url, param, config) {
+    url = getUrl(url, this.base, config)
+    const { _param, _config } = handleParam(param, config, this.config)
+    return this.instance.get(url, _param)
   }
 
-  post(url, params, config) {
-
+  post(url, param, config) {
+    url = getUrl(url, this.base, config)
+    const { _param, _config } = handleParam(param, config, this.config)
+    return this.instance.post(url, _param)
   }
 }
