@@ -9,13 +9,13 @@ export default class Http {
 
   get(url, param, config) {
     url = getUrl(url, this.base, config)
-    const { _param, _config } = handleParam(param, config, this.config)
+    const { _param, _config } = handleParam(param, { ...this.config, ...config })
     return this.instance.get(url, _param)
   }
 
   post(url, param, config) {
     url = getUrl(url, this.base, config)
-    const { _param, _config } = handleParam(param, config, this.config)
+    const { _param, _config } = handleParam(param, { ...this.config, ...config })
     return this.instance.post(url, _param)
   }
 }
