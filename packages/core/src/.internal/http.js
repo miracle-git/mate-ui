@@ -14,7 +14,7 @@ export const getUrl = (url, base, config) => {
 
 export const getInstance = (interceptor, config) => {}
 
-export const handleParam = (param, config, common) => {
+export const handleParam = (param, config) => {
   let _param = param
   let _config = config
   if (!config）{
@@ -22,6 +22,5 @@ export const handleParam = (param, config, common) => {
     _param = param
     _config = rest
   }
-  _config = { ...common, ...(_config || {}) }
   return { _param, _config } 
 }
