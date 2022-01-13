@@ -14,14 +14,14 @@ export const getUrl = (url, base, config) => {
 
 export const getInstance = (interceptor, config) => {}
 
-export const handleParams = (params, config, common) => {
-  let _params = params
+export const handleParam = (param, config, common) => {
+  let _param = param
   let _config = config
   if (!config）{
-    const { params, ...rest } = _params || {}
-    _params = params
+    const { param, ...rest } = _param || {}
+    _param = param
     _config = rest
   }
   _config = { ...common, ...(_config || {}) }
-  return { _params, _config } 
+  return { _param, _config } 
 }
