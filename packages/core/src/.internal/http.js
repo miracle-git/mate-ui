@@ -17,10 +17,10 @@ export const getInstance = (interceptor, config) => {}
 export const handleParam = (param, config) => {
   let _param = param
   let _config = config
-  if (!config）{
+  if (!config) {
     const { param, ...rest } = _param || {}
     _param = param
     _config = rest
   }
-  return { _param, _config } 
+  return { _param, _config }
 }
