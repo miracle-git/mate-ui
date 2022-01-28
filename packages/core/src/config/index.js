@@ -82,7 +82,8 @@ export const DATA_REGEX_PATTERN = {
   trim: /^[\s\uFEFF]+|[\s\uFEFF]+$/g,
   kebab: /([^-])([A-Z])/g,
   camel: /([\\:\-\\_]+(.))/g,
-  uncamel: /([a-z\d])([A-Z])/g
+  uncamel: /([a-z\d])([A-Z])/g,
+  html: /<\/?.+?\/?>/g
 }
 /**
  * @constant 时间格式化常量

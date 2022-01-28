@@ -20,6 +20,16 @@ export const pick = (source, ...props) => {
   return source
 }
 /**
+ * @method 获取指定对象排除指定动态列对应的对象
+ * @param {Object} source 当前指定的数组或对象
+ * @param {Array} props 指定的列(可多列)
+ * @returns {Object} 返回排除指定列对应对象
+ */
+export const draw = (source, ...props) => {
+  const _drawProps = (obj, prop) => (({ [prop]: val, ...rest } = obj) => rest)()
+  return props.reduce((r, s) => _drawProps(r, s), source)
+}
+/**
  * @method 将当前的对象进行展平显示(以.分割)
  * @param {Object} item 需要处理的对象
  */
@@ -154,6 +164,13 @@ export const trim = (str, all = false) => {
  */
 export const trimEnd = (str= '', end = '.') => {
   return str.endsWith(end) ? str.slice(0, -1) : str
+}
+/**
+ * @method 清除字符串中所有的html标签
+ * @param {String} str 需要处理的字符串
+ */
+export const trimHtml = (str) => {
+  return str.replace(DATA_REGEX_PATTERN.html, '')
 }
 /**
  * @method 编码当前的字符串

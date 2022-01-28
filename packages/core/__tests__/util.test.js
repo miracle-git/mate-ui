@@ -1,5 +1,6 @@
 import {
   pick,
+  draw,
   flatten,
   secure,
   oneOf,
@@ -9,6 +10,7 @@ import {
   indexOf,
   trim,
   trimEnd,
+  trimHtml,
   encode,
   decode,
   highlight,
@@ -30,6 +32,16 @@ test('测试：pick', () => {
   expect(pick(core, ['id', 'alias'])).toEqual({
     id: 1, alias: 'core'
   })
+})
+
+test('测试：draw', () => {
+  const core = { id: 1, name: '@mate-ui/core', alias: 'core' }
+  expect(draw(core, 'id')).toEqual(
+    { name: '@mate-ui/core', alias: 'core' }
+  )
+  expect(draw(core, 'id', 'alias')).toEqual(
+    { name: '@mate-ui/core' }
+  )
 })
 
 test('测试：flatten', () => {
@@ -96,13 +108,14 @@ test('测试：indexOf', () => {
   expect(indexOf('@mate-ui/core', 'web')).toBeFalsy()
 })
 
-test('测试：trim&trimEnd', () => {
+test('测试：trim&trimEnd&trimHtml', () => {
   expect(trim(' @mate ui ')).toEqual('@mate ui')
   expect(trim(' @mate ui ', true)).toEqual('@mateui')
   expect(trimEnd('100.')).toEqual('100')
   expect(trimEnd('@mate-ui@1.0.0.')).toEqual('@mate-ui@1.0.0')
   expect(trimEnd('@mate-ui@1.0.0@', '@')).toEqual('@mate-ui@1.0.0')
   expect(trimEnd('@mate-ui@1.0.0', '@')).toEqual('@mate-ui@1.0.0')
+  expect(trimHtml('<span style="color:red">@mate-ui@1.0.0</span>')).toEqual('@mate-ui@1.0.0')
 })
 
 test('测试：encode&decode', () => {
