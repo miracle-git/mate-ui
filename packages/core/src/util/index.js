@@ -223,3 +223,18 @@ export const highlight = (str, keyword) => {
 export const frozen = (prop = '', val = '') => {
   Object.defineProperty(window, prop, { value: val, writable: false, configurable: false })
 }
+/**
+ * @method 将非promise的异步请求转化为promise(通常用于小程序)
+ * @param {Function} func 异步请求函数
+ */
+export const promisic = (func) => {
+  return function(params = {}) {
+    return new Promise((resolve, reject) => {
+      const args = Object.assign(params, {
+        success: res => resolve(res),
+        fail: err => reject(err)
+      })
+      func(args)
+    })
+  }
+}

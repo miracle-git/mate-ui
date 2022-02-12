@@ -37,8 +37,8 @@ test('测试：本地缓存(有值)', () => {
 
 test('测试：本地缓存(加密)', () => {
   Storage.clear()
-  Storage.set(keys.core, values.core, { cryptoType: SYMMETRIC_CRYPTO_TYPE.DES })
-  expect(Storage.get(keys.core, { cryptoType: SYMMETRIC_CRYPTO_TYPE.DES })).toEqual(values.core)
+  Storage.set(keys.core, values.core, { cryptoType: SYMMETRIC_CRYPTO_TYPE.des })
+  expect(Storage.get(keys.core, { cryptoType: SYMMETRIC_CRYPTO_TYPE.des })).toEqual(values.core)
 })
 
 test('测试：会话缓存(默认值)', () => {
@@ -67,6 +67,6 @@ test('测试：会话缓存(有值)', () => {
 
 test('测试：会话缓存(加密)', () => {
   Storage.session.clear()
-  Storage.session.set(keys.core, values.core, { cryptoType: SYMMETRIC_CRYPTO_TYPE.DES })
-  expect(Storage.session.get(keys.core, { cryptoType: SYMMETRIC_CRYPTO_TYPE.DES })).toEqual(values.core)
+  Storage.session.set(keys.core, values.core, { cryptoType: SYMMETRIC_CRYPTO_TYPE.des })
+  expect(Storage.session.get(keys.core, { cryptoType: SYMMETRIC_CRYPTO_TYPE.des })).toEqual(values.core)
 })

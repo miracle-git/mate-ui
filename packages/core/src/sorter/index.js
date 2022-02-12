@@ -7,7 +7,7 @@ import { SORT_TYPE, SORT_MODE } from '../config'
 
 export default class Sorter {
   // 冒泡排序
-  static bubble(items, direction = SORT_TYPE.ASC) {
+  static bubble(items, direction = SORT_TYPE.asc) {
     const len = items.length
     for (let i = len - 1; i >= 0; i--) {
       for (let j = 0; j < i; j++) {
@@ -19,7 +19,7 @@ export default class Sorter {
     return items
   }
   // 选择排序
-  static select(items, direction = SORT_TYPE.ASC) {
+  static select(items, direction = SORT_TYPE.asc) {
     const len = items.length
     for (let i = 0; i < len - 1; i++) {
       let index = i
@@ -33,11 +33,11 @@ export default class Sorter {
     return items
   }
   // 插入排序
-  static insert(items, direction = SORT_TYPE.ASC) {
+  static insert(items, direction = SORT_TYPE.asc) {
     const len = items.length
     for (let i = 1; i < len; i++) {
       let temp = items[i], j = i
-      while (compare(items, items[j - 1], temp, { direction, mode: SORT_MODE.VALUE }) && j > 0) {
+      while (compare(items, items[j - 1], temp, { direction, mode: SORT_MODE.value }) && j > 0) {
         items[j] = items[j - 1]
         j--
       }
@@ -46,13 +46,13 @@ export default class Sorter {
     return items
   }
   // 希尔排序
-  static shell(items, direction = SORT_TYPE.ASC) {
+  static shell(items, direction = SORT_TYPE.asc) {
     const len = items.length
     let delta = Math.floor(len / 2)
     while (delta >= 1) {
       for (let i = delta; i < len; i++) {
         let temp = items[i], j = i
-        while (compare(items, items[j - delta], temp, { direction, mode: SORT_MODE.VALUE }) && j > delta - 1) {
+        while (compare(items, items[j - delta], temp, { direction, mode: SORT_MODE.value }) && j > delta - 1) {
           items[j] = items[j - delta]
           j -= delta
         }
@@ -63,7 +63,7 @@ export default class Sorter {
     return items
   }
   // 快速排序
-  static quick(items, direction = SORT_TYPE.ASC, left, right) {
+  static quick(items, direction = SORT_TYPE.asc, left, right) {
     const len = items.length
     left = typeof left !== 'number' ? 0 : left
     right = typeof right !== 'number' ? len - 1 : right
@@ -75,7 +75,7 @@ export default class Sorter {
     return items
   }
   // 归并排序
-  static merge(items, direction = SORT_TYPE.ASC) {
+  static merge(items, direction = SORT_TYPE.asc) {
     const len = items.length
     if (len < 2) return items
     const mid = Math.floor(len / 2)
@@ -84,7 +84,7 @@ export default class Sorter {
     return combine(items, direction, Sorter.merge(left, direction), Sorter.merge(right, direction))
   }
   // 堆排序
-  static heap(items, direction = SORT_TYPE.ASC) {
+  static heap(items, direction = SORT_TYPE.asc) {
     let len = items.length
     let mid = Math.floor(len / 2)
     // 建立大顶堆
@@ -99,7 +99,7 @@ export default class Sorter {
     return items
   }
   // 桶排序
-  static bucket(items, direction = SORT_TYPE.ASC) {
+  static bucket(items, direction = SORT_TYPE.asc) {
     const len = items.length
     const size = 5
     if (len <= 1) return items
@@ -139,7 +139,7 @@ export default class Sorter {
     return items
   }
   // 计数排序
-  static counting(items, direction = SORT_TYPE.ASC) {
+  static counting(items, direction = SORT_TYPE.asc) {
     const len = items.length
     if (len <= 1) return items
     let max = items[0], index = isAsc(direction) ? 0 : len - 1
@@ -172,7 +172,7 @@ export default class Sorter {
     return items
   }
   // 基数排序
-  static radix(items, direction = SORT_TYPE.ASC) {
+  static radix(items, direction = SORT_TYPE.asc) {
     const len = items.length
     if (len <= 1) return items
     let max = items[0], digit = 0
@@ -190,7 +190,8 @@ export default class Sorter {
       // 初始化桶
       for (let j = 0; j < len; j++) {
         const item = items[j]
-        const index = parseInt((item % mod) / div)
+        const value = (item % mod) / div
+        const index = parseInt(value)
         if(buckets[index] == null) {
           buckets[index] = []
         }

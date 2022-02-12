@@ -20,7 +20,7 @@ export default class Api {
   static map(config, prefix = '', { app = '', mock, crypto = false } = {}) {
     const globalApiKey = (app ? `__MATE_${app}_API__` : '__MATE_API__').toUpperCase()
     if (crypto) {
-      const cryptoType = SYMMETRIC_CRYPTO_TYPE.DES
+      const cryptoType = SYMMETRIC_CRYPTO_TYPE.des
       if (window[globalApiKey]) return JSON.parse(Crypto.decrypt(window[globalApiKey], cryptoType))
       frozen(globalApiKey, Crypto.encrypt(JSON.stringify(mapping(config, prefix, mocking(mock))), cryptoType))
       return JSON.parse(Crypto.decrypt(window[globalApiKey], cryptoType))

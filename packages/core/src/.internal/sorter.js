@@ -11,7 +11,7 @@ export const swap = (items, a, b) => {
   items[b] = temp
 }
 
-export const compare = (items, a, b, { direction, mode = SORT_MODE.INDEX } = {}) => {
+export const compare = (items, a, b, { direction, mode = SORT_MODE.index } = {}) => {
   if (mode.name === 'index') {
     return isAsc(direction) ? items[a] > items[b] : items[a] < items[b]
   } else {
@@ -34,7 +34,7 @@ export const partition = (items, direction, left, right) => {
 export const combine = (items, direction, left, right) => {
   const res = []
   while (left.length && right.length) {
-    if (compare(items, left[0], right[0], { direction, mode: SORT_MODE.VALUE })) {
+    if (compare(items, left[0], right[0], { direction, mode: SORT_MODE.value })) {
       res.push(right.shift())
     } else {
       res.push(left.shift())
