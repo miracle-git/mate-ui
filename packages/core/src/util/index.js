@@ -238,3 +238,32 @@ export const promisic = (func) => {
     })
   }
 }
+/**
+ * @method 下载文件
+ * @param {String} data 当前文件附件数据
+ * @param {String} file 下载文件名称
+ */
+export const download = (data, file) => {
+  if (!data) return
+  const blob = new Blob([data])
+  const link = document.createElement('a')
+  const url = window.URL.createObjectURL(blob)
+  link.href = url
+  link.download = file
+  link.click()
+  window.URL.revokeObjectURL(url)
+}
+/**
+ * @method 获取url字符串问号之后的值并转化为对象
+ * @param {String} str 当前url字符串
+ * @returns {Object} 查询字符串对象
+ */
+export const querystring = (str) => {
+  if (!str || !Type.isString(str) || str.indexOf('?') === -1) return
+  const arr = str.split('?')[1].split('&')
+  return arr.reduce((res, item) => {
+    const query = item.split('=')
+    res = { ...res, [query[0]]: encodeURIComponent(query[1]) }
+    return res
+  }, {})
+}

@@ -126,9 +126,44 @@ export const REQUEST_METHOD = {
  * @constant 请求数据格式
  */
 export const CONTENT_TYPE = {
-  url: 'application/x-www-form-urlencoded',
-  form: 'multipart/form-data',
+  encoded: 'application/x-www-form-urlencoded',
+  formdata: 'multipart/form-data',
   json: 'application/json'
+}
+/**
+ * @constant 请求默认配置
+ */
+export const DEFAULT_REQUEST_OPTIONS = {
+  origin: false,
+  retry: 0,
+  delay: 1000,
+  timeout: 30000,
+  method: REQUEST_METHOD.get,
+  headers: EMPTY_OBJECT,
+  request: EMPTY_FUNC,
+  response: EMPTY_FUNC,
+  reject: EMPTY_FUNC,
+  loading: EMPTY_FUNC,
+  result: {
+    code: 'code',
+    success: 'success',
+    data: 'data',
+    message: 'message'
+  }
+}
+/**
+ * @constant 默认响应配置
+ */
+export const DEFAULT_RESPONSE_OPTIONS = {
+  duration: 3000,
+  error: {
+    401: { code: 401, message: '未授权，请重新登录' },
+    403: { code: 403, message: '拒绝访问' },
+    404: { code: 404, message: '资源未找到' },
+    500: { code: 500, message: '账户已失效，请重新登录' },
+    504: { code: 504, message: '网络超时' },
+    other: { message: '系统异常，请稍后再试' }
+  }
 }
 /**
  * @constant 空类型默认
@@ -136,4 +171,3 @@ export const CONTENT_TYPE = {
 export const EMPTY_FUNC = function() {}
 export const EMPTY_ARRAY = []
 export const EMPTY_OBJECT = {}
-export const EMPTY_STRING = ''

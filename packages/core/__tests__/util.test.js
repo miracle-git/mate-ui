@@ -14,7 +14,8 @@ import {
   encode,
   decode,
   highlight,
-  frozen
+  frozen,
+  querystring
 } from '../src/util'
 
 test('测试：pick', () => {
@@ -135,4 +136,8 @@ test('测试：frozen', () => {
   // expect(window.mate).toEqual('mate-ui')
   delete window.mate
   expect(window.mate).toEqual('mate-ui')
+})
+
+test('测试：querystring', () => {
+  expect(querystring('http://www.mate-ui.com?name=mate&package=core')).toEqual({ name: 'mate', package: 'core' })
 })
