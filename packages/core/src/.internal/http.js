@@ -5,6 +5,7 @@ import { CONTENT_TYPE, DEFAULT_REQUEST_OPTIONS, EMPTY_ARRAY, REQUEST_METHOD } fr
 import Type from '../type'
 
 export const isMini = () => !!wx
+
 export const getBaseUrl = (base, key) => {
   if (Type.isString(base)) return base
   const globalBaseKey = (key ? `__MATE_${key}_BASE__` : '__MATE_BASE__').toUpperCase()
@@ -125,6 +126,42 @@ export const getInstance = (interceptor, config) => {
   return instance
 }
 
+export const getRequest = (instance, url, method, param, config) => {
+  url = getUrl(url, instance.base, config)
+  const { _param, _config } = handleParam(param, { ...instance.config, config })
+  const { loading, origin, responseType, showLoading, hideLoading } = _config
+  const options = handleOptions(instance, url, method, _param, _config)
+  return new Promise((resolve, reject) => {
+    loading && showLoading()
+    instance.http(options).then(res => {
+      if (res && res.status === 200) {
+        // 处理文件下载
+        if (responseType === 'blob') {
+          const content = res.headers['content-disposition']
+          const filename = /fileName=([\w\W]+(\.\w+));/gi.test(content.endsWith(';') ? content : content + ';') && file ? `${file}${RegExp.$2}` : RegExp.$1
+          download(res.data, decodeURIComponent(filename))
+          resolve({ blob: true })
+        } else {
+          resolve(origin ? res : res.data)
+        }
+      } else {
+        reject(res)
+      }
+    }).catch(reject).finally(() => loading && hideLoading())
+  })
+}
+
+export const getMergeRequest = (instance, options = EMPTY_ARRAY) => {
+  const mergeOptions = handleMergeOptions(instance, options)
+  if (Type.isEmptyArray(mergeOptions)) return
+  const loading = options.some(item => item && item.config && item.config.loading)
+  const { showLoading, hideLoading } = instance
+  return new Promise((resolve, reject) => {
+    loading && showLoading()
+    Promise.all(mergeOptions).then(resolve).catch(reject).finally(() => loading && hideLoading())
+  })
+}
+
 export const handleParam = (param, config) => {
   let _param = param
   let _config = config
@@ -172,7 +209,7 @@ export const handleOptions = (instance, url, method, param, config) => {
   return options
 }
 
-export const handleMergeRequest = (instance, options) => {
+export const handleMergeOptions = (instance, options) => {
   if (Type.isEmptyArray(options)) return []
   return options.reduce((r, s) => {
     if (!Type.isEmptyObject(s) && Type.isString(s.url) && Type.isObject(s.config)) {
@@ -181,40 +218,4 @@ export const handleMergeRequest = (instance, options) => {
       return r
     }
   }, [])
-}
-
-export const getRequest = (instance, url, method, param, config) => {
-  url = getUrl(url, instance.base, config)
-  const { _param, _config } = handleParam(param, { ...instance.config, config })
-  const { loading, origin, responseType, showLoading, hideLoading } = _config
-  const options = handleOptions(instance, url, method, _param, _config)
-  return new Promise((resolve, reject) => {
-    loading && showLoading()
-    instance.http(options).then(res => {
-      if (res && res.status === 200) {
-        // 处理文件下载
-        if (responseType === 'blob') {
-          const content = res.headers['content-disposition']
-          const filename = /fileName=([\w\W]+(\.\w+));/gi.test(content.endsWith(';') ? content : content + ';') && file ? `${file}${RegExp.$2}` : RegExp.$1
-          download(res.data, decodeURIComponent(filename))
-          resolve({ blob: true })
-        } else {
-          resolve(origin ? res : res.data)
-        }
-      } else {
-        reject(res)
-      }
-    }).catch(reject).finally(() => loading && hideLoading())
-  })
-}
-
-export const getMergeRequest = (instance, options = EMPTY_ARRAY) => {
-  const requestList = handleMergeRequest(instance, options)
-  if (Type.isEmptyArray(requestList)) return
-  const loading = options.some(item => item && item.config && item.config.loading)
-  const { showLoading, hideLoading } = instance
-  return new Promise((resolve, reject) => {
-    loading && showLoading()
-    Promise.all(requestList).then(resolve).catch(reject).finally(() => loading && hideLoading())
-  })
 }
