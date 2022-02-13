@@ -1,10 +1,10 @@
 import axios from 'axios'
 import qs from 'qs'
+import Type from '../type'
 import { globalKey, querystring, download } from '../util'
 import { CONTENT_TYPE, DEFAULT_REQUEST_OPTIONS, EMPTY_ARRAY, REQUEST_METHOD } from '../config'
-import Type from '../type'
 
-export const isMini = () => !!wx
+export const isWx = () => !!wx
 
 export const getBaseUrl = (base, key, app) => {
   if (Type.isString(base)) return base
@@ -29,7 +29,7 @@ export const getBaseUrl = (base, key, app) => {
       }
       baseUrl = process.env[`VUE_APP_${prop}`] || process.env[`REACT_APP_${prop}`]
       window[globalBaseKey] = baseUrl
-    } else if (isMini()) {
+    } else if (isWx()) {
       const env = wx.getAccountInfoSync().miniProgram.envVersion
       switch (env) {
         case 'release':
