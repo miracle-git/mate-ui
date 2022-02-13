@@ -62,6 +62,8 @@ export const getUrl = (url, base, config) => {
 export const getInstance = (interceptor, config) => {
   const { loading, headers, timeout, retry, delay, request, response, reject } = { ...DEFAULT_REQUEST_OPTIONS, ...config }
   const instance = axios.create({
+    withCredentials: true,
+    crossDomain: true,
     timeout
   })
   // 默认配置
