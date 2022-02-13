@@ -1,14 +1,14 @@
 import axios from 'axios'
 import qs from 'qs'
-import { querystring, download } from '../util'
+import { globalKey, querystring, download } from '../util'
 import { CONTENT_TYPE, DEFAULT_REQUEST_OPTIONS, EMPTY_ARRAY, REQUEST_METHOD } from '../config'
 import Type from '../type'
 
 export const isMini = () => !!wx
 
-export const getBaseUrl = (base, key) => {
+export const getBaseUrl = (base, key, app) => {
   if (Type.isString(base)) return base
-  const globalBaseKey = (key ? `__MATE_${key}_BASE__` : '__MATE_BASE__').toUpperCase()
+  const globalBaseKey = globalKey(app, key ? key + '_base' : 'base')
   let baseUrl = window[globalBaseKey] || wx[globalBaseKey]
   if (baseUrl) return baseUrl
 
@@ -49,7 +49,7 @@ export const getBaseUrl = (base, key) => {
 }
 
 export const getUrl = (url, base, config) => {
-  let baseUrl = getBaseUrl(base, config.base)
+  let baseUrl = getBaseUrl(base, config.base, config.app)
   if (baseUrl.endsWith('/')) {
     baseUrl = baseUrl.slice(-1)
   }
@@ -129,6 +129,9 @@ export const getInstance = (interceptor, config) => {
 }
 
 export const getRequest = (instance, url, method, param, config) => {
+  if (instance.config && instance.config.app) {
+    config.app = instance.config.app
+  }
   url = getUrl(url, instance.base, config)
   const { _param, _config } = handleParam(param, { ...instance.config, config })
   const { loading, origin, responseType, showLoading, hideLoading } = _config
