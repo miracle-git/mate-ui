@@ -276,10 +276,11 @@ export const globalKey = (app = '', scope = '') => {
   return (app ? `__MATE_${app}_${scope}__` : `__MATE_${scope}__`).toUpperCase()
 }
 /**
- * @method 串联加载指定的脚本
- * @param app 所属应用(一般用于区分不同项目，防止多项目相互覆盖)
- * @param scope 所属应用范围(如api,base等等)
+ * @method 串联加载指定的脚本，串联加载【异步】逐个加载，每个加载完成后加载下一个，全部加载完成后执行回调
+ * @param {Array|String} scripts 指定加载的脚本列表
+ * @param {Function} callback 成功后回调函数
+ * @returns 所生成脚本元素对象数组
  */
-export const globalKey = (app = '', scope = '') => {
-  return (app ? `__MATE_${app}_${scope}__` : `__MATE_${scope}__`).toUpperCase()
+export const series = (scripts, callback) => {
+  scripts = !DataType.isArray(scripts) ? [scripts] : scripts
 }
