@@ -211,7 +211,11 @@ export const handleOptions = (instance, url, method, param, config) => {
   }
   // 处理取消请求
   config.cancel && (options.cancelToken = instance.source.token)
-  return options
+  return {
+    url,
+    method,
+    ...options
+  }
 }
 
 export const handleMergeOptions = (instance, options) => {
