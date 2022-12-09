@@ -1,0 +1,14 @@
+node_modules
+coverage
+temp
+dist
+
+CHANGELOG.md
+
+# file
+/**/dist
+/**/lib
+/**/__tests__
+/**/node_modules
+/**/assets
+/**/public

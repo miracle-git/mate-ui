@@ -1,0 +1,15 @@
+*.sh
+*.md
+*.less
+*.scss
+*.woff
+*.ttf
+
+# file
+/**/dist
+/**/lib
+/**/__tests__
+/**/node_modules
+/**/assets
+/**/public
+examples
