@@ -17,20 +17,20 @@
 - 组件库采用 `es6 + vue + webpack` 构建开发
 - 文档库采用 `vuepress + vue + webpack` 构建开发
 
-## 命令
+## 脚本
 - 项目工程相关
-```bash
+```sh
   "preinstall": "npx only-allow pnpm"
   "prepare": "husky install"
 ```
 - 开发文档相关
-```bash
+```sh
   "dev": "pnpm run -C examples serve"
   "docs:dev": "pnpm run -C docs dev"
   "docs:build": "pnpm run -C docs build"
 ```
 - 格式化相关
-```bash
+```sh
   "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.json --max-warnings 0"
   "lint:fix": "eslint --fix . --ext .vue,.js,.ts,.jsx,.tsx,.json"
   "lint:utils": "eslint --fix \"./packages/utils/**\" --ext .js,.ts,.json"
@@ -40,22 +40,22 @@
   "pretty-quick": "pretty-quick --staged"
 ```
 - 变更相关
-```bash
+```sh
   "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md"
 ```
 - 构建相关
-```bash
+```sh
   "clean": "pnpm run --filter \"./packages/**\" -r --parallel clean"
   "build:utils": "pnpm run --filter utils build"
   "build:packages": "pnpm run --filter \"./packages/**\" -r --parallel build"
 ```
 - 版本相关
-```bash
+```sh
   "preversion": "changeset"
   "version": "changeset version && pnpm install --no-frozen-lockfile && pnpm run format:code"
 ```
 - 发布相关
-```bash
+```sh
   "release": "pnpm run clean && pnpm run build:packages && changeset publish"
   "release:nobuild": "changeset publish"
 ```
