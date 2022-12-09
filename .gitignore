@@ -2,6 +2,7 @@
 .vscode/
 .idea/
 .vs/
+.DS_Store/
 
 /**/.DS_Store
 /**/node_modules/
@@ -18,4 +19,4 @@ docs/**/dist
 # Lock File
 /**/package-lock.json
 /**/yarn.lock
-/**/.pnpm-lock.yaml
+.pnpm-lock.yaml
