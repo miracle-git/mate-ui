@@ -1,17 +1,63 @@
 # @mate-ui
-> 基于Lerna构建企业级前端工程化，实现多端(包含但不限于Web/Mobile/MiniProgram)兼容、适配的一体化的前端解决方案。<br/>
+> 基于 `pnpm + workspace + changeset` 构建的面向企业级多端兼容适配的一体化前端解决方案。<br/>
+> 所有项目统一维护在 `packages` 目录下，同时配套api示例文档 `docs`，以及开发调试的沙盒环境 `examples`。<br/>
 
-###
-| 框架包 | 描述 |
-| --------------- | ------------------------------------------------------------------------ |
-| @mate-ui/core | 统一实现前端应用的基础核心库，包含但不限于网络、存储、服务、加密、工具等基础套件 |
-| @mate-ui/common | 统一实现多端组件库的基础服务，包含但不限于图标、主题、国际化等功能套件 |
-| @mate-ui/mock | 基于Json Server和mockjs构建前端应用的Mock服务，提升团队前后端的协调服务能力 |
-| @mate-ui/web | 基于现有的流行前端UI框架(Element,Material,Ant-Design)构建面向Web端的UI应用组件库 |
-| @mate-ui/mob |  基于现有的流行前端UI框架(Vant)构建面向Mobile端的UI应用组件库 |
-| @mate-ui/mini | 基于现有的流畅前端UI框架(Vant,WeUI,UniApp)构建面向小程序端的UI应用组件库 |
-| @mate-ui/chart | 基于现有的图形组件框架(EChart,Three)构建面向智能3D(AR/VR)的可视化应用组件库 |
-| @mate-ui/link | 基于现有的微前端框架(Single-SPA,Qiankun)构建面向异构前端应用一体化解决方案 |
-| @mate-ui/ncp | 基于现有的低代码平台(JEECG)面向客户团队图形化构建应用的能力 |
+## 特性
+- 全面支持 `typescript` (目前支持核心库)
+- 以 `pnpm` 作为构建工具，并搭配 `workspace` 无缝解决工程复杂依赖
+- 完善的工程化规范，包含但不限于 `husky`/`eslint`/`pretter`/`commitlint`
+- 采用 `changeset` 进行多包版本管理，自动维护 `CHANGELOG` 日志
+- 采用 `vuepress` 构建完善的实例文档系统
+- 采用 `rollup` 构建核心库，以及采用 `webpack` 构建组件库
+
+## 介绍
+> 采用最流行的构建工具，最高效的设计理念，最简单上手的 `pnpm + workspace + changeset` 解决方案。<br/>
+> 主要技术栈如下：
+- 核心库采用 `typescript + rollup` 构建开发
+- 组件库采用 `es6 + vue + webpack` 构建开发
+- 文档库采用 `vuepress + vue + webpack` 构建开发
+
+## 命令
+- 项目工程相关
+```bash
+  "preinstall": "npx only-allow pnpm"
+  "prepare": "husky install"
+```
+- 开发文档相关
+```bash
+  "dev": "pnpm run -C examples serve"
+  "docs:dev": "pnpm run -C docs dev"
+  "docs:build": "pnpm run -C docs build"
+```
+- 格式化相关
+```bash
+  "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.json --max-warnings 0"
+  "lint:fix": "eslint --fix . --ext .vue,.js,.ts,.jsx,.tsx,.json"
+  "lint:utils": "eslint --fix \"./packages/utils/**\" --ext .js,.ts,.json"
+  "markdownlint": "markdownlint \"./packages/**/*.md\""
+  "markdownlint:fix": "markdownlint --fix \"**/*.md\""
+  "format:code": "prettier -w . --cache --plugin-search-dir=."
+  "pretty-quick": "pretty-quick --staged"
+```
+- 变更相关
+```bash
+  "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md"
+```
+- 构建相关
+```bash
+  "clean": "pnpm run --filter \"./packages/**\" -r --parallel clean"
+  "build:utils": "pnpm run --filter utils build"
+  "build:packages": "pnpm run --filter \"./packages/**\" -r --parallel build"
+```
+- 版本相关
+```bash
+  "preversion": "changeset"
+  "version": "changeset version && pnpm install --no-frozen-lockfile && pnpm run format:code"
+```
+- 发布相关
+```bash
+  "release": "pnpm run clean && pnpm run build:packages && changeset publish"
+  "release:nobuild": "changeset publish"
+```
 
 <font color=#f81d22>`2022, Mate UI, 即将梦想起航, 未来前端风向标。`</font>
