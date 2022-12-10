@@ -1,5 +1,5 @@
 import { DATA_REGEX_PATTERN } from '@mate-ui/conf'
-import type from '../../.internal/type'
+import type from '../.internal/type'
 
 /**
  * @method 检测当前对象是否包含某属性
