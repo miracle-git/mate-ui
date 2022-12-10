@@ -1,5 +1,5 @@
-import crypto from '../../src'
 import { ASYMMETRIC_CRYPTO_TYPE, SYMMETRIC_CRYPTO_TYPE } from '@mate-ui/conf'
+import crypto from '../../src'
 
 const data = 'mate-ui-core'
 const key = 'mate-key'

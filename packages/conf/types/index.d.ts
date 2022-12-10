@@ -126,3 +126,21 @@ export declare const SYMMETRIC_CRYPTO_TYPE: {
         name: string;
     };
 };
+/**
+ * @constant 存储类型常量
+ */
+export declare const STORAGE_TYPE: {
+    local: string;
+    session: string;
+};
+/**
+ * @constant 存储配置常量
+ */
+export declare const DEFAULT_STORAGE_OPTIONS: {
+    storageType: string;
+    cryptoType: {
+        name: string;
+    };
+    cryptoKey: string;
+    cryptoIv: string;
+};
