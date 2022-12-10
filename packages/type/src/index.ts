@@ -14,7 +14,7 @@ export const isProp = (item: object, key: string) => type.hasOwn.call(item, key)
  * @param item 当前检测的类型
  * @returns {Boolean} 如果当前类型是true或0，则返回true, 否则返回false
  */
-export const isTrueOrZero = (item) => item || item === 0 || item === '0'
+export const isTrueOrZero = (item) => !!item || item === 0 || item === '0'
 
 /**
  * @method 检测当前类型是否为null或undefined

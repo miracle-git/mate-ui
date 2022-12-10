@@ -1,4 +1,4 @@
 node_modules
 dist
-coverage
-test-report.html
+test/coverage
+test/reporter

@@ -20,9 +20,8 @@ import {
   isArray,
   isEmptyArray,
   isObject,
-  isPlainObject,
   isEmptyObject
-} from '../src/index'
+} from '../../src'
 
 test('测试：是否包含属性', () => {
   expect(isProp({ name: 'mate-ui' }, 'name')).toEqual(true)
@@ -95,7 +94,6 @@ test('测试：是否为数组/空数组', () => {
 
 test('测试：是否为对象/纯粹对象/空对象', () => {
   expect(isObject({ name: 'mate-ui' })).toEqual(true)
-  expect(isPlainObject(document)).toEqual(false)
   expect(isEmptyObject({})).toEqual(true)
   expect(isEmptyObject(null)).toEqual(true)
   expect(isEmptyObject(undefined)).toEqual(true)

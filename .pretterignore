@@ -6,4 +6,5 @@
 /**/node_modules
 /**/assets
 /**/public
-packages/util/dist
+packages/conf/dist
+packages/type/dist

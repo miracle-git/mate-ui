@@ -9,5 +9,12 @@ module.exports = {
       }
     ]
   ],
-  plugins: ['@babel/proposal-object-rest-spread']
+  plugins: [
+    '@babel/plugin-proposal-object-rest-spread'
+  ],
+  env: {
+    test: {
+      plugins: ['@babel/plugin-transform-modules-commonjs']
+    }
+  }
 }
