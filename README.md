@@ -47,8 +47,15 @@
 ```sh
   "clean": "pnpm run --filter \"./packages/**\" -r --parallel clean"
   "build:type": "pnpm run --filter type build"
-  "build:allin": "pnpm run --filter \"./packages/**\" -r --parallel build"
+  "build": "pnpm run --filter \"./packages/**\" -r --parallel build"
 ```
+
+- 测试相关
+```sh
+  "test:type": "pnpm run --filter type test"
+  "test": "pnpm run --filter \"./packages/**\" -r --parallel test"
+```
+
 - 版本相关
 ```sh
   "preversion": "changeset"
@@ -56,7 +63,7 @@
 ```
 - 发布相关
 ```sh
-  "release": "pnpm run clean && pnpm run build:allin && changeset publish"
+  "release": "pnpm run clean && pnpm run build && changeset publish"
   "release:nobuild": "changeset publish"
 ```
 

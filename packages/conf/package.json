@@ -1,18 +1,14 @@
 {
-  "name": "@mate-ui/type",
+  "name": "@mate-ui/conf",
   "version": "1.0.0",
-  "description": "数据类型检测&判断",
+  "description": "基础常量配置",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "browser": "dist/index.umd.js",
   "types": "types/index.d.ts",
   "scripts": {
-    "clean": "rimraf dist",
     "build": "pnpm run clean && rollup -c",
-    "test": "jest --verbose --runInBand --coverage"
-  },
-  "dependencies": {
-    "@mate-ui/conf": "workspace:^1.0.0"
+    "clean": "rimraf dist"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
@@ -41,21 +37,6 @@
     "README.md",
     "package.json"
   ],
-  "directories": {
-    "dist": "dist",
-    "test": "__test__"
-  },
-  "jest": {
-    "roots": [
-      "<rootDir>/src"
-    ],
-    "testRegex": "(/__test__/.*|(\\.|/)(test|spec))\\.js?$",
-    "moduleFileExtensions": [
-      "js",
-      "json",
-      "node"
-    ]
-  },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"

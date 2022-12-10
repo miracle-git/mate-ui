@@ -6,10 +6,8 @@ export default {
       return primitive ? typeof obj === type.toLowerCase() : toString.call(obj) === '[object ' + type + ']'
     }
   },
-  isWindow: (item: object) => 'setInterval' in item
+  match: (item: any, pattern: string, flags?: string) => {
+    const regex = new RegExp(pattern, flags)
+    return regex.test(item)
+  }
 }
-
-// export const match = (item, pattern, flags) => {
-//   const regex = new RegExp(pattern, flags)
-//   return regex.test(item)
-// }
