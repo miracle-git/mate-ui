@@ -9,5 +9,5 @@ module.exports = {
   arrowParens: 'avoid',
   proseWrap: 'preserve',
   endOfLine: 'lf',
-  htmlWhitespaceSensitivity: 'strict',
+  htmlWhitespaceSensitivity: 'strict'
 }

@@ -28,11 +28,11 @@
     "format:code": "prettier -w . --cache --plugin-search-dir=.",
     "pretty-quick": "pretty-quick --staged",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
-    "build:utils": "pnpm run --filter utils build",
-    "build:packages": "pnpm run --filter \"./packages/**\" -r --parallel build",
+    "build:type": "pnpm run --filter type build",
+    "build:allin": "pnpm run --filter \"./packages/**\" -r --parallel build",
     "preversion": "changeset",
     "version": "changeset version && pnpm install --no-frozen-lockfile && pnpm run format:code",
-    "release": "pnpm run clean && pnpm run build:packages && changeset publish",
+    "release": "pnpm run clean && pnpm run build:allin && changeset publish",
     "release:nobuild": "changeset publish"
   },
   "devDependencies": {

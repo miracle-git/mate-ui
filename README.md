@@ -46,8 +46,8 @@
 - 构建相关
 ```sh
   "clean": "pnpm run --filter \"./packages/**\" -r --parallel clean"
-  "build:utils": "pnpm run --filter utils build"
-  "build:packages": "pnpm run --filter \"./packages/**\" -r --parallel build"
+  "build:type": "pnpm run --filter type build"
+  "build:allin": "pnpm run --filter \"./packages/**\" -r --parallel build"
 ```
 - 版本相关
 ```sh
@@ -56,7 +56,7 @@
 ```
 - 发布相关
 ```sh
-  "release": "pnpm run clean && pnpm run build:packages && changeset publish"
+  "release": "pnpm run clean && pnpm run build:allin && changeset publish"
   "release:nobuild": "changeset publish"
 ```
 

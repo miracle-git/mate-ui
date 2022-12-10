@@ -7,10 +7,10 @@ module.exports = {
   },
   parser: 'vue-eslint-parser',
   extends: [
-    'plugin:vue/recommended',
+    // 'plugin:vue/recommended',
     'plugin:prettier/recommended',
-    'prettier',
-    'plugin:@typescript-eslint/recommended',
+    'prettier'
+    // 'plugin:@typescript-eslint/recommended'
   ],
   plugins: ['@typescript-eslint', 'json'],
   parserOptions: {
