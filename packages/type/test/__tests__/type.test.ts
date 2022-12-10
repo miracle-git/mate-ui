@@ -92,7 +92,7 @@ test('测试：是否为数组/空数组', () => {
   expect(isEmptyArray(undefined)).toEqual(true)
 })
 
-test('测试：是否为对象/纯粹对象/空对象', () => {
+test('测试：是否为对象/空对象', () => {
   expect(isObject({ name: 'mate-ui' })).toEqual(true)
   expect(isEmptyObject({})).toEqual(true)
   expect(isEmptyObject(null)).toEqual(true)

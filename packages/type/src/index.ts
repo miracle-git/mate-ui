@@ -31,7 +31,7 @@ export const isNullOrUndefined = (item) => item === null || item === undefined
 export const isNumber = (item) => type.is('Number', true)(item)
 
 /**
- * @method 检测当前类型是否为布尔
+ * @method 检测当前类型是否为布尔值
  * @param item 当前检测的类型
  * @returns {Boolean} 如果为布尔则返回true, 否则返回false
  */
