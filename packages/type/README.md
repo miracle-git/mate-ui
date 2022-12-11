@@ -16,7 +16,7 @@ import {
   isProp, 
   isTrueOrZero, 
   isNullOrUndefined, 
-  isNumber, 
+  isNumber,
   isBoolean,
   isString,
   isEmptyString,
@@ -45,7 +45,7 @@ import {
 | isProp | 检测当前对象是否包含某属性 | isProp({ name: 'mate-ui' }, 'name') | item, key |
 | isTrueOrZero | 检测当前类型是否为true或0 | isTrueOrZero('mate-ui') | item |
 | isNullOrUndefined | 检测当前类型是否为null或undefined | isNullOrUndefined(null) | item |
-| isNumber | 检测当前类型是否为数字 | isNumber('1') | item |
+| isNumber | 检测当前类型是否为数字 | isNumber(1) | item |
 | isBoolean | 检测当前类型是否为布尔值 | isBoolean(true) | item |
 | isString | 检测当前类型是否为字符串 | isString('mate-ui') | item |
 | isEmptyString | 检测当前类型是否为空字符串(包含null,trim后长度为0) | isEmptyString('') | item |

@@ -11,14 +11,27 @@ export declare const DATA_REGEX_PATTERN: {
     letterNumber: string;
     letterNumberChar: string;
     letterNumberCharCase: string;
+    chinese: string;
     encode: RegExp;
     decode: RegExp;
+    escape: RegExp;
     highlight: RegExp;
+    locale: RegExp;
     trim: RegExp;
     kebab: RegExp;
     camel: RegExp;
     uncamel: RegExp;
     html: RegExp;
+};
+/**
+ * @constant 时间格式化常量
+ */
+export declare const DATE_FORMATTER: {
+    date: string;
+    datetime: string;
+    datetimeShort: string;
+    time: string;
+    timeShort: string;
 };
 /**
  * @constant 非对称加密算法类型
@@ -143,4 +156,80 @@ export declare const DEFAULT_STORAGE_OPTIONS: {
     };
     cryptoKey: string;
     cryptoIv: string;
+};
+/**
+ * @constant 请求方法常量
+ */
+export declare const REQUEST_METHOD: {
+    get: string;
+    post: string;
+    put: string;
+    patch: string;
+    del: string;
+};
+/**
+ * @constant 空类型默认
+ */
+export declare const EMPTY_FUNC: () => void;
+export declare const EMPTY_ARRAY: never[];
+export declare const EMPTY_OBJECT: {};
+/**
+ * @constant 请求数据格式
+ */
+export declare const CONTENT_TYPE: {
+    encoded: string;
+    formdata: string;
+    json: string;
+};
+/**
+ * @constant 请求默认配置
+ */
+export declare const DEFAULT_REQUEST_OPTIONS: {
+    origin: boolean;
+    retry: number;
+    delay: number;
+    timeout: number;
+    method: string;
+    headers: {};
+    request: () => void;
+    response: () => void;
+    reject: () => void;
+    loading: () => void;
+    result: {
+        code: string;
+        success: string;
+        data: string;
+        message: string;
+    };
+};
+/**
+ * @constant 默认响应配置
+ */
+export declare const DEFAULT_RESPONSE_OPTIONS: {
+    duration: number;
+    error: {
+        401: {
+            code: number;
+            message: string;
+        };
+        403: {
+            code: number;
+            message: string;
+        };
+        404: {
+            code: number;
+            message: string;
+        };
+        500: {
+            code: number;
+            message: string;
+        };
+        504: {
+            code: number;
+            message: string;
+        };
+        other: {
+            message: string;
+        };
+    };
 };

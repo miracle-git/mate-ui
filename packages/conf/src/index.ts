@@ -11,14 +11,28 @@ export const DATA_REGEX_PATTERN = {
   letterNumber: '^(?=.*[0-9])(?=.*[a-zA-Z]).{min,max}$',
   letterNumberChar: '^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9]).{min,max}$',
   letterNumberCharCase: '^(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[^a-zA-Z0-9]).{min,max}$',
+  chinese: '([\\u400-\\u9fa5]*\\w*)',
   encode: /(["'<>]|&(?:(amp|lt|gt|#39|nbsp|quot|#\d+);)?)/g,
   decode: /&(amp|lt|gt|#39|nbsp|quot);/g,
+  escape: /[.*+?^${}()|[\]\\]/g,
   highlight: /[.[*?+^$|()/]|\\]|\\/g,
+  locale: /(%|)\{([0-9a-zA-Z_]+)\}/g,
   trim: /^[\s\uFEFF]+|[\s\uFEFF]+$/g,
   kebab: /([^-])([A-Z])/g,
   camel: /([\\:\-\\_]+(.))/g,
   uncamel: /([a-z\d])([A-Z])/g,
   html: /<\/?.+?\/?>/g
+}
+
+/**
+ * @constant 时间格式化常量
+ */
+export const DATE_FORMATTER = {
+  date: 'yyyy-MM-dd',
+  datetime: 'yyyy-MM-dd HH:mm:ss',
+  datetimeShort: 'yyyy-MM-dd HH:mm',
+  time: 'HH:mm:ss',
+  timeShort: 'HH:mm'
 }
 
 /**
@@ -74,4 +88,68 @@ export const DEFAULT_STORAGE_OPTIONS = {
   cryptoType: SYMMETRIC_CRYPTO_TYPE.none,
   cryptoKey: 'mate-key',
   cryptoIv: 'mate-iv'
+}
+
+/**
+ * @constant 请求方法常量
+ */
+export const REQUEST_METHOD = {
+  get: 'get',
+  post: 'post',
+  put: 'put',
+  patch: 'patch',
+  del: 'delete'
+}
+
+/**
+ * @constant 空类型默认
+ */
+export const EMPTY_FUNC = function() {}
+export const EMPTY_ARRAY = []
+export const EMPTY_OBJECT = {}
+
+/**
+ * @constant 请求数据格式
+ */
+export const CONTENT_TYPE = {
+  encoded: 'application/x-www-form-urlencoded',
+  formdata: 'multipart/form-data',
+  json: 'application/json'
+}
+
+/**
+ * @constant 请求默认配置
+ */
+export const DEFAULT_REQUEST_OPTIONS = {
+  origin: false,
+  retry: 0,
+  delay: 1000,
+  timeout: 30000,
+  method: REQUEST_METHOD.get,
+  headers: EMPTY_OBJECT,
+  request: EMPTY_FUNC,
+  response: EMPTY_FUNC,
+  reject: EMPTY_FUNC,
+  loading: EMPTY_FUNC,
+  result: {
+    code: 'code',
+    success: 'success',
+    data: 'data',
+    message: 'message'
+  }
+}
+
+/**
+ * @constant 默认响应配置
+ */
+export const DEFAULT_RESPONSE_OPTIONS = {
+  duration: 3000,
+  error: {
+    401: { code: 401, message: '未授权，请重新登录' },
+    403: { code: 403, message: '拒绝访问' },
+    404: { code: 404, message: '资源未找到' },
+    500: { code: 500, message: '账户已失效，请重新登录' },
+    504: { code: 504, message: '网络超时' },
+    other: { message: '系统异常，请稍后再试' }
+  }
 }

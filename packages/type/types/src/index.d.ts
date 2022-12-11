@@ -24,6 +24,12 @@ export declare const isNullOrUndefined: (item: any) => boolean;
  */
 export declare const isNumber: (item: any) => boolean;
 /**
+ * @method 检测当前类型是否为负数
+ * @param item 当前检测的类型
+ * @returns {Boolean} 如果为数字则返回true, 否则返回false
+ */
+export declare const isMinusNumber: (item: any) => boolean;
+/**
  * @method 检测当前类型是否为布尔值
  * @param item 当前检测的类型
  * @returns {Boolean} 如果为布尔则返回true, 否则返回false
