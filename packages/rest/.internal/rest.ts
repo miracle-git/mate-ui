@@ -51,5 +51,5 @@ export const mocking = (config) => {
       }
     }
   }
-  return mock ? { prefix: mock.prefix, urls: mock.urls } : null
+  return mock
 }
