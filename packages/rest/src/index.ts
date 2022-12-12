@@ -18,7 +18,7 @@ export default {
    * @property { Array } mock mock接口相关配置(自动将前缀修改为'/api/mock')
    * @property { Boolean } crypto 是否在客户端加密存储(自动将存储到window.__MATE_API__或window.__MATE_XXX_API__变量中)
    */
-  map(config: object, prefix: string | object = '', options?) {
+  map(config:object, prefix:string | object = '', options?) {
     const globalApiKey = string.globalKey(options!.app, 'api')
     if (options!.crypto) {
       const cryptoType = SYMMETRIC_CRYPTO_TYPE.des
@@ -38,7 +38,7 @@ export default {
    * @example: rest.format('/api/mate-ui/service/permission/{0}/account/{1}', 'mateapi', 'miracle')
    * @example: rest.format('/api/mate-ui/service/permission/{project}/account/{user}', { project: 'mateapi', user: 'miracle' })
    */
-  format(url: string, ...args) {
+  format(url:string, ...args) {
     let config = args
     config = isObject(config[0]) ? config[0] : config
     return Object.keys(config).reduce((r, s) => {
