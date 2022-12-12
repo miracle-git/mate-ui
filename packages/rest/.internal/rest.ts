@@ -11,11 +11,6 @@ export const parse = (prefix) => {
   return result
 }
 
-export type MockOptions = {
-  prefix: string,
-  urls: [] | object
-}
-
 export const mapping = (config, _prefix, mock) => {
   let { prefix, exclude } = parse(_prefix)
   return Object.keys(config).reduce((api, key) => {
