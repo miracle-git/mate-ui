@@ -19,7 +19,7 @@ import storage from '@mate-ui/storage'
 > 本地存储和会话存储，当使用 `set` 设置值时，除指定 `key` 和 `val` 之外，还可以传入是否加密 `crypto` 或指定对应的加密策略 `strategy` 以及密钥 `key` 和矢量 `iv` <br/>
 > 加密策略 `strategy` 目前支持对称加密: `SYMMETRIC_CRYPTO_TYPE.aes`、`SYMMETRIC_CRYPTO_TYPE des`、`SYMMETRIC_CRYPTO_TYPE.rc4`<br/>
 
-- 本地缓存
+> 本地缓存
 
 |  属性/方法  | 描述 | 示例 | 参数 |
 | ---------- | ---------- | ---------- | ---------- |
@@ -31,7 +31,7 @@ import storage from '@mate-ui/storage'
 | count | 获取本地存储实例中的个数 | storage.count() | — |
 | contains | 获取本地存储实例中是否包含指定key的实例 | storage.contains('mate-ui') | key |
 
-- 会话缓存
+> 会话缓存
 
 |  属性/方法  | 描述 | 示例 | 参数 |
 | ---------- | ---------- | ---------- | ---------- |
@@ -41,4 +41,3 @@ import storage from '@mate-ui/storage'
 | clear | 清除所有的会话缓存 | storage.session.clear() | — |
 | count | 获取会话存储实例中的个数 | storage.session.count() | — |
 | contains | 获取会话存储实例中是否包含指定key的实例 | storage.session.contains('mate-ui') | key |
-

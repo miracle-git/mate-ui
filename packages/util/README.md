@@ -19,7 +19,7 @@ import { $formatter, $loader, $number, $object, $string, $random, $validator } f
 import { $f, $l, $n, $o, $s, $r, $v } from '@mate-ui/util'
 ```
 - API
-- formatter 格式化工具
+- $formatter 格式化工具
 
 |  属性/方法  | 描述 | 示例 | 参数 |
 | ---------- | ---------- | ---------- | ---------- |
@@ -34,14 +34,14 @@ import { $f, $l, $n, $o, $s, $r, $v } from '@mate-ui/util'
 | timezone | 格式化时区 | $f.timezone('') | data |
 | locale | 格式化国际化 | $f.locale('') | data |
 
-- loader 脚本加载工具
+- $loader 脚本加载工具
 
 |  属性/方法  | 描述 | 示例 | 参数 |
 | ---------- | ---------- | ---------- | ---------- |
 | serialScripts | 串行(异步)逐个加载指定的脚本 | $l.serialScripts([js1,js2,...jsn], () => {}) | scripts, callback |
 | parallelScripts | 并行(同步)同时加载指定的脚本 | $l.parallelScripts([js1,js2,...jsn], () => {}) | scripts, callback |
 
-- number 数字处理工具
+- $number 数字处理工具
 
 |  属性/方法  | 描述 | 示例 | 参数 |
 | ---------- | ---------- | ---------- | ---------- |
@@ -50,7 +50,7 @@ import { $f, $l, $n, $o, $s, $r, $v } from '@mate-ui/util'
 | pretty | 清除结尾多余的0 | $n.pretty('12300.000') | data |
 | trimEndDot | 清除结尾的小数点(常用于数组文本框组件) | $n.trimEndDot('12300.') | data |
 
-- object 对象处理工具
+- $object 对象处理工具
 
 |  属性/方法  | 描述 | 示例 | 参数 |
 | ---------- | ---------- | ---------- | ---------- |
@@ -59,7 +59,7 @@ import { $f, $l, $n, $o, $s, $r, $v } from '@mate-ui/util'
 | pick | 获取指定对象/数组指定列对应的数组或对象 | $o.pick({ a: 1, b: 2, c: 3 }, 'a', 'c') | data, props |
 | draw | 获取指定对象排除指定动态列对应的对象 | $o.draw({ a: 1, b: 2, c: 3 }, 'a', 'c') | data, props |
 
-- string 字符串处理工具
+- $string 字符串处理工具
 
 |  属性/方法  | 描述 | 示例 | 参数 |
 | ---------- | ---------- | ---------- | ---------- |
@@ -79,7 +79,7 @@ import { $f, $l, $n, $o, $s, $r, $v } from '@mate-ui/util'
 | format | 格式化模板字符串 | $s.format('{0} mate ui {1}', '@copyright', 'reserved') | str, val1, val2, ... |
 | query | 获取url字符串问号之后的值并转化为对象 | $s.query('https://www.mate-ui.com?name=mate&package=core')) | str |
 
-- random 随机数处理工具
+- $random 随机数处理工具
 
 |  属性/方法  | 描述 | 示例 | 参数 |
 | ---------- | ---------- | ---------- | ---------- |
@@ -89,7 +89,7 @@ import { $f, $l, $n, $o, $s, $r, $v } from '@mate-ui/util'
 | uuid | 随机生成一个不重复的uuid(可指定长度) | $r.uuid() | len |
 | guid | 随机生成一个guid | $r.guid() | — |
 
-- validator 校验处理工具
+- $validator 校验处理工具
 
 |  属性/方法  | 描述 | 示例 | 参数 |
 | ---------- | ---------- | ---------- | ---------- |
