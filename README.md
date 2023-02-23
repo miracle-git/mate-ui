@@ -46,14 +46,27 @@
 - 构建相关
 ```sh
   "clean": "pnpm run --filter \"./packages/**\" -r --parallel clean"
-  "build:type": "pnpm run --filter type build"
-  "build": "pnpm run --filter \"./packages/**\" -r --parallel build"
+  "build:conf": "pnpm run --filter conf build",
+  "build:type": "pnpm run --filter type build",
+  "build:crypto": "pnpm run --filter crypto build",
+  "build:storage": "pnpm run --filter storage build",
+  "build:util": "pnpm run --filter util build",
+  "build:rest": "pnpm run --filter rest build",
+  "build:sort": "pnpm run --filter sort build",
+  "build:core": "pnpm run build:conf && pnpm run build:type && pnpm run build:crypto && pnpm run build:storage && pnpm run build:util && pnpm run build:rest",
+  "build": "pnpm run build:core && pnpm run --filter core build && pnpm run build:sort"
 ```
 
 - 测试相关
 ```sh
-  "test:type": "pnpm run --filter type test"
-  "test": "pnpm run --filter \"./packages/**\" -r --parallel test"
+  "test:type": "pnpm run --filter type test",
+  "test:crypto": "pnpm run --filter crypto test",
+  "test:storage": "pnpm run --filter storage test",
+  "test:util": "pnpm run --filter util test",
+  "test:rest": "pnpm run --filter rest test",
+  "test:sort": "pnpm run --filter sort test",
+  "test:core": "pnpm run test:type && pnpm run test:crypto && pnpm run test:storage && pnpm run test:util && pnpm run test:rest",
+  "test": "pnpm run test:core && pnpm run --filter core test && pnpm run test:sort",
 ```
 
 - 版本相关
