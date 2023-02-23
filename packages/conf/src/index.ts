@@ -91,6 +91,22 @@ export const DEFAULT_STORAGE_OPTIONS = {
 }
 
 /**
+ * @constant 排序模式
+ */
+export const SORT_MODE = {
+  index: { name: 'index' },
+  value: { name: 'value' }
+}
+
+/**
+ * @constant 排序类型
+ */
+export const SORT_TYPE = {
+  asc: 'asc',
+  desc: 'desc'
+}
+
+/**
  * @constant 请求方法常量
  */
 export const REQUEST_METHOD = {

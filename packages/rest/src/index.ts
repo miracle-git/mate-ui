@@ -4,7 +4,7 @@
  */
 import { SYMMETRIC_CRYPTO_TYPE } from '@mate-ui/conf'
 import { isObject } from '@mate-ui/type'
-import { object, string } from '@mate-ui/util'
+import { $o, $s } from '@mate-ui/util'
 import crypto from '@mate-ui/crypto'
 import { mocking, mapping } from '../.internal/rest'
 
@@ -19,15 +19,15 @@ export default {
    * @property { Boolean } crypto 是否在客户端加密存储(自动将存储到window.__MATE_API__或window.__MATE_XXX_API__变量中)
    */
   map(config:object, prefix:string | object = '', options?) {
-    const globalApiKey = string.globalKey(options!.app, 'api')
+    const globalApiKey = $s.globalKey(options!.app, 'api')
     if (options!.crypto) {
       const cryptoType = SYMMETRIC_CRYPTO_TYPE.des
       if (window[globalApiKey]) return JSON.parse(crypto.decrypt(window[globalApiKey], cryptoType))
-      object.frozen(globalApiKey, crypto.encrypt(JSON.stringify(mapping(config, prefix, mocking(options!.mock))), cryptoType))
+      $o.frozen(globalApiKey, crypto.encrypt(JSON.stringify(mapping(config, prefix, mocking(options!.mock))), cryptoType))
       return JSON.parse(crypto.decrypt(window[globalApiKey], cryptoType))
     } else {
       if (window[globalApiKey]) return window[globalApiKey]
-      object.frozen(globalApiKey, mapping(config, prefix, mocking(options!.mock)))
+      $o.frozen(globalApiKey, mapping(config, prefix, mocking(options!.mock)))
       return window[globalApiKey]
     }
   },
@@ -42,7 +42,7 @@ export default {
     let config = args
     config = isObject(config[0]) ? config[0] : config
     return Object.keys(config).reduce((r, s) => {
-      return r.replace(new RegExp(`\\{${string.escape(s)}\\}`, 'g'), String(config[s]))
+      return r.replace(new RegExp(`\\{${$s.escape(s)}\\}`, 'g'), String(config[s]))
     }, url)
   }
 }

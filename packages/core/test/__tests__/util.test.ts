@@ -1,7 +1,7 @@
 /**
  * @jest-environment jsdom
  */
-import { $f, $s, $n, $o, $r, $v } from '../../src'
+import { $f, $n, $o, $s, $r, $v } from '../../src'
 
 test('测试：pick', () => {
   const lib = [

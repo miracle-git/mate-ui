@@ -78,7 +78,7 @@ declare const _default: {
      */
     trim(str: string, all?: boolean): string;
     /**
-     * @method 清除结尾的字符
+     * @method 清除结尾的的最后一个字符
      * @param { String } str 需要处理的字符串
      * @param { String } end 结尾字符串
      */
@@ -89,7 +89,7 @@ declare const _default: {
      */
     trimHtml(str: string): string;
     /**
-     * @method 格式化默认字符串
+     * @method 格式化模板字符串
      * @param { String } str 需要处理的字符串
      * @param val 格式化占位符对应的字符串({0},{1},...)
      */

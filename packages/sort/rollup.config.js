@@ -18,7 +18,7 @@ export default [
     input: 'src/index.ts',
     // external: [],
     output: {
-      name: 'MatConstant',
+      name: 'MateSort',
       file: 'dist/index.umd.js',
       format: 'umd'
       //   indent: false,
@@ -50,8 +50,8 @@ export default [
     output: {
       file: pkg.main,
       format: 'cjs',
-      indent: false
-      // exports: 'default',
+      indent: false,
+      // exports: 'default'
     },
     plugins: [
       resolve({

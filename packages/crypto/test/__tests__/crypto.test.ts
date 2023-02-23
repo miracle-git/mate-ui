@@ -40,4 +40,3 @@ test('测试：对称加密算法', () => {
   expect(crypto.decrypt('0462e491cf3bf927c6004638', SYMMETRIC_CRYPTO_TYPE.rabbit, { key, iv })).toEqual(data)
   expect(crypto.decrypt('56abdf33c673679cf5f34c5a', SYMMETRIC_CRYPTO_TYPE.rabbitlegacy, { key, iv })).toEqual(data)
 })
-

@@ -18,7 +18,7 @@ export default [
     input: 'src/index.ts',
     // external: [],
     output: {
-      name: 'MatConstant',
+      name: 'MateCore',
       file: 'dist/index.umd.js',
       format: 'umd'
       //   indent: false,
@@ -51,7 +51,7 @@ export default [
       file: pkg.main,
       format: 'cjs',
       indent: false
-      // exports: 'default',
+      // exports: 'default'
     },
     plugins: [
       resolve({

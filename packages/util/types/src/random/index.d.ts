@@ -18,7 +18,7 @@ declare const _default: {
      */
     string(len?: number, timestamp?: boolean): string;
     /**
-     * @method 获取随机颜色
+     * @method 获取随机颜色(可配置透明度)
      * @param {Number} alpha 模糊值(在0，1之间)
      * @returns {String|Object} 返回对应的随机颜色
      */

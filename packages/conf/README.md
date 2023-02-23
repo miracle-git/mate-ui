@@ -1,4 +1,4 @@
-# @mate-ui/conf
+# @mate-ui/constant
 
 > 基础常量配置
 

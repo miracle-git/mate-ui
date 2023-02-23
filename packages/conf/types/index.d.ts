@@ -158,6 +158,24 @@ export declare const DEFAULT_STORAGE_OPTIONS: {
     cryptoIv: string;
 };
 /**
+ * @constant 排序模式
+ */
+export declare const SORT_MODE: {
+    index: {
+        name: string;
+    };
+    value: {
+        name: string;
+    };
+};
+/**
+ * @constant 排序类型
+ */
+export declare const SORT_TYPE: {
+    asc: string;
+    desc: string;
+};
+/**
  * @constant 请求方法常量
  */
 export declare const REQUEST_METHOD: {

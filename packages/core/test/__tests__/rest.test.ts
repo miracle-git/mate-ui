@@ -1,7 +1,7 @@
 /**
  * @jest-environment jsdom
  */
-import rest from '../../src'
+import { Rest } from '../../src'
 
 test('测试：API地址映射(无mock)', () => {
   const config = {
@@ -17,7 +17,7 @@ test('测试：API地址映射(无mock)', () => {
     }
   }
   // app 参数此时可相互隔离测试，实战项目推荐使用(避免多项目全局变量覆盖)
-  const api = rest.map(config, '/api', { app: 'no-mock' })
+  const api = Rest.map(config, '/api', { app: 'no-mock' })
   expect(api.dict).toEqual('/api/dict/list')
   expect(api.user.list).toEqual('/api/user/list')
   expect(api.product.list).toEqual('/api/product/list')
@@ -36,7 +36,7 @@ test('测试：API地址映射(有mock)', () => {
       category: '/product/category'
     }
   }
-  const api = rest.map(config, '/api', {
+  const api = Rest.map(config, '/api', {
     app: 'with-mock',
     mock: [
       '/user/list',
@@ -61,7 +61,7 @@ test('测试：API地址映射(有mock并自定义前缀)', () => {
       category: '/product/category'
     }
   }
-  const api = rest.map(config, '/api', {
+  const api = Rest.map(config, '/api', {
     app: 'with-mock-prefix',
     mock: {
       prefix: '/mock-api',
@@ -91,7 +91,7 @@ test('测试：API地址映射(地址归类)', () => {
       category: '/category'
     }
   }
-  const api = rest.map(config, {
+  const api = Rest.map(config, {
     multi: true,
     common: '/api',
     user: '/api/user',
@@ -121,7 +121,7 @@ test('测试：API地址映射(添加第三方api)', () => {
       book: '/amazon/book'
     }
   }
-  const api = rest.map(config, {
+  const api = Rest.map(config, {
     prefix: '/api',
     key: 'others'
   }, {
@@ -147,7 +147,7 @@ test('测试：API地址映射(加密)', () => {
       category: '/product/category'
     }
   }
-  const api = rest.map(config, '/api', { app: 'with-crypto', crypto: true })
+  const api = Rest.map(config, '/api', { app: 'with-crypto', crypto: true })
   expect(api.dict).toEqual('/api/dict/list')
   expect(api.user.list).toEqual('/api/user/list')
   expect(api.product.list).toEqual('/api/product/list')
@@ -167,7 +167,7 @@ test('测试：API地址映射(动态参数)', () => {
       category: '/product/category/{name}/{mode}'
     }
   }
-  const api = rest.map(config, '/api', { app: 'with-dynamic-params' })
-  expect(rest.format(api.user.detail, '001', '002')).toEqual('/api/user/detail/001/002')
-  expect(rest.format(api.product.category, { name: 'huawei', mode: 'p40' })).toEqual('/api/product/category/huawei/p40')
+  const api = Rest.map(config, '/api', { app: 'with-dynamic-params' })
+  expect(Rest.format(api.user.detail, '001', '002')).toEqual('/api/user/detail/001/002')
+  expect(Rest.format(api.product.category, { name: 'huawei', mode: 'p40' })).toEqual('/api/product/category/huawei/p40')
 })

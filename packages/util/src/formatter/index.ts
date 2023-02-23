@@ -1,4 +1,4 @@
-import {DATA_REGEX_PATTERN, DATE_FORMATTER} from '@mate-ui/conf'
+import { DATA_REGEX_PATTERN, DATE_FORMATTER } from '@mate-ui/conf'
 import { isObject, isProp, isNullOrUndefined } from '@mate-ui/type'
 import { parseDate, parseNumber } from '../../.internal/util'
 

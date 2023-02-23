@@ -73,5 +73,3 @@ test('测试：会话缓存(加密)', () => {
   storage.session.set(keys.core, values.core, { strategy: SYMMETRIC_CRYPTO_TYPE.des })
   expect(storage.session.get(keys.core, { strategy: SYMMETRIC_CRYPTO_TYPE.des })).toEqual(values.core)
 })
-
-
