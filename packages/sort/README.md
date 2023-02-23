@@ -30,12 +30,12 @@ import {
 |  属性/方法  | 描述 | 示例 | 参数 |
 | ---------- | ---------- | ---------- | ---------- |
 | bubbleSort | 冒泡排序(默认升序) | bubbleSort([1,3,5,2,4], type) | arr, type(asc/desc) |
-| selectSort | 选择排序(默认升序) | bubbleSort([1,3,5,2,4], type) | arr, type(asc/desc) |
-| insertSort | 插入排序(默认升序) | bubbleSort([1,3,5,2,4], type) | arr, type(asc/desc) |
-| shellSort | 希尔排序(默认升序) | bubbleSort([1,3,5,2,4], type) | arr, type(asc/desc) |
-| quickSort | 快速排序(默认升序) | bubbleSort([1,3,5,2,4], type) | arr, type(asc/desc) |
-| mergeSort | 归并排序(默认升序) | bubbleSort([1,3,5,2,4], type) | arr, type(asc/desc) |
-| heapSort | 堆排序(默认升序) | bubbleSort([1,3,5,2,4], type) | arr, type(asc/desc) |
-| bucketSort | 桶排序(默认升序) | bubbleSort([1,3,5,2,4], type) | arr, type(asc/desc) |
-| countingSort | 计数排序(默认升序) | bubbleSort([1,3,5,2,4], type) | arr, type(asc/desc) |
-| radixSort | 基数排序(默认升序) | bubbleSort([1,3,5,2,4], type) | arr, type(asc/desc) |
+| selectSort | 选择排序(默认升序) | selectSort([1,3,5,2,4], type) | arr, type(asc/desc) |
+| insertSort | 插入排序(默认升序) | insertSort([1,3,5,2,4], type) | arr, type(asc/desc) |
+| shellSort | 希尔排序(默认升序) | shellSort([1,3,5,2,4], type) | arr, type(asc/desc) |
+| quickSort | 快速排序(默认升序) | quickSort([1,3,5,2,4], type) | arr, type(asc/desc) |
+| mergeSort | 归并排序(默认升序) | mergeSort([1,3,5,2,4], type) | arr, type(asc/desc) |
+| heapSort | 堆排序(默认升序) | heapSort([1,3,5,2,4], type) | arr, type(asc/desc) |
+| bucketSort | 桶排序(默认升序) | bucketSort([1,3,5,2,4], type) | arr, type(asc/desc) |
+| countingSort | 计数排序(默认升序) | countingSort([1,3,5,2,4], type) | arr, type(asc/desc) |
+| radixSort | 基数排序(默认升序) | radixSort([1,3,5,2,4], type) | arr, type(asc/desc) |
