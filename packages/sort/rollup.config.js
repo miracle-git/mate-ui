@@ -62,6 +62,14 @@ export default [
         extensions,
         plugins: [['@babel/plugin-transform-runtime', { version: babelRuntimeVersion }]],
         babelHelpers: 'runtime'
+      }),
+      terser({
+        compress: {
+          pure_getters: true,
+          unsafe: true,
+          unsafe_comps: true,
+          warnings: false
+        }
       })
     ]
   },
@@ -91,6 +99,14 @@ export default [
           ]
         ],
         babelHelpers: 'runtime'
+      }),
+      terser({
+        compress: {
+          pure_getters: true,
+          unsafe: true,
+          unsafe_comps: true,
+          warnings: false
+        }
       })
     ]
   },
