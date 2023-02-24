@@ -12,13 +12,22 @@ npm install @mate-ui/util
 ```
 - 引入全称
 ```sh
-import { $formatter, $loader, $number, $object, $string, $random, $validator } from '@mate-ui/util'
+import { $client, $formatter, $loader, $number, $object, $string, $random, $validator } from '@mate-ui/util'
 ```
 - 引入简写(建议)
 ```sh
-import { $f, $l, $n, $o, $s, $r, $v } from '@mate-ui/util'
+import { $c, $f, $l, $n, $o, $s, $r, $v } from '@mate-ui/util'
 ```
 - API
+
+- $client 客户端工具
+
+|  属性/方法  | 描述 | 示例 | 参数 |
+| ---------- | ---------- | ---------- | ---------- |
+| engine | 浏览器引擎(如：webkit,gecko) | $c.engine | - |
+| browser | 浏览器类型及版本(如：chrome,opera) | $c.browser | - |
+| platform | 客户端操作系统平台(如：windows,mac) | $c.platform | - |
+
 - $formatter 格式化工具
 
 |  属性/方法  | 描述 | 示例 | 参数 |

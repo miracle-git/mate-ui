@@ -25,6 +25,24 @@ export const DATA_REGEX_PATTERN = {
 }
 
 /**
+ * @constant 数据分隔符常量
+ */
+export const DATA_SEPARATOR = {
+  ampersand: '&',
+  comma: ',',
+  colon: ':',
+  semicolon: ';',
+  bar: '|',
+  hyphen: '-',
+  at: '@',
+  dollar: '$',
+  slash: '/',
+  backslash: '\\',
+  underline: '_',
+  whitespace: ' '
+}
+
+/**
  * @constant 时间格式化常量
  */
 export const DATE_FORMATTER = {
@@ -91,7 +109,7 @@ export const DEFAULT_STORAGE_OPTIONS = {
 }
 
 /**
- * @constant 排序模式
+ * @constant 排序模式常量
  */
 export const SORT_MODE = {
   index: { name: 'index' },
@@ -99,7 +117,7 @@ export const SORT_MODE = {
 }
 
 /**
- * @constant 排序类型
+ * @constant 排序类型常量
  */
 export const SORT_TYPE = {
   asc: 'asc',
@@ -125,7 +143,7 @@ export const EMPTY_ARRAY = []
 export const EMPTY_OBJECT = {}
 
 /**
- * @constant 请求数据格式
+ * @constant 请求数据格式常量
  */
 export const CONTENT_TYPE = {
   encoded: 'application/x-www-form-urlencoded',
@@ -134,7 +152,7 @@ export const CONTENT_TYPE = {
 }
 
 /**
- * @constant 请求默认配置
+ * @constant 默认请求配置常量
  */
 export const DEFAULT_REQUEST_OPTIONS = {
   origin: false,
@@ -156,7 +174,7 @@ export const DEFAULT_REQUEST_OPTIONS = {
 }
 
 /**
- * @constant 默认响应配置
+ * @constant 默认响应配置常量
  */
 export const DEFAULT_RESPONSE_OPTIONS = {
   duration: 3000,

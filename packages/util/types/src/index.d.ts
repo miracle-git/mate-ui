@@ -1,3 +1,4 @@
+export { default as $c, default as $client } from './client';
 export { default as $f, default as $formatter } from './formatter';
 export { default as $l, default as $loader } from './loader';
 export { default as $o, default as $object } from './object';

@@ -84,3 +84,124 @@ export const prettyNumber = (num) => {
     }
   }
 }
+
+export const checkOpera = (engine, browser) => {
+  // @ts-ignore
+  engine.version = browser.version = window.opera.version()
+  engine.opera = browser.opera = parseFloat(engine.version)
+}
+
+export const checkWebkit = (engine, browser, ua) => {
+  engine.version = RegExp.$1
+  engine.webkit = parseFloat(engine.version)
+  // 确定Edge
+  if (/Edge?\/(\S+)/.test(ua)) {
+    browser.version = RegExp.$1
+    browser.edge = parseFloat(browser.version)
+  } else if (/Chrome\/(\S+)/.test(ua)) {
+    // 确定Chrome还是Safari
+    browser.version = RegExp.$1
+    browser.chrome = parseFloat(browser.version)
+  } else {
+    // 近似确认版本号
+    let safariVersion = 1
+    if (engine.webkit < 100) {
+      safariVersion = 1
+    } else if (engine.webkit < 312) {
+      safariVersion = 1.2
+    } else if (engine.webkit < 412) {
+      safariVersion = 1.3
+    } else {
+      safariVersion = 2
+    }
+    browser.safari = browser.version = safariVersion
+  }
+}
+
+export const checkHTML = (engine, browser) => {
+  engine.version = browser.version = RegExp.$1
+  engine.khtml = browser.kong = parseFloat(engine.version)
+}
+
+export const checkGecko = (engine, browser, ua) => {
+  engine.version = RegExp.$1
+  engine.gecko = parseFloat(engine.version)
+  // 确定是不是firefox
+  if (/Firefox\/(\S+)/.test(ua)) {
+    browser.version = RegExp.$1
+    browser.firefox = parseFloat(browser.version)
+  }
+}
+
+export const checkMSIE = (engine, browser) => {
+  engine.version = browser.version = RegExp.$1
+  browser.ie = parseFloat(browser.version)
+}
+
+export const checkWindows = (sys, ua) => {
+  // 检测windows操作系统
+  if (sys.win && /Win(?:dows)?([^do]{2})]\s?(\d+\.\d+)?/.test(ua)) {
+    if (RegExp.$1 == 'NT') {
+      switch (RegExp.$2) {
+        case '5.0':
+          sys.win = '2000'
+          break
+        case '5.1':
+          sys.win = 'XP'
+          break
+        case '6.0':
+          sys.win = 'Vista'
+          break
+        case '6.1':
+          sys.win = '7'
+          break
+        default:
+          sys.win = 'NT'
+          break
+      }
+    } else if (RegExp.$1 =='9x') {
+      sys.win = 'ME'
+    } else {
+      sys.win = RegExp.$1
+    }
+  }
+}
+
+export const checkMobile = (sys, ua) => {
+  sys.iphone = ua.indexOf('iPhone') > -1
+  sys.ipod = ua.indexOf('iPod') > -1
+  sys.ipad = ua.indexOf('iPad') > -1
+  sys.nokiaN = ua.indexOf('nokiaN') > -1
+  if (sys.win === 'CE') {
+    sys.winMobile = sys.win
+  } else if (sys.win === 'Ph') {
+    if (/Windows Phone OS (\d+ \d)/.test(ua)) {
+      sys.win = 'Phone'
+      sys.winMobile = parseFloat(RegExp.$1)
+    }
+  }
+}
+
+
+
+export const checkIOS = (sys, ua) => {
+  if (sys.mac && ua.indexOf('Mobile') > -1) {
+    if (/CPU (?:iPhone )?OS (\d+_\d+)/.test(ua)) {
+      sys.ios = parseFloat(RegExp.$1.replace('_', '.'))
+    } else {
+      // 无法检测，只能猜测
+      sys.ios = 2
+    }
+  }
+}
+
+export const checkAndroid = (sys, ua) => {
+  if (/Android (\d+\. \d+)/.test(ua)) {
+    sys.android = parseFloat(RegExp.$1)
+  }
+}
+
+export const checkGame = (sys, ua) => {
+  sys.will = ua.indexOf('Wii') > -1
+  sys.ps = /playstation/i.test(ua)
+}

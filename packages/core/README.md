@@ -14,12 +14,32 @@ npm install @mate-ui/core
 ```sh
 import { 
   Conf, Type, Crypto, Storage, Rest,
-  $formatter, $loader, $number, $object, $string, $random, $validator,
-  $f, $l, $n, $o, $s, $r, $v
+  $client, $formatter, $loader, $number, $object, $string, $random, $validator,
+  $c, $f, $l, $n, $o, $s, $r, $v
 } from '@mate-ui/core'
 ```
 
-- Conf 常量配置 <br/>
+- Conf 常量配置
+
+| 属性/方法 | 描述 | 示例 | 参数 |
+| ---------- | ---------- | ---------- | ---------- |
+| DATA_REGEX_PATTERN | 正则表达式常量 | Conf.DATA_REGEX_PATTERN.guid | — |
+| DATA_SEPARATOR | 数据分隔符常量 | Conf.DATA_SEPARATOR.ampersand | — |
+| DATE_FORMATTER | 时间格式化常量 | Conf.DATE_FORMATTER.date | — |
+| ASYMMETRIC_CRYPTO_TYPE | 非对称加密算法类型 | Conf.ASYMMETRIC_CRYPTO_TYPE.md5 | — |
+| SYMMETRIC_CRYPTO_TYPE | 对称加密算法类型 | Conf.SYMMETRIC_CRYPTO_TYPE.base64 | — |
+| STORAGE_TYPE | 存储类型常量 | Conf.STORAGE_TYPE.local | — |
+| DEFAULT_STORAGE_OPTIONS | 存储配置常量 | Conf.DEFAULT_STORAGE_OPTIONS | — |
+| SORT_MODE | 排序模式常量 | Conf.SORT_MODE.index | — |
+| SORT_TYPE | 排序类型常量 | Conf.SORT_TYPE.asc | — |
+| REQUEST_METHOD | 请求方法常量 | Conf.REQUEST_METHOD.get | — |
+| EMPTY_FUNC | 空函数类型 | Conf.EMPTY_FUNC | — |
+| EMPTY_ARRAY | 空数组类型 | Conf.EMPTY_ARRAY | — |
+| EMPTY_OBJECT | 空对象类型 | Conf.EMPTY_OBJECT | — |
+| CONTENT_TYPE | 请求数据格式常量 | Conf.CONTENT_TYPE.encoded | — |
+| DEFAULT_REQUEST_OPTIONS | 默认请求配置常量 | Conf.DEFAULT_REQUEST_OPTIONS | — |
+| DEFAULT_RESPONSE_OPTIONS | 默认响应配置常量 | Conf.DEFAULT_RESPONSE_OPTIONS | — |
+
 - Type 类型检测
 
 |  属性/方法  | 描述 | 示例 | 参数 |
@@ -84,6 +104,14 @@ import {
 | format | 将当前的Api地址的动态参数进行转化为实际的请求url | Rest.format('/api/mate-ui/service/permission/{project}/account/{user}', { project: 'mateapi', user: 'miracle' }) | url, val1, val2, ... |
 
 - Util 工具类函数
+> $client($c) 客户端工具
+
+|  属性/方法  | 描述 | 示例 | 参数 |
+| ---------- | ---------- | ---------- | ---------- |
+| engine | 浏览器引擎(如：webkit,gecko) | $c.engine | - |
+| browser | 浏览器类型及版本(如：chrome,opera) | $c.browser | - |
+| platform | 客户端操作系统平台(如：windows,mac) | $c.platform | - |
+
 > $formatter($f) 格式化工具
 
 |  属性/方法  | 描述 | 示例 | 参数 |

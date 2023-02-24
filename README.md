@@ -53,8 +53,10 @@
   "build:util": "pnpm run --filter util build",
   "build:rest": "pnpm run --filter rest build",
   "build:sort": "pnpm run --filter sort build",
+  "build:indexdb": "pnpm run --filter indexdb build",
+  "build:pubsub": "pnpm run --filter pubsub build",
   "build:core": "pnpm run build:conf && pnpm run build:type && pnpm run build:crypto && pnpm run build:storage && pnpm run build:util && pnpm run build:rest",
-  "build": "pnpm run build:core && pnpm run --filter core build && pnpm run build:sort"
+  "build": "pnpm run build:core && pnpm run --filter core build && pnpm run build:sort && pnpm run build:indexdb && pnpm run build:pubsub"
 ```
 
 - 测试相关

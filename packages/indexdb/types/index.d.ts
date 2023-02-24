@@ -24,23 +24,6 @@ export declare const DATA_REGEX_PATTERN: {
     html: RegExp;
 };
 /**
- * @constant 数据分隔符常量
- */
-export declare const DATA_SEPARATOR: {
-    ampersand: string;
-    comma: string;
-    colon: string;
-    semicolon: string;
-    bar: string;
-    hyphen: string;
-    at: string;
-    dollar: string;
-    slash: string;
-    backslash: string;
-    underline: string;
-    whitespace: string;
-};
-/**
  * @constant 时间格式化常量
  */
 export declare const DATE_FORMATTER: {
@@ -175,7 +158,7 @@ export declare const DEFAULT_STORAGE_OPTIONS: {
     cryptoIv: string;
 };
 /**
- * @constant 排序模式常量
+ * @constant 排序模式
  */
 export declare const SORT_MODE: {
     index: {
@@ -186,7 +169,7 @@ export declare const SORT_MODE: {
     };
 };
 /**
- * @constant 排序类型常量
+ * @constant 排序类型
  */
 export declare const SORT_TYPE: {
     asc: string;
@@ -209,7 +192,7 @@ export declare const EMPTY_FUNC: () => void;
 export declare const EMPTY_ARRAY: never[];
 export declare const EMPTY_OBJECT: {};
 /**
- * @constant 请求数据格式常量
+ * @constant 请求数据格式
  */
 export declare const CONTENT_TYPE: {
     encoded: string;
@@ -217,7 +200,7 @@ export declare const CONTENT_TYPE: {
     json: string;
 };
 /**
- * @constant 默认请求配置常量
+ * @constant 请求默认配置
  */
 export declare const DEFAULT_REQUEST_OPTIONS: {
     origin: boolean;
@@ -238,7 +221,7 @@ export declare const DEFAULT_REQUEST_OPTIONS: {
     };
 };
 /**
- * @constant 默认响应配置常量
+ * @constant 默认响应配置
  */
 export declare const DEFAULT_RESPONSE_OPTIONS: {
     duration: number;
