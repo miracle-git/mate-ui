@@ -21,4 +21,4 @@ import PubSub from '@mate-ui/pubsub' // 单例模式
 | ---------- | ---------- | ---------- | ---------- |
 | on | 订阅消息 | PubSub.on('mate', () => {}) | type, handler |
 | emit | 发布消息 | PubSub.emit('mate', 'xxx') | type, data |
-| off | 退订消息 | PubSub.off('mate', , () => {}) | type, handler |
+| off | 退订消息 | PubSub.off('mate', () => {}) | type, handler |
