@@ -3,10 +3,10 @@ import { isNumber, isValidDate, isNullOrUndefined, isEmptyString } from '@mate-u
 export type NumberOptions = {
   precision: number,
   thousandth: boolean,
-  pretty: boolean,
-  reserve: boolean,
-  raw: boolean,
-  symbol: string
+  pretty?: boolean,
+  reserve?: boolean,
+  raw?: boolean,
+  symbol?: string
 }
 
 export const parseDate = (date, format) => {

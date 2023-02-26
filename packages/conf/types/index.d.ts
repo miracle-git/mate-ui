@@ -51,6 +51,14 @@ export declare const DATE_FORMATTER: {
     timeShort: string;
 };
 /**
+ * @constant 货币运算单位(k:千，m:百万，b:十亿)
+ */
+export declare const CURRENCY_UNIT: {
+    k: string;
+    m: string;
+    b: string;
+};
+/**
  * @constant 非对称加密算法类型
  */
 export declare const ASYMMETRIC_CRYPTO_TYPE: {

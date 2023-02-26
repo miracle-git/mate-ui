@@ -54,6 +54,15 @@ export const DATE_FORMATTER = {
 }
 
 /**
+ * @constant 货币运算单位(k:千，m:百万，b:十亿)
+ */
+export const CURRENCY_UNIT = {
+  k: '1000',
+  m: '1000000',
+  b: '10000000000'
+}
+
+/**
  * @constant 非对称加密算法类型
  */
 export const ASYMMETRIC_CRYPTO_TYPE = {

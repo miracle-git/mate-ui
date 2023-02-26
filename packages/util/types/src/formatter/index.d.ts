@@ -72,19 +72,53 @@ declare const _default: {
     }): any;
     /**
      * @method 格式化为价格(带千分位)
-     * @property { Number } precision 小数位精度(默认为2)
+     * @param { Number | String } data 数值
+     * @typedef { Object } options 格式化对象
      * @property { Boolean } thousandth 是否保留千分位(默认为true)
+     * @property { Number } precision 小数位精度(默认为2)
      * @property { String } symbol 占位符(当为空或不合法时)
-     * @property { String } unit 货币单位
+     * @property { String } unit 货币单位(默认为人民币￥)
      * @property { Boolean } prefix 是否添加前缀(当货币单位不为空时有效)
      * @returns { String } 格式化后的字符串
      */
-    price(num: any, { precision, thousandth, symbol, unit, prefix }?: {
-        precision?: number | undefined;
+    price(data: any, { thousandth, precision, symbol, unit, prefix }?: {
         thousandth?: boolean | undefined;
+        precision?: number | undefined;
         symbol?: string | undefined;
         unit?: string | undefined;
         prefix?: boolean | undefined;
+    }): any;
+    /**
+     * @method 格式化为百分比
+     * @param { Number | String } data 数值
+     * @typedef { Object } options 格式化对象
+     * @property { Boolean } thousandth 是否保留千分位
+     * @property { Number } precision 小数位精度(默认为2)
+     * @property { Boolean } pretty 是否将尾部多余0去掉
+     * @property { Boolean } raw 是否原样输出(不做任何处理)
+     * @property { String } symbol 占位符(当为空或不合法时)
+     * @property { Boolean } percent 是否需要乘以100
+     * @returns { String } 格式化后的字符串
+     */
+    percent(data: any, { thousandth, precision, pretty, raw, symbol, percent }?: {
+        thousandth?: boolean | undefined;
+        precision?: number | undefined;
+        pretty?: boolean | undefined;
+        raw?: boolean | undefined;
+        symbol?: string | undefined;
+        percent?: boolean | undefined;
+    }): any;
+    /**
+     * @method 格式化为货币(转化大数据)
+     * @param { Number | String } data 数值
+     * @typedef { Object } options 格式化对象
+     * @property { CURRENCY_UNIT } unit 运算单位(k:千，m:百万，b:十亿)
+     * @property { Number } precision 小数位精度(默认为2)
+     * @returns { String } 格式化后的字符串
+     */
+    money(data: any, { unit, precision }?: {
+        unit?: string | undefined;
+        precision?: number | undefined;
     }): any;
     /**
      * @method 格式化国际化
@@ -98,5 +132,24 @@ declare const _default: {
      * @returns { String } 格式化后的字符串
      */
     timezone(data: string): number | undefined;
+    /**
+     * @method 格式化版本号
+     * @param { String } data 版本号
+     * @returns { String } 格式化后的版本号
+     */
+    version(data: string | number): string | number;
+    /**
+     * @method 格式化数组
+     * @param { String } data 数组
+     * @returns { String } 格式化后的数组
+     */
+    array(data: any, sep?: string): any;
+    /**
+     * @method 格式化徽标
+     * @param { String } data 数字
+     * @param { Number } max 最大值(当前数字超过max则显示max+，否则显示当前数字)
+     * @returns { String } 格式化后的徽标
+     */
+    badge(data: any, max?: number): string;
 };
 export default _default;

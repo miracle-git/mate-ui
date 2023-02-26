@@ -198,7 +198,7 @@ module.exports = {
     'default',
     [
       '../../node_modules/jest-html-reporters', {
-        pageTitle: 'Mate Storage Test Report',
+        pageTitle: 'Mate Type Test Report',
         publicPath: './test/reporter',
         expand: true
       }

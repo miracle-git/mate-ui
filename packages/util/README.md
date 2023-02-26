@@ -40,8 +40,13 @@ import { $c, $f, $l, $n, $o, $s, $r, $v } from '@mate-ui/util'
 | number | 格式化数字(可配置千分位，有效数字，末尾去0美化等，返回：12,300.24) | $f.number('12300.2415') | data, { thousandth, precision, pretty, reserve, raw, symbol } |
 | integer | 格式化为整数(可配置千分位，返回：12,300) | $f.integer('12300.2415') | data, { thousandth, symbol } |
 | price | 格式化为价格(可配置千分位，有效数字，货币单位等，返回：$12,300.24) | $f.integer('12300.2415', { unit: '$' }) | data, { thousandth, precision, unit, symbol, prefix } |
+| percent | 格式化为百分比(可配置千分位，有效数字，是否乘以100等，返回：24.88%) | $f.percent('24.868', { percent: false }) | data, { thousandth, precision, symbol, percent } |
+| money | 格式化为货币(转化大数据，可配置有效数字，货币运算单位等，返回：12.30) | $f.integer('12300.2415', { unit: CURRENCY_UNIT.k }) | data, { precision, unit } |
 | timezone | 格式化时区 | $f.timezone('') | data |
 | locale | 格式化国际化 | $f.locale('') | data |
+| version | 格式化版本号(返回v1) | $f.version('1') | data |
+| array | 格式化数组(返回1:2:3) | $f.array([1,2,3],':') | data |
+| badge | 格式化徽标(返回99+) | $f.badge(120) | data |
 
 - $loader 脚本加载工具
 

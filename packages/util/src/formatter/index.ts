@@ -1,5 +1,5 @@
-import { DATA_REGEX_PATTERN, DATE_FORMATTER } from '@mate-ui/conf'
-import { isObject, isProp, isNullOrUndefined } from '@mate-ui/type'
+import { DATA_REGEX_PATTERN, DATE_FORMATTER, CURRENCY_UNIT } from '@mate-ui/conf'
+import { isArray, isObject, isProp, isNullOrUndefined } from '@mate-ui/type'
 import { parseDate, parseNumber } from '../../.internal/util'
 
 /**
@@ -80,17 +80,52 @@ export default {
   },
   /**
    * @method 格式化为价格(带千分位)
-   * @property { Number } precision 小数位精度(默认为2)
+   * @param { Number | String } data 数值
+   * @typedef { Object } options 格式化对象
    * @property { Boolean } thousandth 是否保留千分位(默认为true)
+   * @property { Number } precision 小数位精度(默认为2)
    * @property { String } symbol 占位符(当为空或不合法时)
-   * @property { String } unit 货币单位
+   * @property { String } unit 货币单位(默认为人民币￥)
    * @property { Boolean } prefix 是否添加前缀(当货币单位不为空时有效)
    * @returns { String } 格式化后的字符串
    */
-  price(num, { precision = 2, thousandth = true, symbol = '', unit = '', prefix = true } = {}) {
-    const res = parseNumber(num, { precision, thousandth, pretty: true, reserve: false, raw: false, symbol })
+  price(data, { thousandth = true, precision = 2, symbol = '', unit = '￥', prefix = true } = {}) {
+    const res = parseNumber(data, { thousandth, precision, pretty: true, reserve: false, raw: false, symbol })
     if (!unit) return res
     return prefix ? `${unit}${res}` : `${res}${unit}`
+  },
+  /**
+   * @method 格式化为百分比
+   * @param { Number | String } data 数值
+   * @typedef { Object } options 格式化对象
+   * @property { Boolean } thousandth 是否保留千分位
+   * @property { Number } precision 小数位精度(默认为2)
+   * @property { Boolean } pretty 是否将尾部多余0去掉
+   * @property { Boolean } raw 是否原样输出(不做任何处理)
+   * @property { String } symbol 占位符(当为空或不合法时)
+   * @property { Boolean } percent 是否需要乘以100
+   * @returns { String } 格式化后的字符串
+   */
+  percent(data, { thousandth = true, precision = 2, pretty = false, raw = false, symbol = '', percent = false } = {}) {
+    const res = percent ? data * 100 : data
+    return !data && data !== 0 ? data : (raw ? res + '%' : parseNumber(data, { thousandth, precision, pretty, raw, symbol }) + '%')
+  },
+  /**
+   * @method 格式化为货币(转化大数据)
+   * @param { Number | String } data 数值
+   * @typedef { Object } options 格式化对象
+   * @property { CURRENCY_UNIT } unit 运算单位(k:千，m:百万，b:十亿)
+   * @property { Number } precision 小数位精度(默认为2)
+   * @returns { String } 格式化后的字符串
+   */
+  money(data, { unit = CURRENCY_UNIT.k , precision = 2 } = {}) {
+    if (!data && data !== 0 && unit) {
+      if (unit) {
+        data = data / +unit
+      }
+      data = parseNumber(data, { thousandth: true, precision })
+    }
+    return data
   },
   /**
    * @method 格式化国际化
@@ -131,5 +166,30 @@ export default {
       res = format('-')
     }
     return res
+  },
+  /**
+   * @method 格式化版本号
+   * @param { String } data 版本号
+   * @returns { String } 格式化后的版本号
+   */
+  version(data:string|number) {
+    return !data && data !== 0 ? data : 'v' + data
+  },
+  /**
+   * @method 格式化数组
+   * @param { String } data 数组
+   * @returns { String } 格式化后的数组
+   */
+  array(data, sep = ',') {
+    return isArray(data) ? data.join(sep) : data.replace(',', sep)
+  },
+  /**
+   * @method 格式化徽标
+   * @param { String } data 数字
+   * @param { Number } max 最大值(当前数字超过max则显示max+，否则显示当前数字)
+   * @returns { String } 格式化后的徽标
+   */
+  badge(data, max = 99) {
+    return data ? (+data > max ? `${max}+` : data + '') : ''
   }
 }
