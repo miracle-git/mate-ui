@@ -1,0 +1,29 @@
+{
+  "name": "@mate-ui/theme-grace",
+  "version": "1.0.0",
+  "description": "Mate-UI component grace theme.",
+  "main": "lib/index.css",
+  "style": "lib/index.css",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "build": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miracle-git/mate-ui.git"
+  },
+  "keywords": [
+    "mate-ui",
+    "theme"
+  ],
+  "author": "Miracle He <hmiinyu@sina.com> (https://github.com/miracle-git)",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-less": "^5.0.0",
+    "gulp-autoprefixer": "^4.0.0"
+  }
+}

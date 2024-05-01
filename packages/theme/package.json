@@ -1,0 +1,57 @@
+{
+  "name": "@mate-ui/theme",
+  "version": "1.0.0",
+  "description": "Theme generator cli tool for Mate-UI",
+  "bin": {
+    "mate-ui-theme": "./bin/mate-ui-theme",
+    "mt": "./bin/mate-ui-theme"
+  },
+  "files": [
+    "bin",
+    "lib"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "xo"
+  },
+  "xo": {
+    "space": true,
+    "rule": {
+      "semi": 0,
+      "unicorn/no-process-exit": 0,
+      "import/no-dynamic-require": 0
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:miracle-git/mate-ui.git"
+  },
+  "keywords": [
+    "mate-ui",
+    "vue",
+    "theme",
+    "cli"
+  ],
+  "author": "Miracle He <hmiinyu@sina.com> (https://github.com/miracle-git)",
+  "engines": {
+    "node": ">=0.12.0"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "@mate-ui/theme-grace": "*"
+  },
+  "dependencies": {
+    "commander": "^2.9.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-nop": "0.0.3",
+    "gulp-less": "^5.0.0",
+    "ora": "^0.3.0",
+    "run-sequence": "^1.2.2"
+  },
+  "devDependencies": {
+    "@mate-ui/theme-grace": "^1.0.0",
+    "xo": "^0.17.0"
+  }
+}

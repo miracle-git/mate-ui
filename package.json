@@ -2,7 +2,7 @@
   "name": "mate-ui",
   "private": true,
   "version": "1.0.0",
-  "author": "Miracle He",
+  "author": "Miracle He <hmiinyu@sina.com> (https://github.com/miracle-git)",
   "description": "All-in-one frontend solution for enterprise-level application, support both Vue2/3, React v16+ and Angular v13+, as well as web, mobile and mini applications.",
   "main": "index.js",
   "type": "module",
