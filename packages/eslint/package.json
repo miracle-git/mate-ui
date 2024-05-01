@@ -1,0 +1,16 @@
+{
+  "name": "@mate-ui/eslint",
+  "version": "1.0.0",
+  "author": "Miracle He",
+  "description": "eslint common config.",
+  "main": "index.js",
+  "type": "module",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.56.0",
+    "eslint-config-turbo": "^1.12.2",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-unicorn": "^50.0.1"
+  }
+}

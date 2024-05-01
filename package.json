@@ -1,0 +1,39 @@
+{
+  "name": "mate-ui",
+  "private": true,
+  "version": "1.0.0",
+  "author": "Miracle He",
+  "description": "All-in-one frontend solution for enterprise-level application, support both Vue2/3, React v16+ and Angular v13+, as well as web, mobile and mini applications.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "husky",
+    "format": "prettier --write ."
+  },
+  "keywords": [
+    "frontend",
+    "icon",
+    "theme",
+    "vue",
+    "react",
+    "angular"
+  ],
+  "license": "MIT",
+  "packageManager": "pnpm@8.15.0",
+  "engines": {
+    "pnpm": ">=8.0"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx,vue,json,css,less,md}": [
+      "prettier --write ."
+    ]
+  },
+  "devDependencies": {
+    "@mate-ui/eslint": "workspace:^",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5",
+    "turbo": "^1.12.2"
+  }
+}

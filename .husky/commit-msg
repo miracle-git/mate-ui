@@ -1,0 +1,19 @@
+#!/usr/bin/env sh
+
+echo -e "\033[33m ------------------- 正在校验提交信息格式 -------------------- \033[0m"
+# 获取当前提交的 commit msg
+commit_msg=$(cat "$1")
+
+# 获取用户 email
+email=$(git config user.email)
+
+msg_re="^(feat|fix|perf|refactor|merge|docs|style|test|build|revert|ci|chore|release|workflow)(\(.+\))?: .{1,100}"
+
+if [[ ! $commit_msg =~ $msg_re ]]
+then
+	echo -e "\033[35m不合法的 commit 消息提交格式，请使用正确的格式，请使用 feat|fix|perf|refactor|merge|docs|style 加冒号等开头格式\033[0m"
+
+	# 异常退出
+	exit 1
+fi
+
