@@ -1,8 +1,0 @@
-{
-  "name": "@mate-ui/base",
-  "version": "1.0.0",
-  "description": "基于Web Components封装基础组件",
-  "dependencies": {
-    "@stencil/core": "^3.0.1"
-  }
-}
