@@ -5,12 +5,10 @@ module.exports = {
     node: true
   },
   extends: ['@mate-ui/eslint', 'prettier'],
-  overrides: [
-    {
-      files: ['*.config.{ts,js}'],
-      rules: {
-        'import/no-default-export': 'off'
-      }
+  overrides: [{
+    files: ['*.config.{ts,js}'],
+    rules: {
+      'import/no-default-export': 'off'
     }
-  ]
+  }]
 }
