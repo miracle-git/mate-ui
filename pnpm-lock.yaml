@@ -73,6 +73,10 @@ importers:
         version: 9.25.0(eslint@8.57.0)
 
   packages/icon:
+    dependencies:
+      '@stencil/core':
+        specifier: ^4.7.2
+        version: 4.17.2
     devDependencies:
       svgo:
         specifier: ^3.0.4
@@ -627,6 +631,12 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@stencil/core@4.17.2:
+    resolution: {integrity: sha512-MX7yaLmpTU9iZvCire9nhecTcE0qBlV0vPWrLMeIXewYN7/hb8B3NjnhQyBKC93FDPI8NBRmt6KIugLw9zcRZg==}
+    engines: {node: '>=16.0.0', npm: '>=7.10.0'}
+    hasBin: true
+    dev: false
 
   /@trysound/sax@0.2.0:
     resolution: {integrity: sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==}

@@ -1,8 +1,9 @@
 class MtHtmlElement extends HTMLElement {
-  constructor(html) {
+  constructor(html = '') {
     super()
-    const host = this.attachShadow({ mode: 'open' })
-    const style = `:host {
+    this.attachShadow({ mode: 'open' })
+    this._elementTemplate = document.createElement('template')
+    this._elementStyle = `:host {
       display: inline-block;
       font-size: inherit;
       width: 1em;
@@ -24,13 +25,22 @@ class MtHtmlElement extends HTMLElement {
         transform: rotateZ(360deg);
       }
     }`
-    const template = document.createElement('template')
-    template.innerHTML = `<style>${style}</style> ${html}`
-    host.appendChild(template.content.cloneNode(true))
+    if (html) {
+      this._elementTemplate.innerHTML = `<style>${this._elementStyle}</style> ${html}`
+      this.shadowRoot.appendChild(this._elementTemplate.content.cloneNode(true))
+    }
   }
 
   static get observedAttributes() {
-    return ['size', 'color']
+    return ['name', 'size', 'color']
+  }
+
+  get name() {
+    return this.getAttribute('name')
+  }
+
+  set name(val) {
+    this.setAttribute('name', val)
   }
 
   get size() {
@@ -53,6 +63,9 @@ class MtHtmlElement extends HTMLElement {
     if (oldVal === newVal) return
 
     switch (attr) {
+    case 'name':
+      this.name = newVal
+      break
     case 'size':
       this.size = newVal
       this.style.fontSize = newVal
