@@ -1,615 +1,316 @@
-import AddLocation from './component/add-location'
-import Aim from './component/aim'
-import AlarmClock from './component/alarm-clock'
-import Apple from './component/apple'
-import ArrowDownBold from './component/arrow-down-bold'
-import ArrowDown from './component/arrow-down'
-import ArrowLeftBold from './component/arrow-left-bold'
-import ArrowLeft from './component/arrow-left'
-import ArrowRightBold from './component/arrow-right-bold'
-import ArrowRight from './component/arrow-right'
-import ArrowUpBold from './component/arrow-up-bold'
-import ArrowUp from './component/arrow-up'
-import Avatar from './component/avatar'
-import Back from './component/back'
-import Baseball from './component/baseball'
-import Basketball from './component/basketball'
-import BellFilled from './component/bell-filled'
-import Bell from './component/bell'
-import Bicycle from './component/bicycle'
-import BottomLeft from './component/bottom-left'
-import BottomRight from './component/bottom-right'
-import Bottom from './component/bottom'
-import Bowl from './component/bowl'
-import Box from './component/box'
-import Briefcase from './component/briefcase'
-import BrushFilled from './component/brush-filled'
-import Brush from './component/brush'
-import Burger from './component/burger'
-import Calendar from './component/calendar'
-import CameraFilled from './component/camera-filled'
-import Camera from './component/camera'
-import CaretBottom from './component/caret-bottom'
-import CaretLeft from './component/caret-left'
-import CaretRight from './component/caret-right'
-import CaretTop from './component/caret-top'
-import Cellphone from './component/cellphone'
-import ChatDotRound from './component/chat-dot-round'
-import ChatDotSquare from './component/chat-dot-square'
-import ChatLineRound from './component/chat-line-round'
-import ChatLineSquare from './component/chat-line-square'
-import ChatRound from './component/chat-round'
-import ChatSquare from './component/chat-square'
-import Check from './component/check'
-import Checked from './component/checked'
-import Cherry from './component/cherry'
-import Chicken from './component/chicken'
-import ChromeFilled from './component/chrome-filled'
-import CircleCheckFilled from './component/circle-check-filled'
-import CircleCheck from './component/circle-check'
-import CircleCloseFilled from './component/circle-close-filled'
-import CircleClose from './component/circle-close'
-import CirclePlusFilled from './component/circle-plus-filled'
-import CirclePlus from './component/circle-plus'
-import Clock from './component/clock'
-import CloseBold from './component/close-bold'
-import Close from './component/close'
-import Cloudy from './component/cloudy'
-import CoffeeCup from './component/coffee-cup'
-import Coffee from './component/coffee'
-import Coin from './component/coin'
-import ColdDrink from './component/cold-drink'
-import CollectionTag from './component/collection-tag'
-import Collection from './component/collection'
-import Comment from './component/comment'
-import Compass from './component/compass'
-import Connection from './component/connection'
-import Coordinate from './component/coordinate'
-import CopyDocument from './component/copy-document'
-import Cpu from './component/cpu'
-import CreditCard from './component/credit-card'
-import Crop from './component/crop'
-import dArrowLeft from './component/d-arrow-left'
-import dArrowRight from './component/d-arrow-right'
-import dCaret from './component/d-caret'
-import DataAnalysis from './component/data-analysis'
-import DataBoard from './component/data-board'
-import DataLine from './component/data-line'
-import DeleteFilled from './component/delete-filled'
-import DeleteLocation from './component/delete-location'
-import Delete from './component/delete'
-import Dessert from './component/dessert'
-import Discount from './component/discount'
-import DishDot from './component/dish-dot'
-import Dish from './component/dish'
-import DocumentAdd from './component/document-add'
-import DocumentChecked from './component/document-checked'
-import DocumentCopy from './component/document-copy'
-import DocumentDelete from './component/document-delete'
-import DocumentRemove from './component/document-remove'
-import Document from './component/document'
-import DownCircle from './component/down-circle'
-import Down from './component/down'
-import Download from './component/download'
-import Drizzling from './component/drizzling'
-import EditPen from './component/edit-pen'
-import Edit from './component/edit'
-import ElemeFilled from './component/eleme-filled'
-import Eleme from './component/eleme'
-import ElementPlus from './component/element-plus'
-import Expand from './component/expand'
-import Failed from './component/failed'
-import Female from './component/female'
-import Files from './component/files'
-import Film from './component/film'
-import Filter from './component/filter'
-import Finished from './component/finished'
-import FirstAidKit from './component/first-aid-kit'
-import Flag from './component/flag'
-import Fold from './component/fold'
-import FolderAdd from './component/folder-add'
-import FolderChecked from './component/folder-checked'
-import FolderDelete from './component/folder-delete'
-import FolderOpened from './component/folder-opened'
-import FolderRemove from './component/folder-remove'
-import Folder from './component/folder'
-import Food from './component/food'
-import Football from './component/football'
-import ForkSpoon from './component/fork-spoon'
-import Fries from './component/fries'
-import FullScreen from './component/full-screen'
-import GobletFull from './component/goblet-full'
-import GobletSquareFull from './component/goblet-square-full'
-import GobletSquare from './component/goblet-square'
-import Goblet from './component/goblet'
-import GoldMedal from './component/gold-medal'
-import GoodsFilled from './component/goods-filled'
-import Goods from './component/goods'
-import Grape from './component/grape'
-import Grid from './component/grid'
-import Guide from './component/guide'
-import Handbag from './component/handbag'
-import Headset from './component/headset'
-import HelpFilled from './component/help-filled'
-import Help from './component/help'
-import Hide from './component/hide'
-import Histogram from './component/histogram'
-import HomeFilled from './component/home-filled'
-import HotWater from './component/hot-water'
-import House from './component/house'
-import IceCreamRound from './component/ice-cream-round'
-import IceCreamSquare from './component/ice-cream-square'
-import IceCream from './component/ice-cream'
-import IceDrink from './component/ice-drink'
-import IceTea from './component/ice-tea'
-import InfoFilled from './component/info-filled'
-import Iphone from './component/iphone'
-import Key from './component/key'
-import KnifeFork from './component/knife-fork'
-import LeftCircle from './component/left-circle'
-import Left from './component/left'
-import Lightning from './component/lightning'
-import Link from './component/link'
-import List from './component/list'
-import Loading from './component/loading'
-import LocationFilled from './component/location-filled'
-import LocationInformation from './component/location-information'
-import Location from './component/location'
-import Lock from './component/lock'
-import Lollipop from './component/lollipop'
-import MagicStick from './component/magic-stick'
-import Magnet from './component/magnet'
-import Male from './component/male'
-import Management from './component/management'
-import MapLocation from './component/map-location'
-import Medal from './component/medal'
-import Memo from './component/memo'
-import Menu from './component/menu'
-import MessageBox from './component/message-box'
-import Message from './component/message'
-import Mic from './component/mic'
-import Microphone from './component/microphone'
-import MilkTea from './component/milk-tea'
-import Minus from './component/minus'
-import Money from './component/money'
-import Monitor from './component/monitor'
-import MoonNight from './component/moon-night'
-import Moon from './component/moon'
-import MoreFilled from './component/more-filled'
-import More from './component/more'
-import MostlyCloudy from './component/mostly-cloudy'
-import Mouse from './component/mouse'
-import Mug from './component/mug'
-import MuteNotification from './component/mute-notification'
-import Mute from './component/mute'
-import NoSmoking from './component/no-smoking'
-import Notebook from './component/notebook'
-import Notification from './component/notification'
-import Odometer from './component/odometer'
-import OfficeBuilding from './component/office-building'
-import Open from './component/open'
-import Operation from './component/operation'
-import Opportunity from './component/opportunity'
-import Orange from './component/orange'
-import Paperclip from './component/paperclip'
-import PartlyCloudy from './component/partly-cloudy'
-import Pear from './component/pear'
-import PhoneFilled from './component/phone-filled'
-import Phone from './component/phone'
-import PictureFilled from './component/picture-filled'
-import PictureRounded from './component/picture-rounded'
-import Picture from './component/picture'
-import PieChart from './component/pie-chart'
-import Place from './component/place'
-import Platform from './component/platform'
-import Plus from './component/plus'
-import Pointer from './component/pointer'
-import Position from './component/position'
-import Postcard from './component/postcard'
-import Pouring from './component/pouring'
-import Present from './component/present'
-import PriceTag from './component/price-tag'
-import Printer from './component/printer'
-import Promotion from './component/promotion'
-import QuartzWatch from './component/quartz-watch'
-import QuestionFilled from './component/question-filled'
-import Rank from './component/rank'
-import ReadingLamp from './component/reading-lamp'
-import Reading from './component/reading'
-import RefreshLeft from './component/refresh-left'
-import RefreshRight from './component/refresh-right'
-import Refresh from './component/refresh'
-import Refrigerator from './component/refrigerator'
-import RemoveFilled from './component/remove-filled'
-import Remove from './component/remove'
-import RightCircle from './component/right-circle'
-import Right from './component/right'
-import ScaleToOriginal from './component/scale-to-original'
-import School from './component/school'
-import Scissor from './component/scissor'
-import Search from './component/search'
-import Select from './component/select'
-import Sell from './component/sell'
-import SemiSelect from './component/semi-select'
-import Service from './component/service'
-import SetUp from './component/set-up'
-import Setting from './component/setting'
-import Share from './component/share'
-import Ship from './component/ship'
-import Shop from './component/shop'
-import ShoppingBag from './component/shopping-bag'
-import ShoppingCartFull from './component/shopping-cart-full'
-import ShoppingCart from './component/shopping-cart'
-import ShoppingTrolley from './component/shopping-trolley'
-import Smoking from './component/smoking'
-import Soccer from './component/soccer'
-import SoldOut from './component/sold-out'
-import SortDown from './component/sort-down'
-import SortUp from './component/sort-up'
-import Sort from './component/sort'
-import Stamp from './component/stamp'
-import StarFilled from './component/star-filled'
-import Star from './component/star'
-import Stopwatch from './component/stopwatch'
-import SuccessFilled from './component/success-filled'
-import Sugar from './component/sugar'
-import SuitcaseLine from './component/suitcase-line'
-import Suitcase from './component/suitcase'
-import Sunny from './component/sunny'
-import Sunrise from './component/sunrise'
-import Sunset from './component/sunset'
-import SwitchButton from './component/switch-button'
-import SwitchFilled from './component/switch-filled'
-import Switch from './component/switch'
-import TakeawayBox from './component/takeaway-box'
-import Ticket from './component/ticket'
-import Tickets from './component/tickets'
-import Timer from './component/timer'
-import ToiletPaper from './component/toilet-paper'
-import Tools from './component/tools'
-import TopLeft from './component/top-left'
-import TopRight from './component/top-right'
-import Top from './component/top'
-import TrendCharts from './component/trend-charts'
-import TrophyBase from './component/trophy-base'
-import Trophy from './component/trophy'
-import TurnOff from './component/turn-off'
-import Umbrella from './component/umbrella'
-import Unlock from './component/unlock'
-import UpCircle from './component/up-circle'
-import Up from './component/up'
-import UploadFilled from './component/upload-filled'
-import Upload from './component/upload'
-import UserFilled from './component/user-filled'
-import User from './component/user'
-import Van from './component/van'
-import VideoCameraFilled from './component/video-camera-filled'
-import VideoCamera from './component/video-camera'
-import VideoPause from './component/video-pause'
-import VideoPlay from './component/video-play'
-import View from './component/view'
-import WalletFilled from './component/wallet-filled'
-import Wallet from './component/wallet'
-import WarnTriangleFilled from './component/warn-triangle-filled'
-import WarningFilled from './component/warning-filled'
-import Warning from './component/warning'
-import Watch from './component/watch'
-import Watermelon from './component/watermelon'
-import WindPower from './component/wind-power'
-import ZoomIn from './component/zoom-in'
-import ZoomOut from './component/zoom-out'
+/* Automatically generated by @mate-ui 'script/transfer.mjs' */
+import AddLocation from './component/add-location.js'
+import Aim from './component/aim.js'
+import AlarmClock from './component/alarm-clock.js'
+import Apple from './component/apple.js'
+import ArrowDownBold from './component/arrow-down-bold.js'
+import ArrowDown from './component/arrow-down.js'
+import ArrowLeftBold from './component/arrow-left-bold.js'
+import ArrowLeft from './component/arrow-left.js'
+import ArrowRightBold from './component/arrow-right-bold.js'
+import ArrowRight from './component/arrow-right.js'
+import ArrowUpBold from './component/arrow-up-bold.js'
+import ArrowUp from './component/arrow-up.js'
+import Avatar from './component/avatar.js'
+import Back from './component/back.js'
+import Baseball from './component/baseball.js'
+import Basketball from './component/basketball.js'
+import BellFilled from './component/bell-filled.js'
+import Bell from './component/bell.js'
+import Bicycle from './component/bicycle.js'
+import BottomLeft from './component/bottom-left.js'
+import BottomRight from './component/bottom-right.js'
+import Bottom from './component/bottom.js'
+import Bowl from './component/bowl.js'
+import Box from './component/box.js'
+import Briefcase from './component/briefcase.js'
+import BrushFilled from './component/brush-filled.js'
+import Brush from './component/brush.js'
+import Burger from './component/burger.js'
+import Calendar from './component/calendar.js'
+import CameraFilled from './component/camera-filled.js'
+import Camera from './component/camera.js'
+import CaretBottom from './component/caret-bottom.js'
+import CaretLeft from './component/caret-left.js'
+import CaretRight from './component/caret-right.js'
+import CaretTop from './component/caret-top.js'
+import Cellphone from './component/cellphone.js'
+import ChatDotRound from './component/chat-dot-round.js'
+import ChatDotSquare from './component/chat-dot-square.js'
+import ChatLineRound from './component/chat-line-round.js'
+import ChatLineSquare from './component/chat-line-square.js'
+import ChatRound from './component/chat-round.js'
+import ChatSquare from './component/chat-square.js'
+import Check from './component/check.js'
+import Checked from './component/checked.js'
+import Cherry from './component/cherry.js'
+import Chicken from './component/chicken.js'
+import ChromeFilled from './component/chrome-filled.js'
+import CircleCheckFilled from './component/circle-check-filled.js'
+import CircleCheck from './component/circle-check.js'
+import CircleCloseFilled from './component/circle-close-filled.js'
+import CircleClose from './component/circle-close.js'
+import CirclePlusFilled from './component/circle-plus-filled.js'
+import CirclePlus from './component/circle-plus.js'
+import Clock from './component/clock.js'
+import CloseBold from './component/close-bold.js'
+import Close from './component/close.js'
+import Cloudy from './component/cloudy.js'
+import CoffeeCup from './component/coffee-cup.js'
+import Coffee from './component/coffee.js'
+import Coin from './component/coin.js'
+import ColdDrink from './component/cold-drink.js'
+import CollectionTag from './component/collection-tag.js'
+import Collection from './component/collection.js'
+import Comment from './component/comment.js'
+import Compass from './component/compass.js'
+import Connection from './component/connection.js'
+import Coordinate from './component/coordinate.js'
+import CopyDocument from './component/copy-document.js'
+import Cpu from './component/cpu.js'
+import CreditCard from './component/credit-card.js'
+import Crop from './component/crop.js'
+import dArrowLeft from './component/d-arrow-left.js'
+import dArrowRight from './component/d-arrow-right.js'
+import dCaret from './component/d-caret.js'
+import DataAnalysis from './component/data-analysis.js'
+import DataBoard from './component/data-board.js'
+import DataLine from './component/data-line.js'
+import DeleteFilled from './component/delete-filled.js'
+import DeleteLocation from './component/delete-location.js'
+import Delete from './component/delete.js'
+import Dessert from './component/dessert.js'
+import Discount from './component/discount.js'
+import DishDot from './component/dish-dot.js'
+import Dish from './component/dish.js'
+import DocumentAdd from './component/document-add.js'
+import DocumentChecked from './component/document-checked.js'
+import DocumentCopy from './component/document-copy.js'
+import DocumentDelete from './component/document-delete.js'
+import DocumentRemove from './component/document-remove.js'
+import Document from './component/document.js'
+import DownCircle from './component/down-circle.js'
+import Down from './component/down.js'
+import Download from './component/download.js'
+import Drizzling from './component/drizzling.js'
+import EditPen from './component/edit-pen.js'
+import Edit from './component/edit.js'
+import ElemeFilled from './component/eleme-filled.js'
+import Eleme from './component/eleme.js'
+import ElementPlus from './component/element-plus.js'
+import Expand from './component/expand.js'
+import Failed from './component/failed.js'
+import Female from './component/female.js'
+import Files from './component/files.js'
+import Film from './component/film.js'
+import Filter from './component/filter.js'
+import Finished from './component/finished.js'
+import FirstAidKit from './component/first-aid-kit.js'
+import Flag from './component/flag.js'
+import Fold from './component/fold.js'
+import FolderAdd from './component/folder-add.js'
+import FolderChecked from './component/folder-checked.js'
+import FolderDelete from './component/folder-delete.js'
+import FolderOpened from './component/folder-opened.js'
+import FolderRemove from './component/folder-remove.js'
+import Folder from './component/folder.js'
+import Food from './component/food.js'
+import Football from './component/football.js'
+import ForkSpoon from './component/fork-spoon.js'
+import Fries from './component/fries.js'
+import FullScreen from './component/full-screen.js'
+import GobletFull from './component/goblet-full.js'
+import GobletSquareFull from './component/goblet-square-full.js'
+import GobletSquare from './component/goblet-square.js'
+import Goblet from './component/goblet.js'
+import GoldMedal from './component/gold-medal.js'
+import GoodsFilled from './component/goods-filled.js'
+import Goods from './component/goods.js'
+import Grape from './component/grape.js'
+import Grid from './component/grid.js'
+import Guide from './component/guide.js'
+import Handbag from './component/handbag.js'
+import Headset from './component/headset.js'
+import HelpFilled from './component/help-filled.js'
+import Help from './component/help.js'
+import Hide from './component/hide.js'
+import Histogram from './component/histogram.js'
+import HomeFilled from './component/home-filled.js'
+import HotWater from './component/hot-water.js'
+import House from './component/house.js'
+import IceCreamRound from './component/ice-cream-round.js'
+import IceCreamSquare from './component/ice-cream-square.js'
+import IceCream from './component/ice-cream.js'
+import IceDrink from './component/ice-drink.js'
+import IceTea from './component/ice-tea.js'
+import Icons from './component/icons.js'
+import InfoFilled from './component/info-filled.js'
+import Iphone from './component/iphone.js'
+import Key from './component/key.js'
+import KnifeFork from './component/knife-fork.js'
+import LeftCircle from './component/left-circle.js'
+import Left from './component/left.js'
+import Lightning from './component/lightning.js'
+import Link from './component/link.js'
+import List from './component/list.js'
+import Loading from './component/loading.js'
+import LocationFilled from './component/location-filled.js'
+import LocationInformation from './component/location-information.js'
+import Location from './component/location.js'
+import Lock from './component/lock.js'
+import Lollipop from './component/lollipop.js'
+import MagicStick from './component/magic-stick.js'
+import Magnet from './component/magnet.js'
+import Male from './component/male.js'
+import Management from './component/management.js'
+import MapLocation from './component/map-location.js'
+import Medal from './component/medal.js'
+import Memo from './component/memo.js'
+import Menu from './component/menu.js'
+import MessageBox from './component/message-box.js'
+import Message from './component/message.js'
+import Mic from './component/mic.js'
+import Microphone from './component/microphone.js'
+import MilkTea from './component/milk-tea.js'
+import Minus from './component/minus.js'
+import Money from './component/money.js'
+import Monitor from './component/monitor.js'
+import MoonNight from './component/moon-night.js'
+import Moon from './component/moon.js'
+import MoreFilled from './component/more-filled.js'
+import More from './component/more.js'
+import MostlyCloudy from './component/mostly-cloudy.js'
+import Mouse from './component/mouse.js'
+import Mug from './component/mug.js'
+import MuteNotification from './component/mute-notification.js'
+import Mute from './component/mute.js'
+import NoSmoking from './component/no-smoking.js'
+import Notebook from './component/notebook.js'
+import Notification from './component/notification.js'
+import Odometer from './component/odometer.js'
+import OfficeBuilding from './component/office-building.js'
+import Open from './component/open.js'
+import Operation from './component/operation.js'
+import Opportunity from './component/opportunity.js'
+import Orange from './component/orange.js'
+import Paperclip from './component/paperclip.js'
+import PartlyCloudy from './component/partly-cloudy.js'
+import Pear from './component/pear.js'
+import PhoneFilled from './component/phone-filled.js'
+import Phone from './component/phone.js'
+import PictureFilled from './component/picture-filled.js'
+import PictureRounded from './component/picture-rounded.js'
+import Picture from './component/picture.js'
+import PieChart from './component/pie-chart.js'
+import Place from './component/place.js'
+import Platform from './component/platform.js'
+import Plus from './component/plus.js'
+import Pointer from './component/pointer.js'
+import Position from './component/position.js'
+import Postcard from './component/postcard.js'
+import Pouring from './component/pouring.js'
+import Present from './component/present.js'
+import PriceTag from './component/price-tag.js'
+import Printer from './component/printer.js'
+import Promotion from './component/promotion.js'
+import QuartzWatch from './component/quartz-watch.js'
+import QuestionFilled from './component/question-filled.js'
+import Rank from './component/rank.js'
+import ReadingLamp from './component/reading-lamp.js'
+import Reading from './component/reading.js'
+import RefreshLeft from './component/refresh-left.js'
+import RefreshRight from './component/refresh-right.js'
+import Refresh from './component/refresh.js'
+import Refrigerator from './component/refrigerator.js'
+import RemoveFilled from './component/remove-filled.js'
+import Remove from './component/remove.js'
+import RightCircle from './component/right-circle.js'
+import Right from './component/right.js'
+import ScaleToOriginal from './component/scale-to-original.js'
+import School from './component/school.js'
+import Scissor from './component/scissor.js'
+import Search from './component/search.js'
+import Select from './component/select.js'
+import Sell from './component/sell.js'
+import SemiSelect from './component/semi-select.js'
+import Service from './component/service.js'
+import SetUp from './component/set-up.js'
+import Setting from './component/setting.js'
+import Share from './component/share.js'
+import Ship from './component/ship.js'
+import Shop from './component/shop.js'
+import ShoppingBag from './component/shopping-bag.js'
+import ShoppingCartFull from './component/shopping-cart-full.js'
+import ShoppingCart from './component/shopping-cart.js'
+import ShoppingTrolley from './component/shopping-trolley.js'
+import Smoking from './component/smoking.js'
+import Soccer from './component/soccer.js'
+import SoldOut from './component/sold-out.js'
+import SortDown from './component/sort-down.js'
+import SortUp from './component/sort-up.js'
+import Sort from './component/sort.js'
+import Stamp from './component/stamp.js'
+import StarFilled from './component/star-filled.js'
+import Star from './component/star.js'
+import Stopwatch from './component/stopwatch.js'
+import SuccessFilled from './component/success-filled.js'
+import Sugar from './component/sugar.js'
+import SuitcaseLine from './component/suitcase-line.js'
+import Suitcase from './component/suitcase.js'
+import Sunny from './component/sunny.js'
+import Sunrise from './component/sunrise.js'
+import Sunset from './component/sunset.js'
+import SwitchButton from './component/switch-button.js'
+import SwitchFilled from './component/switch-filled.js'
+import Switch from './component/switch.js'
+import TakeawayBox from './component/takeaway-box.js'
+import Ticket from './component/ticket.js'
+import Tickets from './component/tickets.js'
+import Timer from './component/timer.js'
+import ToiletPaper from './component/toilet-paper.js'
+import Tools from './component/tools.js'
+import TopLeft from './component/top-left.js'
+import TopRight from './component/top-right.js'
+import Top from './component/top.js'
+import TrendCharts from './component/trend-charts.js'
+import TrophyBase from './component/trophy-base.js'
+import Trophy from './component/trophy.js'
+import TurnOff from './component/turn-off.js'
+import Umbrella from './component/umbrella.js'
+import Unlock from './component/unlock.js'
+import UpCircle from './component/up-circle.js'
+import Up from './component/up.js'
+import UploadFilled from './component/upload-filled.js'
+import Upload from './component/upload.js'
+import UserFilled from './component/user-filled.js'
+import User from './component/user.js'
+import Van from './component/van.js'
+import VideoCameraFilled from './component/video-camera-filled.js'
+import VideoCamera from './component/video-camera.js'
+import VideoPause from './component/video-pause.js'
+import VideoPlay from './component/video-play.js'
+import View from './component/view.js'
+import WalletFilled from './component/wallet-filled.js'
+import Wallet from './component/wallet.js'
+import WarnTriangleFilled from './component/warn-triangle-filled.js'
+import WarningFilled from './component/warning-filled.js'
+import Warning from './component/warning.js'
+import Watch from './component/watch.js'
+import Watermelon from './component/watermelon.js'
+import WindPower from './component/wind-power.js'
+import ZoomIn from './component/zoom-in.js'
+import ZoomOut from './component/zoom-out.js'
 
 const components = import.meta.glob('./component/*.js', { import: 'default' })
 
-export {
-  AddLocation,
-  Aim,
-  AlarmClock,
-  Apple,
-  ArrowDownBold,
-  ArrowDown,
-  ArrowLeftBold,
-  ArrowLeft,
-  ArrowRightBold,
-  ArrowRight,
-  ArrowUpBold,
-  ArrowUp,
-  Avatar,
-  Back,
-  Baseball,
-  Basketball,
-  BellFilled,
-  Bell,
-  Bicycle,
-  BottomLeft,
-  BottomRight,
-  Bottom,
-  Bowl,
-  Box,
-  Briefcase,
-  BrushFilled,
-  Brush,
-  Burger,
-  Calendar,
-  CameraFilled,
-  Camera,
-  CaretBottom,
-  CaretLeft,
-  CaretRight,
-  CaretTop,
-  Cellphone,
-  ChatDotRound,
-  ChatDotSquare,
-  ChatLineRound,
-  ChatLineSquare,
-  ChatRound,
-  ChatSquare,
-  Check,
-  Checked,
-  Cherry,
-  Chicken,
-  ChromeFilled,
-  CircleCheckFilled,
-  CircleCheck,
-  CircleCloseFilled,
-  CircleClose,
-  CirclePlusFilled,
-  CirclePlus,
-  Clock,
-  CloseBold,
-  Close,
-  Cloudy,
-  CoffeeCup,
-  Coffee,
-  Coin,
-  ColdDrink,
-  CollectionTag,
-  Collection,
-  Comment,
-  Compass,
-  Connection,
-  Coordinate,
-  CopyDocument,
-  Cpu,
-  CreditCard,
-  Crop,
-  dArrowLeft,
-  dArrowRight,
-  dCaret,
-  DataAnalysis,
-  DataBoard,
-  DataLine,
-  DeleteFilled,
-  DeleteLocation,
-  Delete,
-  Dessert,
-  Discount,
-  DishDot,
-  Dish,
-  DocumentAdd,
-  DocumentChecked,
-  DocumentCopy,
-  DocumentDelete,
-  DocumentRemove,
-  Document,
-  DownCircle,
-  Down,
-  Download,
-  Drizzling,
-  EditPen,
-  Edit,
-  ElemeFilled,
-  Eleme,
-  ElementPlus,
-  Expand,
-  Failed,
-  Female,
-  Files,
-  Film,
-  Filter,
-  Finished,
-  FirstAidKit,
-  Flag,
-  Fold,
-  FolderAdd,
-  FolderChecked,
-  FolderDelete,
-  FolderOpened,
-  FolderRemove,
-  Folder,
-  Food,
-  Football,
-  ForkSpoon,
-  Fries,
-  FullScreen,
-  GobletFull,
-  GobletSquareFull,
-  GobletSquare,
-  Goblet,
-  GoldMedal,
-  GoodsFilled,
-  Goods,
-  Grape,
-  Grid,
-  Guide,
-  Handbag,
-  Headset,
-  HelpFilled,
-  Help,
-  Hide,
-  Histogram,
-  HomeFilled,
-  HotWater,
-  House,
-  IceCreamRound,
-  IceCreamSquare,
-  IceCream,
-  IceDrink,
-  IceTea,
-  InfoFilled,
-  Iphone,
-  Key,
-  KnifeFork,
-  LeftCircle,
-  Left,
-  Lightning,
-  Link,
-  List,
-  Loading,
-  LocationFilled,
-  LocationInformation,
-  Location,
-  Lock,
-  Lollipop,
-  MagicStick,
-  Magnet,
-  Male,
-  Management,
-  MapLocation,
-  Medal,
-  Memo,
-  Menu,
-  MessageBox,
-  Message,
-  Mic,
-  Microphone,
-  MilkTea,
-  Minus,
-  Money,
-  Monitor,
-  MoonNight,
-  Moon,
-  MoreFilled,
-  More,
-  MostlyCloudy,
-  Mouse,
-  Mug,
-  MuteNotification,
-  Mute,
-  NoSmoking,
-  Notebook,
-  Notification,
-  Odometer,
-  OfficeBuilding,
-  Open,
-  Operation,
-  Opportunity,
-  Orange,
-  Paperclip,
-  PartlyCloudy,
-  Pear,
-  PhoneFilled,
-  Phone,
-  PictureFilled,
-  PictureRounded,
-  Picture,
-  PieChart,
-  Place,
-  Platform,
-  Plus,
-  Pointer,
-  Position,
-  Postcard,
-  Pouring,
-  Present,
-  PriceTag,
-  Printer,
-  Promotion,
-  QuartzWatch,
-  QuestionFilled,
-  Rank,
-  ReadingLamp,
-  Reading,
-  RefreshLeft,
-  RefreshRight,
-  Refresh,
-  Refrigerator,
-  RemoveFilled,
-  Remove,
-  RightCircle,
-  Right,
-  ScaleToOriginal,
-  School,
-  Scissor,
-  Search,
-  Select,
-  Sell,
-  SemiSelect,
-  Service,
-  SetUp,
-  Setting,
-  Share,
-  Ship,
-  Shop,
-  ShoppingBag,
-  ShoppingCartFull,
-  ShoppingCart,
-  ShoppingTrolley,
-  Smoking,
-  Soccer,
-  SoldOut,
-  SortDown,
-  SortUp,
-  Sort,
-  Stamp,
-  StarFilled,
-  Star,
-  Stopwatch,
-  SuccessFilled,
-  Sugar,
-  SuitcaseLine,
-  Suitcase,
-  Sunny,
-  Sunrise,
-  Sunset,
-  SwitchButton,
-  SwitchFilled,
-  Switch,
-  TakeawayBox,
-  Ticket,
-  Tickets,
-  Timer,
-  ToiletPaper,
-  Tools,
-  TopLeft,
-  TopRight,
-  Top,
-  TrendCharts,
-  TrophyBase,
-  Trophy,
-  TurnOff,
-  Umbrella,
-  Unlock,
-  UpCircle,
-  Up,
-  UploadFilled,
-  Upload,
-  UserFilled,
-  User,
-  Van,
-  VideoCameraFilled,
-  VideoCamera,
-  VideoPause,
-  VideoPlay,
-  View,
-  WalletFilled,
-  Wallet,
-  WarnTriangleFilled,
-  WarningFilled,
-  Warning,
-  Watch,
-  Watermelon,
-  WindPower,
-  ZoomIn,
-  ZoomOut
-}
+export { AddLocation,Aim,AlarmClock,Apple,ArrowDownBold,ArrowDown,ArrowLeftBold,ArrowLeft,ArrowRightBold,ArrowRight,ArrowUpBold,ArrowUp,Avatar,Back,Baseball,Basketball,BellFilled,Bell,Bicycle,BottomLeft,BottomRight,Bottom,Bowl,Box,Briefcase,BrushFilled,Brush,Burger,Calendar,CameraFilled,Camera,CaretBottom,CaretLeft,CaretRight,CaretTop,Cellphone,ChatDotRound,ChatDotSquare,ChatLineRound,ChatLineSquare,ChatRound,ChatSquare,Check,Checked,Cherry,Chicken,ChromeFilled,CircleCheckFilled,CircleCheck,CircleCloseFilled,CircleClose,CirclePlusFilled,CirclePlus,Clock,CloseBold,Close,Cloudy,CoffeeCup,Coffee,Coin,ColdDrink,CollectionTag,Collection,Comment,Compass,Connection,Coordinate,CopyDocument,Cpu,CreditCard,Crop,dArrowLeft,dArrowRight,dCaret,DataAnalysis,DataBoard,DataLine,DeleteFilled,DeleteLocation,Delete,Dessert,Discount,DishDot,Dish,DocumentAdd,DocumentChecked,DocumentCopy,DocumentDelete,DocumentRemove,Document,DownCircle,Down,Download,Drizzling,EditPen,Edit,ElemeFilled,Eleme,ElementPlus,Expand,Failed,Female,Files,Film,Filter,Finished,FirstAidKit,Flag,Fold,FolderAdd,FolderChecked,FolderDelete,FolderOpened,FolderRemove,Folder,Food,Football,ForkSpoon,Fries,FullScreen,GobletFull,GobletSquareFull,GobletSquare,Goblet,GoldMedal,GoodsFilled,Goods,Grape,Grid,Guide,Handbag,Headset,HelpFilled,Help,Hide,Histogram,HomeFilled,HotWater,House,IceCreamRound,IceCreamSquare,IceCream,IceDrink,IceTea,Icons,InfoFilled,Iphone,Key,KnifeFork,LeftCircle,Left,Lightning,Link,List,Loading,LocationFilled,LocationInformation,Location,Lock,Lollipop,MagicStick,Magnet,Male,Management,MapLocation,Medal,Memo,Menu,MessageBox,Message,Mic,Microphone,MilkTea,Minus,Money,Monitor,MoonNight,Moon,MoreFilled,More,MostlyCloudy,Mouse,Mug,MuteNotification,Mute,NoSmoking,Notebook,Notification,Odometer,OfficeBuilding,Open,Operation,Opportunity,Orange,Paperclip,PartlyCloudy,Pear,PhoneFilled,Phone,PictureFilled,PictureRounded,Picture,PieChart,Place,Platform,Plus,Pointer,Position,Postcard,Pouring,Present,PriceTag,Printer,Promotion,QuartzWatch,QuestionFilled,Rank,ReadingLamp,Reading,RefreshLeft,RefreshRight,Refresh,Refrigerator,RemoveFilled,Remove,RightCircle,Right,ScaleToOriginal,School,Scissor,Search,Select,Sell,SemiSelect,Service,SetUp,Setting,Share,Ship,Shop,ShoppingBag,ShoppingCartFull,ShoppingCart,ShoppingTrolley,Smoking,Soccer,SoldOut,SortDown,SortUp,Sort,Stamp,StarFilled,Star,Stopwatch,SuccessFilled,Sugar,SuitcaseLine,Suitcase,Sunny,Sunrise,Sunset,SwitchButton,SwitchFilled,Switch,TakeawayBox,Ticket,Tickets,Timer,ToiletPaper,Tools,TopLeft,TopRight,Top,TrendCharts,TrophyBase,Trophy,TurnOff,Umbrella,Unlock,UpCircle,Up,UploadFilled,Upload,UserFilled,User,Van,VideoCameraFilled,VideoCamera,VideoPause,VideoPlay,View,WalletFilled,Wallet,WarnTriangleFilled,WarningFilled,Warning,Watch,Watermelon,WindPower,ZoomIn,ZoomOut }
 export const registerComponent = () => {
   if (window.__MT__ICON__INSTALLED__) return
   for (const path in components) {
     const name = path.replace('./component/', '').replace('.js', '')
     const component = components[path]
-    component().then(module => {
-      window.customElements.define(`mt-icon-${name}`, module)
+    component().then(item => {
+      window.customElements.define(`mt-icon-${name}`, item)
     })
   }
   window.__MT__ICON__INSTALLED__ = true

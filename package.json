@@ -11,7 +11,8 @@
     "prepare": "husky",
     "format": "prettier --write .",
     "dev:icon": "pnpm --filter @mate-ui/icon run dev",
-    "build:icon": "pnpm --filter @mate-ui/icon run build"
+    "build:icon": "pnpm --filter @mate-ui/icon run build",
+    "gen:icon": "pnpm --filter @mate-ui/icon run gen"
   },
   "keywords": [
     "frontend",
