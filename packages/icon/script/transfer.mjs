@@ -67,7 +67,8 @@ export { install as registerComponent }`
 const renderCompFile = (entry, outDir) => {
   getSvgFiles(entry)
     .then(res => {
-      return res.filter(async c => c !== 'icons.svg').map(async c => {
+      console.log(res)
+      return res.filter(c => c !== 'icons.svg').map(async c => {
         const svgFileContent = readFileSync(`${entry}/${c}`, 'utf-8')
         const svg = await transferSvg(svgFileContent)
         return {
