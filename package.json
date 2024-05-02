@@ -9,7 +9,9 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "prepare": "husky",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "dev:icon": "pnpm --filter @mate-ui/icon run dev",
+    "build:icon": "pnpm --filter @mate-ui/icon run build"
   },
   "keywords": [
     "frontend",
