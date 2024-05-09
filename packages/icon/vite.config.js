@@ -7,17 +7,15 @@ const __dirname = fileURLToPath(new URL('.', import.meta.url))
 
 const getPagePathList = () => {
   const pages = readdirSync(resolve(__dirname, 'src/component'))
-  let map = {}
+  const map = {}
   pages.forEach(c => {
-    const t = c
-    map[t.replace('.js', '')] = resolve(__dirname, 'src/component', c)
+    map[c.replace('.js', '')] = resolve(__dirname, 'src/component', c)
   })
 
   return map
 }
 
-export default defineConfig(({ command, mode }) => {
-  console.log(command, mode);
+export default defineConfig(({ command }) => {
   if (command === 'serve') {
     return {
       resolve: {
@@ -29,10 +27,18 @@ export default defineConfig(({ command, mode }) => {
   } else {
     return {
       build: {
+        rollupOptions: {
+          output: {
+            exports: 'named'
+          }
+        },
         lib: {
           entry: {
             index: 'src/index.js',
             ...getPagePathList(),
+          },
+          output: {
+
           },
           formats: ['es', 'cjs'],
           fileName(format, entryName) {

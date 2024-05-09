@@ -96,8 +96,8 @@ const renderCompFile = (entry, outDir) => {
       return names
     })
     .then(res => {
-      const importStr = res.map(c => `import ${c.className} from './component/${c.name}.js'`).join('\n').concat(`\nimport Icon from './component/icon.js'`)
-      const compNameList = [...res.map(c => ({ compName: c.compName, className: [c.className].join('') })), { className: 'Icon', compName: 'mt-icon' }]
+      const importStr = res.map(c => `import ${c.className} from './component/${c.name}.js'`).join('\n')
+      const compNameList = res.map(c => ({ compName: c.compName, className: [c.className].join('') }))
       const install = `
 const components = import.meta.glob('./component/*.js', { import: 'default' })
 
@@ -107,13 +107,7 @@ export const registerComponent = () => {
   for (const path in components) {
     const name = path.replace('./component/', '').replace('.js', '')
     const component = components[path]
-    component().then(item => {
-      if (item.name === 'MtIcon') {
-        window.customElements.define('mt-icon', item)
-      } else {
-        window.customElements.define(\`mt-icon-\${name}\`, item)
-      }
-    })
+    component().then(item => window.customElements.define(\`mt-icon-\${name}\`, item))
   }
   window.__MT__ICON__INSTALLED__ = true
 }`
@@ -129,7 +123,7 @@ export const registerComponent = () => {
 const __dirname = new URL('..', import.meta.url)
 const root = fileURLToPath(__dirname)
 
-const entryDir = join(root, 'svg')
+const entryDir = join(root, 'src/svg')
 const outputDir = join(root, 'src')
 
 renderCompFile(entryDir, outputDir)

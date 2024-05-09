@@ -20,7 +20,9 @@
     "theme",
     "vue",
     "react",
-    "angular"
+    "angular",
+    "lowercode",
+    "platform"
   ],
   "license": "MIT",
   "packageManager": "pnpm@8.15.0",

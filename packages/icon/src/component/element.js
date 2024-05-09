@@ -32,7 +32,7 @@ class MtHtmlElement extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ['name', 'size', 'color']
+    return ['size', 'color']
   }
 
   get name() {
@@ -63,18 +63,15 @@ class MtHtmlElement extends HTMLElement {
     if (oldVal === newVal) return
 
     switch (attr) {
-    case 'name':
-      this.name = newVal
-      break
-    case 'size':
-      this.size = newVal
-      this.style.fontSize = newVal
-      break
-    case 'color':
-      this.color = newVal
-      this.style.color = newVal
-      break
-    }
+      case 'size':
+        this.size = newVal
+        this.style.fontSize = newVal
+        break
+      case 'color':
+        this.color = newVal
+        this.style.color = newVal
+        break
+      }
   }
 }
 
