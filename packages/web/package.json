@@ -1,0 +1,41 @@
+{
+  "name": "@mate-ui/web",
+   "version": "1.0.0",
+  "description": "A cross-platform web component library developed by stencil.js framework.",
+  "main": "dist/components/index.js",
+  "module": "dist/components/index.js",
+  "types": "dist/types/index.d.ts",
+  "unpkg": "dist/components/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:miracle-git/mate-ui.git"
+  },
+  "files": [
+    "dist/",
+    "README.md"
+  ],
+  "keywords": [
+    "mate-ui",
+    "component",
+    "web-component",
+    "stencil"
+  ],
+  "scripts": {
+    "start": "stencil build --prod --es5 --watch",
+    "build": "stencil build --docs",
+    "test": "stencil test --spec --e2e",
+    "test:watch": "stencil test --spec --e2e --watchAll",
+    "gen": "stencil generate"
+  },
+  "dependencies": {
+    "@stencil/core": "^4.7.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.10",
+    "@types/node": "^16.18.64",
+    "jest": "^29.7.0",
+    "jest-cli": "^29.7.0",
+    "puppeteer": "^21.5.2"
+  },
+  "license": "MIT"
+}

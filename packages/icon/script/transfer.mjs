@@ -81,7 +81,7 @@ const renderCompFile = (entry, outDir) => {
       await Promise.allSettled(res).then(arr => {
         names = arr.map(c => {
           const template = renderCode(`mt-icon-${c.value.name}`, c.value.content)
-          writeFile(`${outDir}/component/${c.value.name}.js`, template, err => {
+          writeFile(`${outDir}/components/${c.value.name}.js`, template, err => {
             if (err) {
               throw err
             }
@@ -96,16 +96,16 @@ const renderCompFile = (entry, outDir) => {
       return names
     })
     .then(res => {
-      const importStr = res.map(c => `import ${c.className} from './component/${c.name}.js'`).join('\n')
+      const importStr = res.map(c => `import ${c.className} from './components/${c.name}.js'`).join('\n')
       const compNameList = res.map(c => ({ compName: c.compName, className: [c.className].join('') }))
       const install = `
-const components = import.meta.glob('./component/*.js', { import: 'default' })
+const components = import.meta.glob('./components/*.js', { import: 'default' })
 
 export { ${compNameList.map(c => c.className).join(',')} }
 export const registerComponent = () => {
   if (window.__MT__ICON__INSTALLED__) return
   for (const path in components) {
-    const name = path.replace('./component/', '').replace('.js', '')
+    const name = path.replace('./components/', '').replace('.js', '')
     const component = components[path]
     component().then(item => window.customElements.define(\`mt-icon-\${name}\`, item))
   }
@@ -123,7 +123,7 @@ export const registerComponent = () => {
 const __dirname = new URL('..', import.meta.url)
 const root = fileURLToPath(__dirname)
 
-const entryDir = join(root, 'src/svg')
+const entryDir = join(root, 'src/assets')
 const outputDir = join(root, 'src')
 
 renderCompFile(entryDir, outputDir)

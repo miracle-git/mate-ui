@@ -22,7 +22,7 @@
     "svg"
   ],
   "scripts": {
-    "dev": "vite",
+    "start": "vite",
     "build": "vite build",
     "gen": "node script/transfer.mjs"
   },

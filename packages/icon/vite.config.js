@@ -6,10 +6,10 @@ import { resolve } from 'node:path'
 const __dirname = fileURLToPath(new URL('.', import.meta.url))
 
 const getPagePathList = () => {
-  const pages = readdirSync(resolve(__dirname, 'src/component'))
+  const pages = readdirSync(resolve(__dirname, 'src/components'))
   const map = {}
   pages.forEach(c => {
-    map[c.replace('.js', '')] = resolve(__dirname, 'src/component', c)
+    map[c.replace('.js', '')] = resolve(__dirname, 'src/components', c)
   })
 
   return map

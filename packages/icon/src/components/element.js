@@ -35,14 +35,6 @@ class MtHtmlElement extends HTMLElement {
     return ['size', 'color']
   }
 
-  get name() {
-    return this.getAttribute('name')
-  }
-
-  set name(val) {
-    this.setAttribute('name', val)
-  }
-
   get size() {
     return this.getAttribute('size')
   }
