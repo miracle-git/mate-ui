@@ -10,7 +10,7 @@
     "preinstall": "npx only-allow pnpm",
     "prepare": "husky",
     "format": "prettier --write .",
-    "build": "pnpm -r --filter=./packages/* run build",
+    "build": "pnpm pnpm -r --parallel --filter=./packages/* run build",
     "pre:alpha": "pnpm changeset pre enter alpha",
     "pre:beta": "pnpm changeset pre enter beta",
     "pre:rc": "pnpm changeset pre enter rc",
@@ -22,7 +22,9 @@
     "gen:web": "pnpm --filter @mate-ui/web run gen",
     "start:icon": "pnpm --filter @mate-ui/icon run start",
     "build:icon": "pnpm --filter @mate-ui/icon run build",
-    "gen:icon": "pnpm --filter @mate-ui/icon run gen"
+    "gen:icon": "pnpm --filter @mate-ui/icon run gen",
+    "build:core": "pnpm --filter @mate-ui/core run build",
+    "test:core": "pnpm --filter @mate-ui/core run test"
   },
   "keywords": [
     "frontend",
@@ -46,7 +48,6 @@
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
-    "@mate-ui/eslint": "workspace:^",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",

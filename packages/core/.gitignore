@@ -1,6 +1,5 @@
 dist/
-www/
-loader/
+test/report
 
 *~
 *.sw[mnpcod]
@@ -15,7 +14,7 @@ log.txt
 .stencil/
 .idea/
 .vscode/
-.sass-cache/
+.less-cache/
 .versions/
 node_modules/
 $RECYCLE.BIN/

@@ -6,34 +6,56 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MtIcon {
-        "name": string;
+    interface MyComponent {
+        /**
+          * The first name
+         */
+        "first": string;
+        /**
+          * The last name
+         */
+        "last": string;
+        /**
+          * The middle name
+         */
+        "middle": string;
     }
 }
 declare global {
-    interface HTMLMtIconElement extends Components.MtIcon, HTMLStencilElement {
+    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
-    var HTMLMtIconElement: {
-        prototype: HTMLMtIconElement;
-        new (): HTMLMtIconElement;
+    var HTMLMyComponentElement: {
+        prototype: HTMLMyComponentElement;
+        new (): HTMLMyComponentElement;
     };
     interface HTMLElementTagNameMap {
-        "mt-icon": HTMLMtIconElement;
+        "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
-    interface MtIcon {
-        "name"?: string;
+    interface MyComponent {
+        /**
+          * The first name
+         */
+        "first"?: string;
+        /**
+          * The last name
+         */
+        "last"?: string;
+        /**
+          * The middle name
+         */
+        "middle"?: string;
     }
     interface IntrinsicElements {
-        "mt-icon": MtIcon;
+        "my-component": MyComponent;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "mt-icon": LocalJSX.MtIcon & JSXBase.HTMLAttributes<HTMLMtIconElement>;
+            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }
 }
