@@ -9,6 +9,7 @@
       "dom",
       "dom.iterable",
     ],
+    "esModuleInterop": true,
     "allowJs": true,  /* 允许编译 js 文件 */
     "removeComments": true, /* 输出不包含注释 */
     "strict": true, /* 启用所有严格类型检查选项 */

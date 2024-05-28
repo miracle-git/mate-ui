@@ -1,6 +1,8 @@
+import { Crypto } from '../.internal/global'
+
 /**
  * @file Random
- * @description 获取随机值(数字，颜色，guid等)
+ * @description 获取随机值(数字，颜色，字符串等)
  */
 export default class Random {
    /**
@@ -28,15 +30,14 @@ export default class Random {
     return Math.floor(Math.random() * (max - min) + min)
   }
   /**
-   * @method 获取介于最小值和最大值之间的随机颜色
-   * @param { Number } min 最小值
-   * @param { Number } max 最大值
+   * @method 获取指定透明度的随机颜色
+   * @param { Number } alpha 透明度(0,1之间)
    * @returns { String } 返回对应的随机颜色
    */
-  static color(min, max) {
-    const r = this.number(min, max)
-    const g = this.number(min, max)
-    const b = this.number(min, max)
-    return `rgb(${r},${g},${b})`
+  static color(alpha = 1) {
+    const arr = new Uint8Array(3)
+    const colors = Array.from(Crypto.getRandomValues(arr)).join()
+    if (alpha < 0 || alpha > 1) alpha = 1
+    return `rgba(${colors}, ${alpha})`
   }
 }
