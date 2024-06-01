@@ -1,5 +1,6 @@
 import Type from '../type/main'
 import { NumberUtil } from '../util/main'
+import { DATA_REGEX_PATTERN, EMPTY_OBJECT } from '../config/main'
 
 /**
  * @file Formatter
@@ -67,7 +68,7 @@ export default class Formatter {
       const _temp = val.toString()
       const _buffer = []
       for (let i = 0, loop = len - _temp.length; i < loop; i++) {
-        _buffer.push('0');
+        _buffer.push('0')
       }
       _buffer.push(_temp);
       return _buffer.join('')
@@ -92,5 +93,35 @@ export default class Formatter {
       res = res.replace(/\,/g, '')
     }
     return pretty ? NumberUtil.pretty(res) : res
+  }
+  static timezone(tz) {
+    if (!tz) return
+    let res = -8 * 60 * 60 * 1000
+    const format = (symbol, number = 1) => {
+      const date = tz.split(symbol)[1]
+      return number * date.split(':')[0] * 60 * 60 * 1000 + date.split(':')[1] * 60 * 1000
+    }
+    if (tz.includes('+')) {
+      res = format('+', -1)
+    } else if (tz.includes('-')) {
+      res = format('-')
+    }
+    return res
+  }
+  static locale(template, ...args) {
+    if (args.length === 1 && typeof args[0] === 'object') {
+      args = args[0]
+    }
+    if (!args) {
+      // @ts-ignore
+      args = EMPTY_OBJECT
+    }
+    return template.replace(DATA_REGEX_PATTERN.locale, (match, prefix, i, index) => {
+      if (template[index - 1] === '{' && template[index + match.length] === '}') {
+        return i
+      }
+      const res = Type.hasOwn(args, i) ? args[i] : null
+      return Type.isUndefinedOrNull(res) ? '' : res
+    })
   }
 }

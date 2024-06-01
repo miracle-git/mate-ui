@@ -1,3 +1,5 @@
 export { default as NumberUtil } from './number'
 export { default as StringUtil } from './string'
+export { default as DateUtil } from './date'
+export { default as ArrayUtil } from './array'
 export { default as ObjectUtil } from './object'

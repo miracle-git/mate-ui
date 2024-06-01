@@ -109,4 +109,17 @@ export default class StringUtil {
       '&nbsp;': ' '
     })[a])
   }
+  /**
+   * @method 获取字符串(含中文)的长度
+   * @param { String } item 当前字符串
+   */
+  static len(item: string) {
+    let res = 0
+    if (item.match(DATA_REGEX_PATTERN.length) === null) {
+      res = item.length
+    } else {
+      res = item.length + item.match(DATA_REGEX_PATTERN.length).length
+    }
+    return res
+  }
 }
