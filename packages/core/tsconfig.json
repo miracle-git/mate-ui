@@ -6,6 +6,7 @@
     "module": "esnext", /* 输出的代码使用什么方式进行模块化： 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */
     "lib": [ /* 指定引用的标准库 */
       "esnext",
+      "es2015.promise",
       "dom",
       "dom.iterable",
     ],

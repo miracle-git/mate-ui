@@ -45,6 +45,28 @@ export const SYMMETRIC_CRYPTO_TYPE = {
 }
 
 /**
+ * @constant 浏览器引擎类型
+ */
+export const BROWSER_ENGINE_TYPE = {
+  opera: 'Opera',
+  webkit: 'Webkit',
+  khtml: 'KHTML',
+  gecko: 'Gecko',
+  msie: 'MSIE'
+}
+
+/**
+ * @constant 操作系统平台类型
+ */
+export const OS_PLATFORM_TYPE = {
+  windows: 'Windows',
+  tablet: 'Tablet',
+  ios: 'iOS',
+  android: 'Android',
+  game: 'Game'
+}
+
+/**
  * @constant 排序类型
  */
 export const SORT_TYPE = {
@@ -79,6 +101,61 @@ export const DEFAULT_STORAGE_OPTIONS = {
 }
 
 /**
+ * @constant 内存数据库常量
+ */
+export const DEFAULT_INDEXDB_OPTIONS = {
+  name: 'mate-idb-client',
+  version: 1,
+  storeName: 'context',
+  keyPath: 'uuid'
+}
+
+/**
+ * @constant 浏览器类型
+ */
+export const DEFAULT_BROWSER_TYPE = {
+  chrome: 0,
+  firefox: 0,
+  safari: 0,
+  opera: 0,
+  konq: 0,
+  ie: 0,
+  edge: 0,
+  version: null
+}
+
+/**
+ * @constant 浏览器引擎类型
+ */
+export const DEFAULT_ENGINE_TYPE = {
+  webkit: 0,
+  khtml: 0,
+  gecko: 0,
+  opera: 0,
+  msie: 0,
+  version: null
+}
+
+/**
+ * @constant 操作系统平台类型
+ */
+export const DEFAULT_PLATFORM_TYPE = {
+  // 操作系统
+  windows: false,
+  mac: false,
+  xll: false,
+  // 移动设备
+  ios: false,
+  android: false,
+  ipod: false,
+  ipad: false,
+  iphone: false,
+  // 游戏设备
+  will: false,
+  ps: false
+}
+
+/**
  * @constant 正则表达式常量
  */
 export const DATA_REGEX_PATTERN = {
@@ -98,7 +175,20 @@ export const DATA_REGEX_PATTERN = {
   kebab: /([^-])([A-Z])/g,
   camel: /([\\:\-\\_]+(.))/g,
   uncamel: /([a-z\d])([A-Z])/g,
-  html: /<\/?.+?\/?>/g
+  html: /<\/?.+?\/?>/g,
+  webkit: /AppleWebkit\/(\S+)/,
+  khtml: /KHTML\/(\S+)/,
+  konq: /Konqueror\/([^]+)/,
+  gecko: /rv:([^\)]+)\) Gecko\/\d{8}/,
+  msie: /MSIE ([^]+)/,
+  msgecko: /rv:([\d.]+)\) like Gecko/,
+  edge: /Edge?\/(\S+)/,
+  chrome: /Chrome\/(\S+)/,
+  firefox: /Firefox\/(\S+)/,
+  windows: /Win(?:dows)?([^do]{2})\s?(\d+\.\d+)?/,
+  ios: /CPU (?:iPhone )?OS (\d+_\d+)/,
+  android: /Andriod (\d+\. \d+)/,
+  game: /playstation/i
 }
 
 /**
