@@ -5,7 +5,7 @@ import { Crypto } from '../.internal/global'
  * @description 获取随机值(数字，颜色，字符串等)
  */
 export default class Random {
-   /**
+  /**
    * @method 获取指定长度的随机字符串
    * @param { Number } len 指定长度(默认：32)
    * @returns { String } 返回对应的随机字符串

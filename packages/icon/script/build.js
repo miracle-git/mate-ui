@@ -9,8 +9,8 @@ const entryFileList = readdirSync(entryDir, 'utf-8')
 const outputDirList = readdirSync(outputDir, 'utf-8')
 
 const batches = entryFileList
-  .filter(f => f.endsWith('.svg'))
-  .map(async file => {
+  .filter((f) => f.endsWith('.svg'))
+  .map(async (file) => {
     const name = file.replace('.svg', '')
     const filePath = entryDir + '/' + file
     const svgFile = readFileSync(filePath)
@@ -20,8 +20,8 @@ const batches = entryFileList
     }
   })
 
-Promise.all(batches).then(res => {
-  const t = res.map(async c => {
+Promise.all(batches).then((res) => {
+  const t = res.map(async (c) => {
     const parseStr = parseSync(c.file)
     const str = stringify(parseStr)
     const target = { content: str, id: c._name }

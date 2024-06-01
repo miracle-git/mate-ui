@@ -18,7 +18,7 @@ export default class HttpClient {
       },
       ...(options || EMPTY_OBJECT)
     })
-    this[http].interceptors.request.use(config => {
+    this[http].interceptors.request.use((config) => {
       // XSS攻击
       if (config.xss && config.data) {
         if (!Type.isEqual(config.data, '[object FormData]')) {
@@ -33,26 +33,29 @@ export default class HttpClient {
       return config
       // @ts-ignore
     }, Promise.reject)
-    this[http].interceptors.response.use(res => {
-      if (Type.isFunction(response)) {
-        response(res)
+    this[http].interceptors.response.use(
+      (res) => {
+        if (Type.isFunction(response)) {
+          response(res)
+        }
+        if (DATA_REGEX_PATTERN.json.test(res.headers['content-type'])) {
+          return res.data
+        }
+        return res
+      },
+      (err) => {
+        if (Type.isFunction(reject)) {
+          reject(err.response)
+        }
+        // @ts-ignore
+        return Promise.reject(err)
       }
-      if (DATA_REGEX_PATTERN.json.test(res.headers['content-type'])) {
-        return res.data
-      }
-      return res
-    }, err => {
-      if (Type.isFunction(reject)) {
-        reject(err.response)
-      }
-      // @ts-ignore
-      return Promise.reject(err)
-    })
+    )
   }
-  get(url, { params = EMPTY_OBJECT, xss = true, timeout = 60000} = {}) {
+  get(url, { params = EMPTY_OBJECT, xss = true, timeout = 60000 } = {}) {
     return this[http]({ url, method: REQUEST_METHOD.get, params, timeout, xss })
   }
-  post(url, { params = EMPTY_OBJECT, xss = true, timeout = 60000} = {}) {
+  post(url, { params = EMPTY_OBJECT, xss = true, timeout = 60000 } = {}) {
     return this[http]({ url, method: REQUEST_METHOD.post, data: params, timeout, xss })
   }
 }

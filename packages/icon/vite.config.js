@@ -8,7 +8,7 @@ const __dirname = fileURLToPath(new URL('.', import.meta.url))
 const getPagePathList = () => {
   const pages = readdirSync(resolve(__dirname, 'src/components'))
   const map = {}
-  pages.forEach(c => {
+  pages.forEach((c) => {
     map[c.replace('.js', '')] = resolve(__dirname, 'src/components', c)
   })
 
@@ -35,16 +35,14 @@ export default defineConfig(({ command }) => {
         lib: {
           entry: {
             index: 'src/index.js',
-            ...getPagePathList(),
+            ...getPagePathList()
           },
-          output: {
-
-          },
+          output: {},
           formats: ['es', 'cjs'],
           fileName(format, entryName) {
             if (format === 'es') {
               if (entryName === 'index') {
-                return `index.js`;
+                return `index.js`
               } else {
                 return `es/${entryName}.js`
               }

@@ -21,8 +21,8 @@ export default class ObjectUtil {
    */
   static pick(item, ...props) {
     const _props = Type.isArray(props[0]) ? props[0] : props
-    const _pickProps = (current, props) => props.reduce((prop, val) =>
-      (val in current && (prop[val] = current[val]), prop), {})
+    const _pickProps = (current, props) =>
+      props.reduce((prop, val) => (val in current && (prop[val] = current[val]), prop), {})
     return _pickProps(item, _props)
   }
   /**
@@ -51,7 +51,7 @@ export default class ObjectUtil {
     function recursive(obj, prop) {
       if (Type.isObject(obj)) {
         let empty = true
-        Object.keys(obj).forEach(p => {
+        Object.keys(obj).forEach((p) => {
           empty = false
           recursive(obj[p], prop ? `${prop}.${p}` : p)
         })

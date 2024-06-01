@@ -18,12 +18,15 @@ export default class Api {
    * @param mock mock接口相关配置(自动将前缀修改为'/api/mock')
    * @param crypto 是否在客户端加密存储(自动将存储到window.__MATE_API__或window.__MATE_XXX_API__变量中)
    */
-  static map(config, prefix, { app = '', mock = {} , crypto = false } = {}) {
+  static map(config, prefix, { app = '', mock = {}, crypto = false } = {}) {
     const globalApiKey = StringUtil.globalKey(app, 'api')
     if (crypto) {
       const cryptoType = SYMMETRIC_CRYPTO_TYPE.des
       if (window[globalApiKey]) return JSON.parse(Crypto.decrypt(window[globalApiKey], cryptoType))
-      ObjectUtil.frozen(globalApiKey, Crypto.encrypt(JSON.stringify(mapping(config, prefix, mocking(mock))), cryptoType))
+      ObjectUtil.frozen(
+        globalApiKey,
+        Crypto.encrypt(JSON.stringify(mapping(config, prefix, mocking(mock))), cryptoType)
+      )
       return JSON.parse(Crypto.decrypt(window[globalApiKey], cryptoType))
     } else {
       if (window[globalApiKey]) return window[globalApiKey]

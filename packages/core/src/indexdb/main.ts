@@ -18,7 +18,9 @@ export default class IndexDB {
     if (!IndexedDBContext) return
     this._context = IndexedDBContext
     this._db = null
-    const dbOptions = Type.isString(options) ? { ...DEFAULT_INDEXDB_OPTIONS, name: options.toString() } : { ...DEFAULT_INDEXDB_OPTIONS, options }
+    const dbOptions = Type.isString(options)
+      ? { ...DEFAULT_INDEXDB_OPTIONS, name: options.toString() }
+      : { ...DEFAULT_INDEXDB_OPTIONS, options }
     const { name, version, storeName, keyPath } = dbOptions
     this.name = name
     this.version = version
@@ -39,14 +41,14 @@ export default class IndexDB {
   open() {
     const request = this._context.open(this.name, this.version)
     return new Promise((resolve, reject) => {
-      request.onsuccess = e => {
+      request.onsuccess = (e) => {
         this._db = e.target.result
         resolve(this._db)
       }
-      request.onerror = e => {
+      request.onerror = (e) => {
         reject(e.currentTarget.error.message)
       }
-      request.onupgradeneeded = e => {
+      request.onupgradeneeded = (e) => {
         const db = e.target.result
         if (!db.objectStoreNames.contains(this.storeName)) {
           db.createObjectStore(this.storeName, {
@@ -70,7 +72,7 @@ export default class IndexDB {
   getByKey(key) {
     const request = this._getReadonlyStore().get(key)
     return new Promise((resolve, reject) => {
-      request.onsuccess = e => {
+      request.onsuccess = (e) => {
         const data = e.target.result
         if (data) {
           resolve(data)
@@ -78,7 +80,7 @@ export default class IndexDB {
           reject(new Error('no data'))
         }
       }
-      request.onerror = e => {
+      request.onerror = (e) => {
         reject(e.currentTarget.error.message)
       }
     })

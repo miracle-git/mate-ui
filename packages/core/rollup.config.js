@@ -12,20 +12,24 @@ const config = {
   // 入口文件，src/index.ts
   input: path.resolve(__dirname, 'src/index.ts'),
   // 输出文件
-  output: [{
-    // commonjs: package.json 配置的 main 属性
-    file: pkg.main,
-    format: 'cjs',
-  }, {
-    // es module: package.json 配置的 module 属性
-    file: pkg.module,
-    format: 'es',
-  }, {
-    // umd: package.json 配置的 umd 属性（全局变量）
-    name,
-    file: pkg.umd,
-    format: 'umd'
-  }],
+  output: [
+    {
+      // commonjs: package.json 配置的 main 属性
+      file: pkg.main,
+      format: 'cjs'
+    },
+    {
+      // es module: package.json 配置的 module 属性
+      file: pkg.module,
+      format: 'es'
+    },
+    {
+      // umd: package.json 配置的 umd 属性（全局变量）
+      name,
+      file: pkg.umd,
+      format: 'umd'
+    }
+  ],
   plugins: [
     // 解析第三方依赖
     resolve(),
@@ -40,10 +44,7 @@ const config = {
       // 只转换源代码，不转换外部依赖
       exclude: 'node_modules/**',
       // babel 默认不支持 ts 需要手动添加
-      extensions: [
-        ...DEFAULT_EXTENSIONS,
-        '.ts',
-      ],
+      extensions: [...DEFAULT_EXTENSIONS, '.ts']
     }),
     // 正式环境，压缩代码
     terser({

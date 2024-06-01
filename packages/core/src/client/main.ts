@@ -1,5 +1,12 @@
 import Type from '../type/main'
-import { DATA_REGEX_PATTERN, DEFAULT_BROWSER_TYPE, DEFAULT_ENGINE_TYPE, DEFAULT_PLATFORM_TYPE, BROWSER_ENGINE_TYPE, OS_PLATFORM_TYPE } from '../config/main'
+import {
+  DATA_REGEX_PATTERN,
+  DEFAULT_BROWSER_TYPE,
+  DEFAULT_ENGINE_TYPE,
+  DEFAULT_PLATFORM_TYPE,
+  BROWSER_ENGINE_TYPE,
+  OS_PLATFORM_TYPE
+} from '../config/main'
 import { checkBrowser, checkEngine, checkPlatform, ping, analyze } from '../.internal/client'
 
 /**

@@ -16,7 +16,11 @@ test('测试：是否为数组/空数组', () => {
 })
 
 test('测试：是否为函数/空函数', () => {
-  expect(Type.isFunction(function () { return 'mate-ui' })).toEqual(true)
+  expect(
+    Type.isFunction(function () {
+      return 'mate-ui'
+    })
+  ).toEqual(true)
   expect(Type.isFunction(() => 'mate-ui')).toEqual(true)
   expect(Type.isEmptyFunction(function () {})).toEqual(true)
   expect(Type.isEmptyFunction(() => {})).toEqual(true)
@@ -75,6 +79,6 @@ test('测试：JSON转化(当转化不成功则返回默认值)', () => {
   expect(Type.json('', 'mate-ui')).toEqual('mate-ui')
   expect(Type.json('', [])).toEqual([])
   expect(Type.json('', {})).toEqual({})
-  expect(Type.json('[{"name":"mate-ui"}]', [])).toEqual([{ 'name': 'mate-ui' }])
-  expect(Type.json('{"name":"mate-ui"}', {})).toEqual({ 'name': 'mate-ui' })
+  expect(Type.json('[{"name":"mate-ui"}]', [])).toEqual([{ name: 'mate-ui' }])
+  expect(Type.json('{"name":"mate-ui"}', {})).toEqual({ name: 'mate-ui' })
 })

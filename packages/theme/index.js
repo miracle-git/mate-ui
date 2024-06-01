@@ -31,7 +31,7 @@ exports.run = function (opts, cb) {
   gulp.task('build', build(opts))
   gulp.task('fonts', fonts(opts))
   if (typeof cb === 'function') {
-    return series('build', 'fonts', cb);
+    return series('build', 'fonts', cb)
   }
-  return series('build', 'fonts');
+  return series('build', 'fonts')
 }

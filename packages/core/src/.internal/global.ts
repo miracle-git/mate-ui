@@ -1,12 +1,12 @@
 declare global {
   interface Window {
-    webkitIndexedDB,
-    webkitCrypto,
-    mozIndexedDB,
-    mozCrypto,
-    oCrypto,
-    opera,
-    msIndexedDB,
+    webkitIndexedDB
+    webkitCrypto
+    mozIndexedDB
+    mozCrypto
+    oCrypto
+    opera
+    msIndexedDB
     msCrypto
   }
 }

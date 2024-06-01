@@ -2,7 +2,7 @@ const { optimize } = require('svgo')
 const { writeFileSync } = require('fs')
 const svgoPluginConf = require('./svgo.mjs')
 
-const format = svgFile =>
+const format = (svgFile) =>
   optimize(svgFile, {
     plugins: svgoPluginConf
   })
@@ -10,7 +10,7 @@ const format = svgFile =>
  * @param {*} svgFile
  * @returns
  */
-const transSvg = svgFile => {
+const transSvg = (svgFile) => {
   return new Promise((resolve, reject) => {
     try {
       resolve(format(svgFile).data)
@@ -20,10 +20,10 @@ const transSvg = svgFile => {
   })
 }
 
-const camelCase = str => {
+const camelCase = (str) => {
   const arr = str.split('-')
   return arr
-    .map(c => {
+    .map((c) => {
       const firstChar = c.split('').shift()
       return c.replace(/^([a-zA-Z])(.+)/, `${firstChar.toUpperCase()}$2`)
     })
@@ -104,5 +104,5 @@ const writeFile = (path, name, content) => {
 module.exports = {
   transSvg,
   camelCase,
-  writeFile,
+  writeFile
 }

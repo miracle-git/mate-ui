@@ -32,9 +32,8 @@ export default class PubSubClient {
     }
     for (let i = 0, len = handlers.length; i < len; i++) {
       if (handlers[i] === handler) {
-        handlers.splice(i , 1)
+        handlers.splice(i, 1)
       }
     }
   }
 }
-

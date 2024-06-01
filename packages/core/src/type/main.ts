@@ -131,7 +131,7 @@ export default class Type {
    * @param pattern 当前检测的正则匹配表达式（默认值：DATA_REGEX_PATTERN.guid）
    * @returns { Boolean } 如果为Guid则返回true, 否则返回false
    */
-  static isGuid(item, pattern= DATA_REGEX_PATTERN.guid) {
+  static isGuid(item, pattern = DATA_REGEX_PATTERN.guid) {
     return match(item, pattern, 'i')
   }
   /**
@@ -262,7 +262,7 @@ export default class Type {
    */
   static include(items, val, ignore = false) {
     if (ignore) {
-      return items.map(item => item + '').includes(val + '')
+      return items.map((item) => item + '').includes(val + '')
     }
     return items.includes(val)
   }

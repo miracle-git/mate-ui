@@ -15,7 +15,11 @@ export default class Storage {
    * @desc 值可能为简单类型，对象或数组
    */
   static get(key, options = null) {
-    const { storageType = '', cryptoType = SYMMETRIC_CRYPTO_TYPE.none, def = undefined } = { ...DEFAULT_STORAGE_OPTIONS, ...options }
+    const {
+      storageType = '',
+      cryptoType = SYMMETRIC_CRYPTO_TYPE.none,
+      def = undefined
+    } = { ...DEFAULT_STORAGE_OPTIONS, ...options }
     const { storage, secret, decrypt } = getStorageOptions(storageType, cryptoType)
     try {
       return JSON.parse(decrypt(storage[key] || '', secret)) || def

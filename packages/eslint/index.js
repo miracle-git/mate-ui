@@ -10,22 +10,26 @@ module.exports = {
     'eqeqeq': ['error', 'always'], // 需要使用 === 和 !== (消除类型不安全的相等运算符)
     'object-shorthand': ['error', 'always'],
     'no-sequences': [
-      'error', {
+      'error',
+      {
         allowInParentheses: false
       }
     ],
     'prefer-template': 'error', // 字符串拼接使用字符串模板而不是+
     'curly': 'error', // 确保将块语句包裹在花括号中来防止错误并提高代码清晰度
     'padding-line-between-statements': [
-      'error', {
+      'error',
+      {
         blankLine: 'always',
         prev: ['function', 'class', 'const', 'let', 'var', 'block-like'],
         next: '*'
-      }, {
+      },
+      {
         blankLine: 'always',
         prev: '*',
         next: ['return', 'block-like']
-      }, {
+      },
+      {
         blankLine: 'any',
         prev: ['const', 'let', 'var'],
         next: ['const', 'let', 'var']
@@ -34,7 +38,8 @@ module.exports = {
     'padded-blocks': ['error', 'never'],
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': [
-      'error', {
+      'error',
+      {
         varsIgnorePattern: '^_',
         argsIgnorePattern: '^_',
         ignoreRestSiblings: true
@@ -42,21 +47,27 @@ module.exports = {
     ],
     'no-console': 'error',
     'no-restricted-imports': [
-      'error', {
-        patterns: [{
-          group: ['~/localization/*'],
-          message: "Don't import any internals from a module, only use its public api"
-        }]
+      'error',
+      {
+        patterns: [
+          {
+            group: ['~/localization/*'],
+            message: "Don't import any internals from a module, only use its public api"
+          }
+        ]
       }
     ],
     // 对比排序前后代码，排序后的代码看起来更整洁
     'import/order': [
-      'error', {
+      'error',
+      {
         'groups': ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
-        'pathGroups': [{
-          pattern: '~/**',
-          group: 'internal'
-        }],
+        'pathGroups': [
+          {
+            pattern: '~/**',
+            group: 'internal'
+          }
+        ],
         'alphabetize': {
           order: 'asc',
           caseInsensitive: true
@@ -68,7 +79,8 @@ module.exports = {
     'import/no-duplicates': 'error', // 导入/无重复
     'import/no-useless-path-segments': [
       // 防止在 import 和 require 语句中出现不必要的路径段
-      'error', {
+      'error',
+      {
         noUselessIndex: true
       }
     ],

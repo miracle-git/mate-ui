@@ -1,8 +1,12 @@
 import Formatter from '../src/formatter/main'
 
 test('格式化：字符串', () => {
-  expect(Formatter.string('{0} is a library developed by {1}', 'Mate UI', 'Miracle He')).toEqual('Mate UI is a library developed by Miracle He')
-  expect(Formatter.string('{library} is a library developed by {author}', { library: 'Mate UI', author: 'Miracle He' })).toEqual('Mate UI is a library developed by Miracle He')
+  expect(Formatter.string('{0} is a library developed by {1}', 'Mate UI', 'Miracle He')).toEqual(
+    'Mate UI is a library developed by Miracle He'
+  )
+  expect(
+    Formatter.string('{library} is a library developed by {author}', { library: 'Mate UI', author: 'Miracle He' })
+  ).toEqual('Mate UI is a library developed by Miracle He')
 })
 
 test('格式化：日期', () => {
@@ -17,4 +21,3 @@ test('格式化：数字', () => {
   expect(Formatter.number('20481215.00242', { thousandth: true, pretty: true })).toEqual('20,481,215')
   expect(Formatter.number('mate', { symbol: '--' })).toEqual('--')
 })
-

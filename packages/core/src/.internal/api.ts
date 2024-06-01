@@ -2,7 +2,7 @@ import Type from '../type/main'
 
 export const parse = (prefix) => {
   const result = { prefix: '', exclude: '' }
-  if (Type.isObject(prefix) && ('prefix' in prefix)) {
+  if (Type.isObject(prefix) && 'prefix' in prefix) {
     result.prefix = prefix.prefix
     result.exclude = prefix.key || 'others'
   } else if (Type.isString(prefix)) {
@@ -29,7 +29,7 @@ export const mapping = (config, _prefix, mock) => {
       }
     }
     if (Type.isObject(val)) {
-      api[key] = mapping(val, (key === exclude ? '' : prefix), mock)
+      api[key] = mapping(val, key === exclude ? '' : prefix, mock)
     }
     return api
   }, {})

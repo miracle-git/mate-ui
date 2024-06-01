@@ -4,7 +4,7 @@
  */
 export default class DateUtil {
   static compare(left: Date, right: Date) {
-    return left.getTime() < right.getTime() ? -1 : (left.getTime() > right.getTime() ? 1 : 0)
+    return left.getTime() < right.getTime() ? -1 : left.getTime() > right.getTime() ? 1 : 0
   }
   static padding(date: Date, suffix = false) {
     const time = `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, '0')}-${date.getDate().toString().padStart(2, '0')}`
@@ -12,7 +12,7 @@ export default class DateUtil {
     const hours = now.getHours()
     const minutes = now.getMinutes()
     const seconds = now.getSeconds()
-    const pad = data => data < 10 ? `0${data}` : data
+    const pad = (data) => (data < 10 ? `0${data}` : data)
     return suffix ? `${time} 00:00:00` : `${time} ${pad(hours)}:${pad(minutes)}:${pad(seconds)}`
   }
   static interval(start, end) {
@@ -28,11 +28,15 @@ export default class DateUtil {
   }
   static now(date: Date) {
     if (!date) date = new Date()
-    const pad = data => data < 10 ? `0${data}` : data
+    const pad = (data) => (data < 10 ? `0${data}` : data)
     const [year, month, day, hour, minute, second] = [
-      date.getFullYear(), date.getMonth() + 1, date.getDate(),
-      date.getHours(), date.getMinutes(), date.getSeconds()
-    ].map((item, index) => index === 0 ? item : pad(item))
+      date.getFullYear(),
+      date.getMonth() + 1,
+      date.getDate(),
+      date.getHours(),
+      date.getMinutes(),
+      date.getSeconds()
+    ].map((item, index) => (index === 0 ? item : pad(item)))
     return `${year}-${month}-${day}-${hour}-${minute}-${second}`
   }
   static timezone(time, tz) {

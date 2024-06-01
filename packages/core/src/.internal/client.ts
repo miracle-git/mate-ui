@@ -135,7 +135,7 @@ export const ping = async (img, src) => {
     _reject = reject
   })
   const ts = +new Date()
-  img.onload = e => _resolve({ type: e.type, ping: (+new Date()) - ts })
+  img.onload = (e) => _resolve({ type: e.type, ping: +new Date() - ts })
   img.onerror = _reject
   img.src = `${src}?_=${ts}`
   return _ping
@@ -144,7 +144,7 @@ export const ping = async (img, src) => {
 export const analyze = (res, pos) => {
   let total = 0
   let packages = 0
-  res.forEach(item => {
+  res.forEach((item) => {
     total += item.ping
     if (item.type === 'error') {
       packages++
@@ -152,7 +152,7 @@ export const analyze = (res, pos) => {
   })
   const len = res.length - pos
   const average = total / len
-  const rate = packages / len * 100
+  const rate = (packages / len) * 100
   let quantity = 0
   // 判断网络质量
   if (average > 100 && average <= 200) {
@@ -161,9 +161,9 @@ export const analyze = (res, pos) => {
     quantity = Math.max(quantity, 2)
   }
   // 判断丢包率
-  if (rate > .1 && rate <= .2) {
+  if (rate > 0.1 && rate <= 0.2) {
     quantity = Math.max(quantity, 1)
-  } else if (rate > .2) {
+  } else if (rate > 0.2) {
     quantity = Math.max(quantity, 2)
   }
   return {
@@ -172,4 +172,3 @@ export const analyze = (res, pos) => {
     rate: `${rate}%`
   }
 }
-

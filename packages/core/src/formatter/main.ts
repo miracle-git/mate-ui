@@ -24,7 +24,7 @@ export default class Formatter {
    * @param { String } format 需要格式化的日期格式
    */
   static date(str: string | Date, format: string) {
-    let target = str instanceof Date ? str : (str ? new Date(str) : '')
+    let target = str instanceof Date ? str : str ? new Date(str) : ''
     if (!Type.isValidDate(target)) return str
     const timezone = 8 // 目标时区时间，东8区
     const gmt = (target as Date).getTimezoneOffset() // 本地时间和格林威治的时间差，单位是分钟
@@ -45,7 +45,7 @@ export default class Formatter {
     }
     for (let k in o) {
       if (new RegExp(`(${k})`).test(format)) {
-        format = format.replace(RegExp.$1, (RegExp.$1.length === 1) ? (o[k]) : ((`00${o[k]}`).substr((`${o[k]}`).length)))
+        format = format.replace(RegExp.$1, RegExp.$1.length === 1 ? o[k] : `00${o[k]}`.substr(`${o[k]}`.length))
       }
     }
     return format
@@ -63,20 +63,20 @@ export default class Formatter {
   static number(str, { thousandth = false, precision = 2, pretty = false, symbol = '' } = {}) {
     if (isNaN(str) || Type.isUndefinedOrNull(str) || Type.isEmptyString(str, true)) return symbol || str
     str = str * 1
-    let [temp, digit, integer, buffer, positive] = [0.00, 0, 0, [], true]
+    let [temp, digit, integer, buffer, positive] = [0.0, 0, 0, [], true]
     const _zero = (val, len) => {
       const _temp = val.toString()
       const _buffer = []
       for (let i = 0, loop = len - _temp.length; i < loop; i++) {
         _buffer.push('0')
       }
-      _buffer.push(_temp);
+      _buffer.push(_temp)
       return _buffer.join('')
     }
     // 取出正负号
-    positive = (str >= 0)
+    positive = str >= 0
     // 强制转换为绝对值数浮点
-    temp = (isNaN(temp = parseFloat(str))) ? 0 : Math.abs(temp)
+    temp = isNaN((temp = parseFloat(str))) ? 0 : Math.abs(temp)
     // 所有内容用正数规则处理
     // 分离整数部分
     integer = parseInt(temp.toString())
@@ -88,7 +88,7 @@ export default class Formatter {
     } while ((integer = parseInt((integer / 1000).toString())))
     // 最高段区去掉前导0
     buffer[0] = parseInt(buffer[0]).toString()
-    let res = ((positive) ? '' : '-') + buffer.join(',') + (precision > 0 ? ('.' + _zero(digit, precision)) : '')
+    let res = (positive ? '' : '-') + buffer.join(',') + (precision > 0 ? '.' + _zero(digit, precision) : '')
     if (!thousandth) {
       res = res.replace(/\,/g, '')
     }

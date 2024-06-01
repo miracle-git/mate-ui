@@ -6,7 +6,7 @@ import Type from '../type/main'
  */
 export default class ArrayUtil {
   static oneOf(current, values = []) {
-    return values.some(item => item === current)
+    return values.some((item) => item === current)
   }
   static range(current, min = 0, max = 1) {
     return current >= min && current <= max
@@ -21,8 +21,8 @@ export default class ArrayUtil {
    */
   static pick(items, ...props) {
     const _props = Type.isArray(props[0]) ? props[0] : props
-    const _pickProps = (current, props) => props.reduce((prop, val) =>
-      (val in current && (prop[val] = current[val]), prop), {})
-    return items.map(item => _pickProps(item, _props))
+    const _pickProps = (current, props) =>
+      props.reduce((prop, val) => (val in current && (prop[val] = current[val]), prop), {})
+    return items.map((item) => _pickProps(item, _props))
   }
 }

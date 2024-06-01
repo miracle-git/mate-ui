@@ -63,7 +63,7 @@ class MtHtmlElement extends HTMLElement {
         this.color = newVal
         this.style.color = newVal
         break
-      }
+    }
   }
 }
 

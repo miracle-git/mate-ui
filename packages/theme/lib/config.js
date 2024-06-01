@@ -6,13 +6,16 @@ try {
   pkg = require(path.resolve(process.cwd(), 'package.json'))
 } catch (err) {}
 
-var config = Object.assign({
-  browsers: ['ie > 9', 'last 2 versions'],
-  out: './theme',
-  config: './mate-ui-vars.less',
-  theme: '@mate-ui/theme-grace',
-  minimize: false
-}, pkg['@mate-ui/theme'])
+var config = Object.assign(
+  {
+    browsers: ['ie > 9', 'last 2 versions'],
+    out: './theme',
+    config: './mate-ui-vars.less',
+    theme: '@mate-ui/theme-grace',
+    minimize: false
+  },
+  pkg['@mate-ui/theme']
+)
 
 exports.themePath = path.resolve(process.cwd(), './node_modules/' + config.theme)
 exports.out = config.out

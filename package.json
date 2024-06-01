@@ -9,7 +9,6 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "prepare": "husky",
-    "format": "prettier --write .",
     "build": "pnpm pnpm -r --parallel --filter=./packages/* run build",
     "pre:alpha": "pnpm changeset pre enter alpha",
     "pre:beta": "pnpm changeset pre enter beta",

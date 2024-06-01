@@ -11,7 +11,7 @@ export default class NumberUtil {
    */
   static pretty(num: string | number) {
     const type = typeof num
-    const value = (val) => type === 'number' ? Number(val) : val
+    const value = (val) => (type === 'number' ? Number(val) : val)
     num = num + ''
     let temp = num
     let len = num.length - num.indexOf('.') - 1

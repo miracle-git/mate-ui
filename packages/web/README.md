@@ -30,8 +30,8 @@ pnpm i @mate-ui/web
 
 ## Components
 
-| Component Name   | Sub Component Name |   Scope  |        Description         |
-|------------------|--------------------|----------|----------------------------|
-| button           | -                  |    All   | Button                     |
-| icon             | -                  |    All   | Svg Icon                   |
-| search-form      | _                  |    Web   | Search form for query page |
+| Component Name | Sub Component Name | Scope | Description                |
+| -------------- | ------------------ | ----- | -------------------------- |
+| button         | -                  | All   | Button                     |
+| icon           | -                  | All   | Svg Icon                   |
+| search-form    | \_                 | Web   | Search form for query page |

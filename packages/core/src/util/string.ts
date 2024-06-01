@@ -77,7 +77,7 @@ export default class StringUtil {
   static highlight(item: string, keyword: string, color = '#f81d22') {
     const res = keyword.replace(DATA_REGEX_PATTERN.highlight, '\\$&')
     const reg = new RegExp(res, 'gi')
-    return item.replace(reg, text => `<span style="color:${color}">${text}</span>`)
+    return item.replace(reg, (text) => `<span style="color:${color}">${text}</span>`)
   }
   /**
    * @method 将当前的字符串进行编码(转化<,>,""等字符)
@@ -85,14 +85,16 @@ export default class StringUtil {
    */
   static encode(item: string) {
     return item.replace(DATA_REGEX_PATTERN.encode, (a, b, c) =>
-      c ? a : {
-        '<': '&lt;',
-        '&': '&amp;',
-        '>': '&gt;',
-        '"': '&quot;',
-        "'": '&#39;',
-        ' ': '&nbsp;'
-      }[a]
+      c
+        ? a
+        : {
+            '<': '&lt;',
+            '&': '&amp;',
+            '>': '&gt;',
+            '"': '&quot;',
+            "'": '&#39;',
+            ' ': '&nbsp;'
+          }[a]
     )
   }
   /**
@@ -100,14 +102,18 @@ export default class StringUtil {
    * @param { String } item 需要处理的字符串
    */
   static decode(item: string) {
-    return item.replace(DATA_REGEX_PATTERN.decode, (a) => ({
-      '&lt;': '<',
-      '&amp;': '&',
-      '&gt;': '>',
-      '&quot;': '"',
-      '&#39;': "'",
-      '&nbsp;': ' '
-    })[a])
+    return item.replace(
+      DATA_REGEX_PATTERN.decode,
+      (a) =>
+        ({
+          '&lt;': '<',
+          '&amp;': '&',
+          '&gt;': '>',
+          '&quot;': '"',
+          '&#39;': "'",
+          '&nbsp;': ' '
+        })[a]
+    )
   }
   /**
    * @method 获取字符串(含中文)的长度

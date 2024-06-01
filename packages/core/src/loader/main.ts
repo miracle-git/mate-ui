@@ -20,7 +20,7 @@ export default class Loader {
       script[i] = document.createElement('script')
       script[i].setAttribute('type', 'text/javascript')
       script[i].onload = script[i].onreadystatechange = function () {
-        const ready = !/*@cc_on!@*/0 || this.readyState == 'loaded' || this.readyState === 'complete'
+        const ready = !(/*@cc_on!@*/ 0) || this.readyState == 'loaded' || this.readyState === 'complete'
         if (!ready) return
         this.onload = this.onreadystatechange = null
         this.parentNode.removeChild(this)
@@ -51,7 +51,7 @@ export default class Loader {
       script[i] = document.createElement('script')
       script[i].setAttribute('type', 'text/javascript')
       script[i].onload = script[i].onreadystatechange = function () {
-        const ready = !/*@cc_on!@*/0 || this.readyState == 'loaded' || this.readyState === 'complete'
+        const ready = !(/*@cc_on!@*/ 0) || this.readyState == 'loaded' || this.readyState === 'complete'
         if (!ready) {
           loaded++
           this.onload = this.onreadystatechange = null
