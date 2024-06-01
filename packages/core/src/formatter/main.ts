@@ -17,16 +17,6 @@ export default class Formatter {
       return r.replace(new RegExp(`\\{${escape(s)}\\}`, 'g'), String(vals[s]))
     }, str)
   }
-   /**
-   * @method 将字符串中的特殊字符转义
-   * @param { String } str 需要格式化的字符串
-   */
-  static escape(str) {
-    if (Type.isUndefinedOrNull(str) || Type.isEmptyString(str, true)) return ''
-    const chars = [' ', '.', ',', '&&', '||', '(', ')', '-', '%', '/', '#', '@', '!', '*', '?']
-    chars.forEach(item => str = str.replaceAll(item, '_'))
-    return str
-  }
   /**
    * @method 将字符串格式化为日期
    * @param { String | Date } str 需要格式化的字符串或日期

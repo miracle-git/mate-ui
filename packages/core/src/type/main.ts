@@ -7,6 +7,18 @@ import { DATA_REGEX_PATTERN } from '../config/main'
 
 export default class Type {
   /**
+   * @method 检测两个数据是否相等
+   * @param left 左侧数据
+   * @param right 右侧数据
+   * @param ignore 是否忽略大小写，默认不忽略
+   * @returns { Boolean } 如果相等则返回true, 否则返回false
+   */
+  static isEqual(left, right, ignore = false) {
+    left = ignore ? this.string(left).toLowerCase() : this.string(left)
+    right = ignore ? this.string(right).toLowerCase() : this.string(right)
+    return left === right
+  }
+  /**
    * @method 检测当前类型是否为对象
    * @param item 当前检测的类型
    * @returns { Boolean } 如果为对象则返回true, 否则返回false
@@ -223,5 +235,35 @@ export default class Type {
     } catch (e) {
       return defs
     }
+  }
+  /**
+   * @method 判断当前对象是否包含指定属性
+   * @param item 当前对象
+   * @param key 指定属性
+   * @returns { Boolean } 如果当前对象是否包含指定属性返回true，否则将返回false
+   */
+  static hasOwn(item, key) {
+    return Object.prototype.hasOwnProperty.call(item, key)
+  }
+  /**
+   * @method 将当前对象转化为字符串
+   * @param item 当前对象
+   * @returns { String } 返回转化后的字符串
+   */
+  static string(item) {
+    return Object.prototype.toString.call(item)
+  }
+  /**
+   * @method 判断当前数组中是否包含指定的值
+   * @param items 当前数组
+   * @param val 指定的值
+   * @param ignore 是否忽略大小写，默认不忽略
+   * @returns { Boolean } 如果包含则返回true, 否则返回false
+   */
+  static include(items, val, ignore = false) {
+    if (ignore) {
+      return items.map(item => item + '').includes(val + '')
+    }
+    return items.includes(val)
   }
 }

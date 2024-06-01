@@ -1,4 +1,3 @@
-export const { toString, hasOwnProperty: hasOwn } = Object.prototype
 export const isWindow = (item) => item && typeof item === 'object' && 'setInterval' in item
 
 export const is = (type: string, primitive = false) => {
