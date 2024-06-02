@@ -8,15 +8,15 @@ import { DATA_REGEX_PATTERN } from '../config/main'
 export default class StringUtil {
   /**
    * @method 获取全局变量的key
-   * @param app 所属应用(一般用于区分不同项目，防止多项目相互覆盖)
-   * @param scope 所属应用范围(如api,base等等)
+   * @param { String } app 所属应用(一般用于区分不同项目，防止多项目相互覆盖)
+   * @param { String } scope 所属应用范围(如api,base等等)
    */
   static globalKey = (app = '', scope = '') => {
     return (app ? `__MATE_${app}_${scope}__` : `__MATE_${scope}__`).toUpperCase()
   }
   /**
    * @method 将当前对象转化为烤串模式(连字串全小写)
-   * @param item 当前字符串
+   * @param { String } item 当前字符串
    */
   static kebab(item) {
     if (!Type.isString(item)) item = Type.string(item)
@@ -24,7 +24,7 @@ export default class StringUtil {
   }
   /**
    * @method 将当前字符串转化为驼峰模式(首字符小写，后续字符大写)
-   * @param item 当前字符串
+   * @param { String } item 当前字符串
    */
   static camel(item) {
     if (!Type.isString(item)) item = Type.string(item)
@@ -34,7 +34,7 @@ export default class StringUtil {
   }
   /**
    * @method 将当前字符串转化为头脑模式(首字符大写，后续字符不变)
-   * @param item 当前字符串
+   * @param { String } item 当前字符串
    */
   static capital(item) {
     if (!Type.isString(item)) item = Type.string(item)
@@ -42,11 +42,11 @@ export default class StringUtil {
   }
   /**
    * @method 将当前字符串的空格去掉(适合中英文混合)
-   * @param item 当前字符串
-   * @param options 配置选项
-   * @param options.all 去除所有的空格(包含中间的空格)，默认只去除两头的空格
-   * @param options.html 去除html字符串所有的特殊字符，即所谓的"html萃取"
-   * @param options.end 去除字符串结尾中指定的字符串
+   * @param { String } item 当前字符串
+   * @param { Object } options 配置选项
+   * @param { Boolean } options.all 去除所有的空格(包含中间的空格)，默认只去除两头的空格
+   * @param { Boolean } options.html 去除html字符串所有的特殊字符，即所谓的"html萃取"
+   * @param { String } options.end 去除字符串结尾中指定的字符串
    */
   static trim(item, { all = false, html = false, end = '' } = {}) {
     if (!Type.isString(item)) item = Type.string(item)
@@ -96,9 +96,9 @@ export default class StringUtil {
    * @param { String } item 当前需要处理的文本
    * @param { Object } options 配置选项
    * @param { Object } options.stars 添加多少个星号
-   * @param { Object} options.ignore 是否不处理(原文返回)
-   * @param { Object} options.before 星号前导字符数
-   * @param { Object} options.after 星号后导字符数
+   * @param { Object } options.ignore 是否不处理(原文返回)
+   * @param { Object } options.before 星号前导字符数
+   * @param { Object } options.after 星号后导字符数
    * @returns { String } 返回处理之后的文本
    */
   static secure(item: string, { stars = 4, ignore = false, before = 3, after = 4 } = {}) {
