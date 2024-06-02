@@ -253,17 +253,4 @@ export default class Type {
   static string(item) {
     return Object.prototype.toString.call(item)
   }
-  /**
-   * @method 判断当前数组中是否包含指定的值
-   * @param items 当前数组
-   * @param val 指定的值
-   * @param ignore 是否忽略大小写，默认不忽略
-   * @returns { Boolean } 如果包含则返回true, 否则返回false
-   */
-  static include(items, val, ignore = false) {
-    if (ignore) {
-      return items.map((item) => item + '').includes(val + '')
-    }
-    return items.includes(val)
-  }
 }

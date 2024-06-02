@@ -23,10 +23,7 @@ export default class Api {
     if (crypto) {
       const cryptoType = SYMMETRIC_CRYPTO_TYPE.des
       if (window[globalApiKey]) return JSON.parse(Crypto.decrypt(window[globalApiKey], cryptoType))
-      ObjectUtil.frozen(
-        globalApiKey,
-        Crypto.encrypt(JSON.stringify(mapping(config, prefix, mocking(mock))), cryptoType)
-      )
+      ObjectUtil.frozen(globalApiKey, Crypto.encrypt(JSON.stringify(mapping(config, prefix, mocking(mock))), cryptoType))
       return JSON.parse(Crypto.decrypt(window[globalApiKey], cryptoType))
     } else {
       if (window[globalApiKey]) return window[globalApiKey]

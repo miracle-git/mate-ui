@@ -15,9 +15,10 @@ export default class ObjectUtil {
     Object.defineProperty(window, prop, { value: val, writable: false, configurable: false })
   }
   /**
-   * @method 获取对象指定属性的子对象
+   * @method 提取对象指定属性的子对象
    * @param { Object } item 当前对象
-   * @param { Array } props 指定的多个属性
+   * @param { Array } props 指定的属性(可为多个)
+   * @returns { Object } 返回提取指定属性对应对象
    */
   static pick(item, ...props) {
     const _props = Type.isArray(props[0]) ? props[0] : props
@@ -26,7 +27,19 @@ export default class ObjectUtil {
     return _pickProps(item, _props)
   }
   /**
-   * @method 获取对象中深层次属性的值(中间层自动判空)
+   * @method 获取指定对象排除指定动态列对应的对象
+   * @param { Object } item 当前指定的对象
+   * @param { Array } props 指定的属性(可为多个)
+   * @returns { Object } 返回排除指定属性的对象
+   */
+  static draw(item, ...props) {
+    const _props = Type.isArray(props[0]) ? props[0] : props
+    const _drawProps = (current, props) =>
+      props.reduce((obj, prop) => (({ [prop]: val, ...rest } = obj) => rest)(), current)
+    return _drawProps(item, _props)
+  }
+  /**
+   * @method 获取对象中深层∂次属性的值(中间层自动判空)
    * @param { String } path 属性的路径
    * @param { Object } item 当前对象
    * @param def 如果没有找到返回默认值
@@ -43,8 +56,8 @@ export default class ObjectUtil {
     return res
   }
   /**
-   * @method 将当前对象的铺平显示
-   * @param { Object } item 当前对象
+   * @method 将当前的对象进行展平显示(以.分割)
+   * @param { Object } item 需要处理的对象
    */
   static flatten(item) {
     const res = {}
