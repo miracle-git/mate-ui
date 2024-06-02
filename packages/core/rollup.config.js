@@ -27,8 +27,14 @@ const config = {
       // umd: package.json 配置的 umd 属性（全局变量）
       name,
       file: pkg.umd,
-      format: 'umd'
+      format: 'umd',
+      globals: {
+        'axios': 'axios'
+      }
     }
+  ],
+  external: [
+    'axios'
   ],
   plugins: [
     // 解析第三方依赖

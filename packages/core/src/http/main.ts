@@ -1,4 +1,4 @@
-import { EMPTY_FUNC, EMPTY_OBJECT } from '../config/main'
+import { EMPTY_OBJECT, EMPTY_FUNC } from '../config/main'
 import HttpClient from '../.internal/http'
 
 export default (function () {

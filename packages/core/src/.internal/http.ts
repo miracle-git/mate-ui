@@ -7,8 +7,9 @@ const http = Symbol('Http Client')
 
 export default class HttpClient {
   constructor({ config, request, response, reject }) {
-    const { headers = EMPTY_OBJECT, ...options } = config || EMPTY_OBJECT
-    this[http] = axios.create({
+    const { headers = EMPTY_OBJECT, ...options } = config || {}
+    console.log(axios, options)
+    axios.create({
       baseURL: '',
       withCredentials: true, // 携带Cookie
       timeout: 60000,
@@ -16,7 +17,7 @@ export default class HttpClient {
         'Content-Type': 'application/json',
         ...headers
       },
-      ...(options || EMPTY_OBJECT)
+      ...(options || {})
     })
     this[http].interceptors.request.use((config) => {
       // XSS攻击
