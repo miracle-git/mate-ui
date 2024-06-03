@@ -14,6 +14,17 @@ export default class StringUtil {
   static globalKey = (app = '', scope = '') => {
     return (app ? `__MATE_${app}_${scope}__` : `__MATE_${scope}__`).toUpperCase()
   }
+   /**
+   * @method 按占位符格式化字符串
+   * @param { String } item 需要格式化的字符串
+   * @param { Array | Object } vals 多个需要替换的值
+   */
+  static format(item, ...vals) {
+    vals = Type.isObject(vals[0]) ? vals[0] : vals
+    return Object.keys(vals).reduce((r, s) => {
+      return r.replace(new RegExp(`\\{${escape(s)}\\}`, 'g'), String(vals[s]))
+    }, item)
+  }
   /**
    * @method 将当前对象转化为烤串模式(连字串全小写)
    * @param { String } item 当前字符串

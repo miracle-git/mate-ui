@@ -4,7 +4,6 @@
  */
 import Crypto from '../crypto/main'
 import Type from '../type/main'
-import Formatter from '../formatter/main'
 import { StringUtil, ObjectUtil } from '../util/main'
 import { SYMMETRIC_CRYPTO_TYPE } from '../config/main'
 import { mocking, mapping } from '../.internal/api'
@@ -38,6 +37,6 @@ export default class Api {
    */
   static format(url: string, config: object) {
     if (Type.isEmptyString(url) || !Type.isObject(config)) return url
-    return Formatter.string(url, config)
+    return StringUtil.format(url, config)
   }
 }

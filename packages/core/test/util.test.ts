@@ -1,7 +1,9 @@
-import { StringUtil, NumberUtil, ArrayUtil, ObjectUtil } from '../src/util/main'
+import { StringUtil, NumberUtil, DateUtil, ArrayUtil, ObjectUtil } from '../src/util/main'
 
 test('测试：字符串工具类', () => {
   const phone = '13566668888'
+  expect(StringUtil.format('{0} is a library developed by {1}', 'Mate UI', 'Miracle He')).toEqual('Mate UI is a library developed by Miracle He')
+  expect(StringUtil.format('{library} is a library developed by {author}', { library: 'Mate UI', author: 'Miracle He' })).toEqual('Mate UI is a library developed by Miracle He')
   expect(StringUtil.kebab('mateUiCore')).toEqual('mate-ui-core')
   expect(StringUtil.camel('mate-ui-core')).toEqual('mateUiCore')
   expect(StringUtil.camel('mate_ui_core')).toEqual('mateUiCore')
@@ -34,6 +36,16 @@ test('测试：数字工具类', () => {
   expect(NumberUtil.pretty(20481215.0)).toEqual(20481215)
   expect(NumberUtil.pretty('20481215.00')).toEqual('20481215')
   expect(NumberUtil.pretty('mate')).toEqual('mate')
+  expect(NumberUtil.format('20481215.00242', { thousandth: true })).toEqual('20,481,215.00')
+  expect(NumberUtil.format('20481215.00242', { thousandth: true, precision: 4 })).toEqual('20,481,215.0024')
+  expect(NumberUtil.format('20481215.00242', { thousandth: true, pretty: true })).toEqual('20,481,215')
+  expect(NumberUtil.format('mate', { symbol: '--' })).toEqual('--')
+})
+
+test('测试：日期工具类', () => {
+  expect(DateUtil.format(new Date(2024, 5, 28), 'yyyy-MM-dd')).toEqual('2024-06-28')
+  expect(DateUtil.format('2024-05-28 12:25:30', 'yyyy-MM-dd hh:mm')).toEqual('2024-05-28 12:25')
+  expect(DateUtil.format('mate', 'yyyy-MM-dd')).toEqual('mate')
 })
 
 test('测试：数组工具类', () => {
