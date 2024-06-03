@@ -41,9 +41,6 @@ importers:
       '@rollup/plugin-commonjs':
         specifier: ^21.0.3
         version: 21.1.0(rollup@2.79.1)
-      '@rollup/plugin-json':
-        specifier: ^6.1.0
-        version: 6.1.0(rollup@2.79.1)
       '@rollup/plugin-node-resolve':
         specifier: ^13.1.3
         version: 13.3.0(rollup@2.79.1)
@@ -150,6 +147,15 @@ importers:
         specifier: ^5.0.2
         version: 5.2.10(terser@5.31.0)
 
+  packages/locale:
+    dependencies:
+      i18next:
+        specifier: ^23.11.5
+        version: 23.11.5
+      i18next-browser-languagedetector:
+        specifier: ^8.0.0
+        version: 8.0.0
+
   packages/ng:
     devDependencies:
       svgo:
@@ -173,6 +179,8 @@ importers:
       vite:
         specifier: ^5.0.2
         version: 5.2.10(terser@5.31.0)
+
+  packages/render: {}
 
   packages/theme:
     dependencies:
@@ -1587,7 +1595,6 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       regenerator-runtime: 0.14.1
-    dev: true
 
   /@babel/template@7.24.0:
     resolution: {integrity: sha512-Bkf2q8lMB0AFpX0NFEqSbx1OkTHf0f+0j82mkw+ZpzBnkk7e9Ql0891vlfgi+kHwOk8tQjiQHpqh4LaSa0fKEA==}
@@ -2456,19 +2463,6 @@ packages:
       rollup: 2.79.1
     dev: true
 
-  /@rollup/plugin-json@6.1.0(rollup@2.79.1):
-    resolution: {integrity: sha512-EGI2te5ENk1coGeADSIwZ7G2Q8CJS2sF120T7jLw4xFw9n7wIOXHo+kIYRAoVpJAN+kmqZSoO3Fp4JtoNF4ReA==}
-    engines: {node: '>=14.0.0'}
-    peerDependencies:
-      rollup: ^1.20.0||^2.0.0||^3.0.0||^4.0.0
-    peerDependenciesMeta:
-      rollup:
-        optional: true
-    dependencies:
-      '@rollup/pluginutils': 5.1.0(rollup@2.79.1)
-      rollup: 2.79.1
-    dev: true
-
   /@rollup/plugin-node-resolve@13.3.0(rollup@2.79.1):
     resolution: {integrity: sha512-Lus8rbUo1eEcnS4yTFKLZrVumLPY+YayBdWXgFSHYhTT2iJbMhoaaBL3xl5NCdeRytErGr8tZ0L71BMRmnlwSw==}
     engines: {node: '>= 10.0.0'}
@@ -2502,21 +2496,6 @@ packages:
     dependencies:
       estree-walker: 2.0.2
       picomatch: 2.3.1
-    dev: true
-
-  /@rollup/pluginutils@5.1.0(rollup@2.79.1):
-    resolution: {integrity: sha512-XTIWOPPcpvyKI6L1NHo0lFlCyznUEyPmPY1mc3KpPVDYulHSTvyeLNVW00QTLIAFNhR3kYnJTQHeGqU4M3n09g==}
-    engines: {node: '>=14.0.0'}
-    peerDependencies:
-      rollup: ^1.20.0||^2.0.0||^3.0.0||^4.0.0
-    peerDependenciesMeta:
-      rollup:
-        optional: true
-    dependencies:
-      '@types/estree': 1.0.5
-      estree-walker: 2.0.2
-      picomatch: 2.3.1
-      rollup: 2.79.1
     dev: true
 
   /@rollup/rollup-android-arm-eabi@4.18.0:
@@ -6713,6 +6692,18 @@ packages:
     hasBin: true
     dev: true
 
+  /i18next-browser-languagedetector@8.0.0:
+    resolution: {integrity: sha512-zhXdJXTTCoG39QsrOCiOabnWj2jecouOqbchu3EfhtSHxIB5Uugnm9JaizenOy39h7ne3+fLikIjeW88+rgszw==}
+    dependencies:
+      '@babel/runtime': 7.24.5
+    dev: false
+
+  /i18next@23.11.5:
+    resolution: {integrity: sha512-41pvpVbW9rhZPk5xjCX2TPJi2861LEig/YRhUkY+1FQ2IQPS0bKUDYnEqY8XPPbB48h1uIwLnP9iiEfuSl20CA==}
+    dependencies:
+      '@babel/runtime': 7.24.5
+    dev: false
+
   /iconv-lite@0.4.24:
     resolution: {integrity: sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==}
     engines: {node: '>=0.10.0'}
@@ -10274,7 +10265,6 @@ packages:
 
   /regenerator-runtime@0.14.1:
     resolution: {integrity: sha512-dYnhHh0nJoMfnkZs6GmmhFknAGRrLznOu5nc9ML+EJxGvrx6H7teuevqVqCuPcPK//3eDrrjQhehXVx9cnkGdw==}
-    dev: true
 
   /regenerator-transform@0.15.2:
     resolution: {integrity: sha512-hfMp2BoF0qOk3uc5V20ALGDS2ddjQaLrdl7xrGXvAIow7qeWRM2VA2HuCHkUKk9slq3VwEwLNK3DFBqDfPGYtg==}

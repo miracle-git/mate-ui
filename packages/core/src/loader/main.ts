@@ -35,7 +35,6 @@ export default class Loader {
     }
     recursive(0)
   }
-
   /**
    * 并行加载指定的脚本：同步同时加载，不论上个脚本是否加载完成直接加载下一个，全部加载完成后执行回调
    * @param scripts { String | Array<String> } 指定的脚本

@@ -1,0 +1,27 @@
+{
+  "name": "@mate-ui/render",
+  "version": "1.0.0",
+  "description": "Mate-UI render api regardless for vue, react, angular.",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.js",
+  "unpkg": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:miracle-git/mate-ui.git"
+  },
+  "files": [
+    "dist/",
+    "package.json",
+    "README.md"
+  ],
+  "keywords": [
+    "mate-ui",
+    "frontend",
+    "render",
+    "renderless",
+    "api"
+  ],
+  "scripts": {
+  },
+  "license": "MIT"
+}
