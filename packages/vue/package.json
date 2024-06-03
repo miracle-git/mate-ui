@@ -1,35 +1,69 @@
 {
   "name": "@mate-ui/vue",
   "version": "1.0.0",
-  "description": "Mate-UI icon web component library.",
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.js",
-  "unpkg": "dist/index.js",
+  "description": "An enterprise-level Mate-UI design language and Vue-based implementation",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "unpkg": "dist/mate.min.js",
+  "typings": "es/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git@github.com:miracle-git/mate-ui.git"
   },
+  "license": "MIT",
+  "homepage": "https://www.mate-ui.com/",
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "Firefox ESR",
+    "not dead"
+  ],
   "files": [
-    "dist/",
-    "package.json",
-    "README.md"
+    "dist",
+    "lib",
+    "es",
+    "scripts",
+    "vetur",
+    "typings/global.d.ts",
+    "locale"
   ],
   "keywords": [
     "mate-ui",
-    "frontend",
-    "icon",
-    "web-component",
-    "svg"
+    "mate",
+    "vue",
+    "vue3",
+    "design",
+    "vueComponent",
+    "component",
+    "components",
+    "ui",
+    "framework",
+    "frontend"
   ],
   "scripts": {
     "start": "vite",
     "build": "vite build",
     "gen": "node script/transfer.mjs"
   },
-  "devDependencies": {
-    "svgo": "^3.0.4",
-    "terser": "^5.24.0",
-    "vite": "^5.0.2"
+  "engines": {
+    "node": ">=12.22.0"
   },
-  "license": "MIT"
+  "sideEffects": [
+    "docs/*",
+    "*.vue",
+    "*.md",
+    "dist/*",
+    "*.css"
+  ],
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git",
+      "czConfig": "./scripts/commitizen.js"
+    }
+  },
+  "dependencies": {
+    "@mate-ui/core": "workspace:^",
+    "@mate-ui/icon": "workspace:^",
+    "@mate-ui/locale": "workspace:^"
+  }
 }

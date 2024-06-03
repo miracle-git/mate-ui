@@ -247,16 +247,16 @@ importers:
         version: 5.0.0
 
   packages/vue:
-    devDependencies:
-      svgo:
-        specifier: ^3.0.4
-        version: 3.2.0
-      terser:
-        specifier: ^5.24.0
-        version: 5.31.0
-      vite:
-        specifier: ^5.0.2
-        version: 5.2.10(terser@5.31.0)
+    dependencies:
+      '@mate-ui/core':
+        specifier: workspace:^
+        version: link:../core
+      '@mate-ui/icon':
+        specifier: workspace:^
+        version: link:../icon
+      '@mate-ui/locale':
+        specifier: workspace:^
+        version: link:../locale
 
   packages/web:
     dependencies:
