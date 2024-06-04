@@ -1,4 +1,5 @@
-import theme from '../theme/en-US';
+import theme from '../theme/en-US'
+
 export default {
   ...theme,
   'navBar.lang': 'Languages',
@@ -19,5 +20,5 @@ export default {
   'app.docs.components.icon.category.data': 'Data Icons',
   'app.docs.components.icon.category.other': 'Application Icons',
   'app.docs.components.icon.category.logo': 'Brand and Logos',
-  'app.docs.components.icon.pic-searcher.intro': 'AI Search by image is online, welcome to use! 🎉',
-};
+  'app.docs.components.icon.pic-searcher.intro': 'AI Search by image is online, welcome to use! 🎉'
+}

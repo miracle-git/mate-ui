@@ -1,11 +1,11 @@
 /* eslint-disable import/no-unresolved */
-import Layout from '../layouts/index.vue';
-import Iframe from '../layouts/Iframe.vue';
+import Layout from '../layouts/index.vue'
+import Iframe from '../layouts/Iframe.vue'
 // import Iframe from '../components/iframe.jsx';
-import demoRoutes from './demoRoutes';
+import routes from './routes'
 // import otherRoutes from './otherRoutes';
-import { createRouter, createWebHistory } from 'vue-router';
-const routes = [
+import { createRouter, createWebHistory } from 'vue-router'
+const appRoutes = [
   // ...otherRoutes,
   {
     path: '/components',
@@ -15,8 +15,8 @@ const routes = [
         path: 'overview:lang(.*)',
         component: () => import('../views/ComponentOverview.vue'),
       },
-      ...demoRoutes,
-    ],
+      ...routes
+    ]
   },
   {
     path: '/iframe',
@@ -212,10 +212,10 @@ const routes = [
 export default createRouter({
   history: createWebHistory(),
   fallback: false,
-  routes,
-  scrollBehavior: to => {
+  routes: appRoutes,
+  scrollBehavior: (to) => {
     if (to.hash) {
-      return { el: to.hash, top: 80, behavior: 'auto' };
+      return { el: to.hash, top: 80, behavior: 'auto' }
     }
-  },
-});
+  }
+})

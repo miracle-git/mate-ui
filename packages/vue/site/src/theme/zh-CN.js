@@ -16,7 +16,6 @@ export default {
   'app.header.lang': 'English',
   'app.content.edit-page': '在 GitHub 上编辑此页！',
   'app.content.edit-demo': '在 GitHub 上编辑此示例！',
-  'app.content.contributors': '文档贡献者',
   'app.component.examples': '代码演示',
   'app.component.examples.expand': '展开全部代码',
   'app.component.examples.collapse': '收起全部代码',
