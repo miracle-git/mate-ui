@@ -186,39 +186,28 @@ const routes = [
         component: () => import('../vueDocs/download.en-US.md'),
       },
       {
-        path: 'vue/sponsor-cn',
-        meta: { enTitle: 'Sponsor', title: '支持我们', category: 'docs' },
-        component: () => import('../vueDocs/sponsor.zh-CN.md'),
-      },
-      {
-        path: 'vue/sponsor',
-        meta: { enTitle: 'Sponsor', title: '支持我们', category: 'docs' },
-        component: () => import('../vueDocs/sponsor.en-US.md'),
-      },
-      {
         path: 'vue/changelog-cn',
         meta: { enTitle: 'Change Log', title: '更新日志', category: 'docs' },
-        component: () => import('../../../CHANGELOG.zh-CN.md'),
+        component: () => import('../../../CHANGELOG.zh-CN.md')
       },
       {
         path: 'vue/changelog',
         meta: { enTitle: 'Change Log', title: '更新日志', category: 'docs' },
-        component: () => import('../../../CHANGELOG.en-US.md'),
+        component: () => import('../../../CHANGELOG.en-US.md')
       },
-      { path: '', redirect: '/docs/vue/introduce/' },
-    ],
+      { path: '', redirect: '/docs/vue/introduce/' }
+    ]
   },
   {
     path: '/theme-editor',
-    component: () => import('../views/theme-editor/index.vue'),
+    component: () => import('../views/theme-editor/index.vue')
   },
   {
     path: '/theme-editor-cn',
-    component: () => import('../views/theme-editor/index.vue'),
+    component: () => import('../views/theme-editor/index.vue')
   },
-  { path: '/debugger', component: () => import('../../debugger') },
-  { path: '/:lang(.*)', redirect: '/components/overview' },
-];
+  { path: '/:lang(.*)', redirect: '/components/overview' }
+]
 
 export default createRouter({
   history: createWebHistory(),
