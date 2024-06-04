@@ -1,9 +1,9 @@
 'use strict';
 
-const { execSync } = require('child_process')
+const { execSync } = require('child_process');
 const fg = require('fast-glob');
 
-const components = fg.sync('*', { cwd: 'components', onlyDirectories: true })
+const components = fg.sync('*', { cwd: 'components', onlyDirectories: true });
 // precomputed scope
 const scopeComplete = execSync('git status --porcelain || true')
   .toString()
@@ -11,7 +11,7 @@ const scopeComplete = execSync('git status --porcelain || true')
   .split('\n')
   .find(r => ~r.indexOf('M  '))
   ?.replace(/(\/)/g, '%%')
-  ?.match(/components%%((\w|-)*)/)?.[1]
+  ?.match(/components%%((\w|-)*)/)?.[1];
 
 /** @type {import('cz-git').CommitizenGitOptions} */
 module.exports = {
@@ -21,5 +21,5 @@ module.exports = {
   defaultScope: scopeComplete,
   maxHeaderLength: 100,
   allowEmptyIssuePrefixs: false,
-  allowCustomIssuePrefixs: false
-}
+  allowCustomIssuePrefixs: false,
+};

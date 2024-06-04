@@ -12,7 +12,6 @@
     "moduleResolution": "node",
     "esModuleInterop": true,
     "experimentalDecorators": true,
-    "forceConsistentCasingInFileNames": true,
     "jsx": "preserve",
     "jsxImportSource": "vue",
     "noUnusedParameters": true,
@@ -21,9 +20,8 @@
     "target": "es6",
     "module": "esnext",
     "skipLibCheck": true,
-    "strict": true,
     "allowJs": true,
-    "verbatimModuleSyntax": true,
+    "importsNotUsedAsValues": "preserve",
     "stripInternal": true,
     "resolveJsonModule": true
   },
@@ -35,6 +33,6 @@
     "locale",
     "scripts",
     "**/__tests__/**/*",
-    "docs/dist"
+    "site/dist"
   ]
 }
