@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://www.mate-ui.com" target="_blank" rel="noopener noreferrer">
-    <img alt="Mate UI Logo" src="./mate-ui.png" height="100" style="max-width:100%;">
+    <img alt="Mate UI Logo" src="./logo.png" height="100" style="max-width:100%;">
   </a>
 </p>
 
