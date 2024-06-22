@@ -34,5 +34,5 @@ export default [
   })
 
   const report = await engine.lintText(TEMPLATE)
-  fs.writeFileSync('docs/src/router/routes.js', report[0].source)
+  fs.writeFileSync('docs/src/router/routes.config.js', report[0].source)
 })()

@@ -126,6 +126,7 @@
     "markdown-it-container": "^3.0.0",
     "markdown-it-emoji": "^2.0.0",
     "markdown-it-table-of-contents": "^0.5.2",
+    "nprogress": "^0.2.0",
     "prismjs": "^1.23.0",
     "progress": "^2.0.3",
     "slash": "^3.0.0",
@@ -136,7 +137,8 @@
     "typescript": "~4.9.3",
     "vite": "^3.0.0",
     "vue": "^3.2.0",
-    "vue-eslint-parser": "^9.3.1"
+    "vue-eslint-parser": "^9.3.1",
+    "vue-router": "^4.0.0"
   },
   "sideEffects": [
     "docs/*",

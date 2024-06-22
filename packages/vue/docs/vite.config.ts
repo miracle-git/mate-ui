@@ -16,7 +16,8 @@ export default {
       '@mate-ui/vue/es': path.resolve(__dirname, '../src'),
       '@mate-ui/vue': path.resolve(__dirname, '../src'),
       '@': path.resolve(__dirname, './src')
-    }
+    },
+    extensions: ['.js', '.jsx', '.ts', '.tsx', '.vue', '.css', '.less', '.scss', '.json', '.gql', '.graphql']
   },
   server: {
     host: true
@@ -39,8 +40,8 @@ export default {
       // '@ant-design/icons-vue',
       // 'lodash-es',
       // 'dayjs',
-      // 'vue',
-      // 'vue-router',
+      'vue',
+      'vue-router',
       // 'vue-i18n',
       // 'async-validator'
     ]
