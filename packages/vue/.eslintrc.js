@@ -5,26 +5,18 @@ module.exports = {
     node: true,
     jasmine: true,
     jest: true,
-    es6: true,
+    es6: true
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    parser: 'babel-eslint',
+    parser: 'babel-eslint'
   },
   extends: [
     'plugin:vue/vue3-recommended',
     'plugin:import/recommended',
     'plugin:import/typescript',
-    '@vue/typescript/recommended',
-    '@vue/prettier',
-    // 'prettier',
+    '@vue/typescript/recommended'
   ],
-  // extends: [
-  //   'eslint:recommended',
-  //   'plugin:vue/vue3-recommended',
-  //   '@vue/typescript/recommended',
-  //   '@vue/prettier',
-  // ],
   plugins: ['markdown', 'jest', '@typescript-eslint', 'import'],
   globals: {
     h: true,
@@ -36,13 +28,12 @@ module.exports = {
       processor: 'markdown/markdown',
       rules: {
         'no-console': 'off'
-      },
+      }
     },
     {
       files: ['*.ts', '*.tsx'],
-      // extends: ['@vue/typescript/recommended', '@vue/prettier'],
       parserOptions: {
-        project: './tsconfig.json',
+        project: './tsconfig.json'
       },
       rules: {
         '@typescript-eslint/ban-types': 0,
@@ -50,7 +41,10 @@ module.exports = {
         '@typescript-eslint/explicit-module-boundary-types': 0,
         '@typescript-eslint/no-empty-function': 0,
         '@typescript-eslint/no-non-null-assertion': 0,
-        '@typescript-eslint/no-unused-vars': ['error', { vars: 'all', args: 'after-used', ignoreRestSiblings: true }],
+        '@typescript-eslint/no-unused-vars': [
+          'error',
+          { vars: 'all', args: 'after-used', ignoreRestSiblings: true }
+        ],
         '@typescript-eslint/ban-ts-comment': 0
       }
     },
@@ -59,7 +53,7 @@ module.exports = {
       parser: 'vue-eslint-parser',
       parserOptions: {
         parser: '@typescript-eslint/parser',
-        ecmaVersion: 2021,
+        ecmaVersion: 2021
       },
       rules: {
         'no-console': 'off',
@@ -72,22 +66,21 @@ module.exports = {
     '@typescript-eslint/no-empty-function': 0,
     '@typescript-eslint/no-unused-vars': [
       'error',
-      { vars: 'all', args: 'after-used', ignoreRestSiblings: true, argsIgnorePattern: '^_' },
+      { vars: 'all', args: 'after-used', ignoreRestSiblings: true, argsIgnorePattern: '^_' }
     ],
     'import/no-named-as-default': 'off',
     'import/namespace': [2, { allowComputed: true }],
     'import/no-named-as-default-member': 'off',
     'import/no-unresolved': [2, { ignore: ['ant-design-vue'] }],
-    'comma-dangle': [2, 'always-multiline'],
+    'comma-dangle': ['off'],
     'no-var': 'error',
-    'comma-dangle': 'off',
     'no-console': [2, { allow: ['warn', 'error'] }],
     'object-shorthand': 2,
     'no-unused-vars': [2, { ignoreRestSiblings: true, argsIgnorePattern: '^_' }],
     'no-undef': 2,
     'camelcase': 'off',
     'no-extra-boolean-cast': 'off',
-    'semi': 'off',
+    'semi': ['off'],
     'vue/no-v-html': 'off',
     'vue/require-explicit-emits': 'off',
     'vue/require-prop-types': 'off',

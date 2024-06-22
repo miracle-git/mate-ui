@@ -2,10 +2,10 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "ant-design-vue": ["components/index.ts"],
-      "ant-design-vue/es/*": ["components/*"],
-      "ant-design-vue/lib/*": ["components/*"],
-      "ant-design-vue/locale/*": ["components/locale/*"]
+      "@mate-ui/vue": ["src/components/index.ts"],
+      "@mate-ui/vue/es/*": ["src/components/*"],
+      "@mate-ui/vue/lib/*": ["src/components/*"],
+      "@mate-ui/vue/locale/*": ["src/components/locales/*"]
     },
     "lib": ["DOM", "ESNext"],
     "strictNullChecks": false,
@@ -30,9 +30,9 @@
     "lib",
     "es",
     "dist",
-    "locale",
+    "locales",
     "scripts",
     "**/__tests__/**/*",
-    "site/dist"
+    "docs/dist"
   ]
 }

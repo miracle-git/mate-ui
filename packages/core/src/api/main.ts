@@ -12,7 +12,7 @@ export default class Api {
   /**
    * @method 根据当前的地址配置生成Api对象
    * @param { Object } config 地址配置(可按照模块划分)
-   * @param { String, Object } prefix 前缀(可为字符串或对象，默认为'/api')
+   * @param { String | Object } prefix 前缀(可为字符串或对象，默认为'/api')
    * @param { Object } options 配置选项
    * @param { String } options.app api归属应用(一般用于区分不同项目，防止多项目相互覆盖)
    * @param { String | Object | Array } options.mock mock接口相关配置(自动将前缀修改为'/api/mock')

@@ -3,7 +3,8 @@ module.exports = {
     test: {
       presets: [['@babel/preset-env']],
       plugins: [
-        ['@vue/babel-plugin-jsx', { mergeProps: false, enableObjectSlots: false }],
+      [
+        '@vue/babel-plugin-jsx', { mergeProps: false, enableObjectSlots: false }],
         '@babel/plugin-proposal-optional-chaining',
         '@babel/plugin-transform-object-assign',
         '@babel/plugin-proposal-object-rest-spread',
@@ -12,8 +13,8 @@ module.exports = {
         '@babel/plugin-proposal-class-properties',
         '@babel/plugin-syntax-dynamic-import',
         '@babel/plugin-transform-runtime',
-        'transform-require-context',
-      ],
-    },
-  },
-};
+        'transform-require-context'
+      ]
+    }
+  }
+}

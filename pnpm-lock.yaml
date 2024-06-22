@@ -24,6 +24,613 @@ importers:
         specifier: ^1.12.2
         version: 1.13.3
 
+  packages/antd-vue:
+    dependencies:
+      '@ant-design/colors':
+        specifier: ^6.0.0
+        version: 6.0.0
+      '@ant-design/icons-vue':
+        specifier: ^7.0.0
+        version: 7.0.1(vue@3.4.27)
+      '@babel/runtime':
+        specifier: ^7.10.5
+        version: 7.24.5
+      '@ctrl/tinycolor':
+        specifier: ^3.5.0
+        version: 3.6.1
+      '@emotion/hash':
+        specifier: ^0.9.0
+        version: 0.9.1
+      '@emotion/unitless':
+        specifier: ^0.8.0
+        version: 0.8.1
+      '@mate-ui/core':
+        specifier: workspace:^
+        version: link:../core
+      '@mate-ui/icon':
+        specifier: workspace:^
+        version: link:../icon
+      '@mate-ui/locale':
+        specifier: workspace:^
+        version: link:../locale
+      '@simonwep/pickr':
+        specifier: ~1.8.0
+        version: 1.8.2
+      array-tree-filter:
+        specifier: ^2.1.0
+        version: 2.1.0
+      async-validator:
+        specifier: ^4.0.0
+        version: 4.2.5
+      csstype:
+        specifier: ^3.1.1
+        version: 3.1.3
+      dayjs:
+        specifier: ^1.10.5
+        version: 1.11.11
+      dom-align:
+        specifier: ^1.12.1
+        version: 1.12.4
+      dom-scroll-into-view:
+        specifier: ^2.0.0
+        version: 2.0.1
+      lodash:
+        specifier: ^4.17.21
+        version: 4.17.21
+      lodash-es:
+        specifier: ^4.17.15
+        version: 4.17.21
+      resize-observer-polyfill:
+        specifier: ^1.5.1
+        version: 1.5.1
+      scroll-into-view-if-needed:
+        specifier: ^2.2.25
+        version: 2.2.31
+      shallow-equal:
+        specifier: ^1.0.0
+        version: 1.2.1
+      stylis:
+        specifier: ^4.1.3
+        version: 4.3.2
+      throttle-debounce:
+        specifier: ^5.0.0
+        version: 5.0.0
+      vue-types:
+        specifier: ^3.0.0
+        version: 3.0.2(vue@3.4.27)
+      warning:
+        specifier: ^4.0.0
+        version: 4.0.3
+    devDependencies:
+      '@babel/cli':
+        specifier: ^7.8.4
+        version: 7.24.6(@babel/core@7.24.5)
+      '@babel/core':
+        specifier: ^7.10.5
+        version: 7.24.5
+      '@babel/plugin-proposal-class-properties':
+        specifier: ^7.8.3
+        version: 7.18.6(@babel/core@7.24.5)
+      '@babel/plugin-proposal-export-default-from':
+        specifier: ^7.8.3
+        version: 7.24.6(@babel/core@7.24.5)
+      '@babel/plugin-proposal-export-namespace-from':
+        specifier: ^7.12.1
+        version: 7.18.9(@babel/core@7.24.5)
+      '@babel/plugin-proposal-object-rest-spread':
+        specifier: ^7.9.6
+        version: 7.20.7(@babel/core@7.24.5)
+      '@babel/plugin-proposal-optional-chaining':
+        specifier: ^7.10.1
+        version: 7.21.0(@babel/core@7.24.5)
+      '@babel/plugin-syntax-dynamic-import':
+        specifier: ^7.8.3
+        version: 7.8.3(@babel/core@7.24.5)
+      '@babel/plugin-transform-member-expression-literals':
+        specifier: ^7.8.3
+        version: 7.24.6(@babel/core@7.24.5)
+      '@babel/plugin-transform-object-assign':
+        specifier: ^7.8.3
+        version: 7.24.6(@babel/core@7.24.5)
+      '@babel/plugin-transform-property-literals':
+        specifier: ^7.8.3
+        version: 7.24.6(@babel/core@7.24.5)
+      '@babel/plugin-transform-runtime':
+        specifier: ^7.10.5
+        version: 7.24.6(@babel/core@7.24.5)
+      '@babel/plugin-transform-template-literals':
+        specifier: ^7.8.3
+        version: 7.24.6(@babel/core@7.24.5)
+      '@babel/plugin-transform-typescript':
+        specifier: ^7.12.1
+        version: 7.24.6(@babel/core@7.24.5)
+      '@babel/polyfill':
+        specifier: ^7.8.7
+        version: 7.12.1
+      '@babel/preset-env':
+        specifier: ^7.9.6
+        version: 7.24.6(@babel/core@7.24.5)
+      '@babel/preset-typescript':
+        specifier: ^7.10.4
+        version: 7.24.6(@babel/core@7.24.5)
+      '@commitlint/cli':
+        specifier: ^12.0.0
+        version: 12.1.4
+      '@commitlint/config-conventional':
+        specifier: ^12.0.0
+        version: 12.1.4
+      '@octokit/rest':
+        specifier: ^18.0.0
+        version: 18.12.0
+      '@rollup/plugin-babel':
+        specifier: ^5.3.0
+        version: 5.3.1(@babel/core@7.24.5)(rollup@2.79.1)
+      '@types/compression':
+        specifier: ^1.7.0
+        version: 1.7.5
+      '@types/fs-extra':
+        specifier: ^9.0.8
+        version: 9.0.13
+      '@types/jest':
+        specifier: ^28.1.4
+        version: 28.1.8
+      '@types/koa':
+        specifier: ^2.11.6
+        version: 2.15.0
+      '@types/lodash-es':
+        specifier: ^4.17.3
+        version: 4.17.12
+      '@types/lru-cache':
+        specifier: ^5.1.0
+        version: 5.1.1
+      '@types/markdown-it':
+        specifier: ^10.0.2
+        version: 10.0.3
+      '@types/node':
+        specifier: ^14.0.0
+        version: 14.18.63
+      '@types/postcss-load-config':
+        specifier: ^2.0.1
+        version: 2.0.1
+      '@typescript-eslint/eslint-plugin':
+        specifier: ^5.4.0
+        version: 5.62.0(@typescript-eslint/parser@5.62.0)(eslint@8.57.0)(typescript@4.9.5)
+      '@typescript-eslint/parser':
+        specifier: ^5.4.0
+        version: 5.62.0(eslint@8.57.0)(typescript@4.9.5)
+      '@vitejs/plugin-legacy':
+        specifier: ^2.2.0
+        version: 2.3.1(terser@5.31.0)(vite@3.2.10)
+      '@vitejs/plugin-vue':
+        specifier: ^3.0.0
+        version: 3.2.0(vite@3.2.10)(vue@3.4.27)
+      '@vitejs/plugin-vue-jsx':
+        specifier: ^2.0.0
+        version: 2.1.1(vite@3.2.10)(vue@3.4.27)
+      '@vue/babel-plugin-jsx':
+        specifier: ^1.0.0
+        version: 1.2.2(@babel/core@7.24.5)
+      '@vue/cli-plugin-eslint':
+        specifier: ^5.0.0
+        version: 5.0.8(@vue/cli-service@5.0.8)(esbuild@0.12.29)(eslint@8.57.0)(webpack-cli@4.10.0)
+      '@vue/eslint-config-typescript':
+        specifier: ^11.0.0
+        version: 11.0.3(eslint-plugin-vue@9.25.0)(eslint@8.57.0)(typescript@4.9.5)
+      '@vue/test-utils':
+        specifier: ^2.0.2
+        version: 2.4.6
+      '@vue/vue3-jest':
+        specifier: '28'
+        version: 28.1.0(@babel/core@7.24.5)(babel-jest@28.1.3)(jest@28.1.3)(typescript@4.9.5)(vue@3.4.27)
+      '@vueuse/core':
+        specifier: ^8.3.1
+        version: 8.9.4(vue@3.4.27)
+      '@webpack-cli/serve':
+        specifier: ^1.3.1
+        version: 1.7.0(webpack-cli@4.10.0)(webpack-dev-server@4.15.2)
+      acorn:
+        specifier: ^8.0.0
+        version: 8.11.3
+      ali-oss:
+        specifier: ^6.16.0
+        version: 6.20.0
+      autoprefixer:
+        specifier: ^10.2.0
+        version: 10.4.19(postcss@8.4.38)
+      axios:
+        specifier: ^0.22.0
+        version: 0.22.0
+      babel-eslint:
+        specifier: ^10.0.1
+        version: 10.1.0(eslint@8.57.0)
+      babel-jest:
+        specifier: ^28.1.2
+        version: 28.1.3(@babel/core@7.24.5)
+      babel-loader:
+        specifier: ^8.0.0
+        version: 8.3.0(@babel/core@7.24.5)(webpack@5.91.0)
+      babel-plugin-import:
+        specifier: ^1.1.1
+        version: 1.13.8
+      babel-plugin-inline-import-data-uri:
+        specifier: ^1.0.1
+        version: 1.0.1
+      babel-plugin-istanbul:
+        specifier: ^6.0.0
+        version: 6.1.1
+      babel-plugin-transform-require-context:
+        specifier: ^0.1.1
+        version: 0.1.1
+      case-sensitive-paths-webpack-plugin:
+        specifier: ^2.1.2
+        version: 2.4.0
+      chalk:
+        specifier: ^4.1.1
+        version: 4.1.2
+      cheerio:
+        specifier: ^1.0.0-rc.2
+        version: 1.0.0-rc.12
+      codecov:
+        specifier: ^3.0.0
+        version: 3.8.3
+      codesandbox:
+        specifier: ^2.2.3
+        version: 2.2.3
+      colorful:
+        specifier: ^2.1.0
+        version: 2.1.0
+      commander:
+        specifier: ^6.1.0
+        version: 6.2.1
+      compare-versions:
+        specifier: ^3.3.0
+        version: 3.6.0
+      cross-env:
+        specifier: ^7.0.0
+        version: 7.0.3
+      css-loader:
+        specifier: ^5.0.0
+        version: 5.2.7(webpack@5.91.0)
+      css-minimizer-webpack-plugin:
+        specifier: ^3.0.0
+        version: 3.4.1(esbuild@0.12.29)(webpack@5.91.0)
+      cz-git:
+        specifier: ^1.3.8
+        version: 1.9.2
+      date-fns:
+        specifier: ^2.24.0
+        version: 2.30.0
+      diacritics:
+        specifier: ^1.3.0
+        version: 1.3.0
+      docsearch.js:
+        specifier: ^2.6.3
+        version: 2.6.3
+      duplicate-package-checker-webpack-plugin:
+        specifier: ^3.0.0
+        version: 3.0.0
+      enquire-js:
+        specifier: ^0.2.1
+        version: 0.2.1
+      esbuild:
+        specifier: ~0.12.29
+        version: 0.12.29
+      esbuild-loader:
+        specifier: ^3.0.0
+        version: 3.2.0(webpack@5.91.0)
+      escape-html:
+        specifier: ^1.0.3
+        version: 1.0.3
+      eslint:
+        specifier: ^8.3.0
+        version: 8.57.0
+      eslint-plugin-html:
+        specifier: ^6.0.0
+        version: 6.2.0
+      eslint-plugin-import:
+        specifier: ^2.24.2
+        version: 2.29.1(@typescript-eslint/parser@5.62.0)(eslint@8.57.0)
+      eslint-plugin-jest:
+        specifier: ^26.0.0
+        version: 26.9.0(@typescript-eslint/eslint-plugin@5.62.0)(eslint@8.57.0)(jest@28.1.3)(typescript@4.9.5)
+      eslint-plugin-markdown:
+        specifier: ^2.0.0
+        version: 2.2.1(eslint@8.57.0)
+      eslint-plugin-no-explicit-type-exports:
+        specifier: ^0.12.0
+        version: 0.12.1(@typescript-eslint/parser@5.62.0)(eslint@8.57.0)(typescript@4.9.5)
+      eslint-plugin-vue:
+        specifier: ^9.17.0
+        version: 9.25.0(eslint@8.57.0)
+      fast-glob:
+        specifier: ^3.2.7
+        version: 3.3.2
+      fetch-jsonp:
+        specifier: ^1.1.3
+        version: 1.3.0
+      fs-extra:
+        specifier: ^10.0.0
+        version: 10.1.0
+      glob:
+        specifier: ^7.1.2
+        version: 7.2.3
+      globby:
+        specifier: ^11.1.0
+        version: 11.1.0
+      gray-matter:
+        specifier: ^4.0.3
+        version: 4.0.3
+      gulp:
+        specifier: ^4.0.1
+        version: 4.0.2
+      gulp-babel:
+        specifier: ^8.0.0
+        version: 8.0.0(@babel/core@7.24.5)
+      gulp-strip-code:
+        specifier: ^0.1.4
+        version: 0.1.4
+      gulp-typescript:
+        specifier: ^6.0.0-alpha.1
+        version: 6.0.0-alpha.1(typescript@4.9.5)
+      html-webpack-plugin:
+        specifier: ^5.3.1
+        version: 5.6.0(webpack@5.91.0)
+      ignore-emit-webpack-plugin:
+        specifier: ^2.0.6
+        version: 2.0.6
+      is-windows:
+        specifier: ^1.0.2
+        version: 1.0.2
+      jest:
+        specifier: ^28.1.2
+        version: 28.1.3(@types/node@14.18.63)
+      jest-environment-jsdom:
+        specifier: ^28.0.0
+        version: 28.1.3
+      jest-environment-node:
+        specifier: ^28.0.2
+        version: 28.1.3
+      jest-serializer-vue:
+        specifier: ^2.0.0
+        version: 2.0.2
+      jest-transform-stub:
+        specifier: ^2.0.0
+        version: 2.0.0
+      js-base64:
+        specifier: ^3.0.0
+        version: 3.7.7
+      json-templater:
+        specifier: ^1.2.0
+        version: 1.2.0
+      jsonp:
+        specifier: ^0.2.1
+        version: 0.2.1
+      less:
+        specifier: ^4.0.0
+        version: 4.2.0
+      less-loader:
+        specifier: ^10.0.0
+        version: 10.2.0(less@4.2.0)(webpack@5.91.0)
+      less-plugin-npm-import:
+        specifier: ^2.1.0
+        version: 2.1.0
+      less-vars-to-js:
+        specifier: ^1.3.0
+        version: 1.3.0
+      lint-staged:
+        specifier: ^11.0.0
+        version: 11.2.6
+      majo:
+        specifier: ^0.10.1
+        version: 0.10.1
+      markdown-it:
+        specifier: ^8.4.2
+        version: 8.4.2
+      markdown-it-anchor:
+        specifier: ^8.0.4
+        version: 8.6.7(@types/markdown-it@10.0.3)(markdown-it@8.4.2)
+      markdown-it-container:
+        specifier: ^3.0.0
+        version: 3.0.0
+      markdown-it-emoji:
+        specifier: ^2.0.0
+        version: 2.0.2
+      markdown-it-table-of-contents:
+        specifier: ^0.5.2
+        version: 0.5.2
+      marked:
+        specifier: 0.3.18
+        version: 0.3.18
+      merge2:
+        specifier: ^1.2.1
+        version: 1.4.1
+      mini-css-extract-plugin:
+        specifier: ^2.4.5
+        version: 2.9.0(webpack@5.91.0)
+      minimist:
+        specifier: ^1.2.0
+        version: 1.2.8
+      mkdirp:
+        specifier: ^0.5.1
+        version: 0.5.6
+      mockdate:
+        specifier: ^2.0.2
+        version: 2.0.5
+      moment:
+        specifier: ^2.29.1
+        version: 2.30.1
+      nprogress:
+        specifier: ^0.2.0
+        version: 0.2.0
+      postcss:
+        specifier: ^8.2.12
+        version: 8.4.38
+      postcss-loader:
+        specifier: ^6.0.0
+        version: 6.2.1(postcss@8.4.38)(webpack@5.91.0)
+      pretty-quick:
+        specifier: ^3.0.0
+        version: 3.3.1(prettier@2.8.8)
+      prismjs:
+        specifier: ^1.23.0
+        version: 1.29.0
+      progress:
+        specifier: ^2.0.3
+        version: 2.0.3
+      raw-loader:
+        specifier: ^4.0.2
+        version: 4.0.2(webpack@5.91.0)
+      remark-frontmatter:
+        specifier: ^2.0.0
+        version: 2.0.0
+      remark-parse:
+        specifier: ^8.0.0
+        version: 8.0.3
+      remark-stringify:
+        specifier: ^8.0.0
+        version: 8.1.1
+      remark-yaml-config:
+        specifier: ^4.1.0
+        version: 4.1.1
+      remove-files-webpack-plugin:
+        specifier: ^1.5.0
+        version: 1.5.0(esbuild@0.12.29)(webpack-cli@4.10.0)(webpack@5.91.0)
+      reqwest:
+        specifier: ^2.0.5
+        version: 2.0.5
+      rimraf:
+        specifier: ^3.0.0
+        version: 3.0.2
+      rucksack-css:
+        specifier: ^1.0.2
+        version: 1.0.2
+      selenium-server:
+        specifier: ^3.0.1
+        version: 3.141.59
+      semver:
+        specifier: ^7.0.0
+        version: 7.6.0
+      slash:
+        specifier: ^3.0.0
+        version: 3.0.0
+      string-replace-loader:
+        specifier: ^3.1.0
+        version: 3.1.0(webpack@5.91.0)
+      style-loader:
+        specifier: ^3.0.0
+        version: 3.3.4(webpack@5.91.0)
+      stylelint:
+        specifier: ^14.0.0
+        version: 14.16.1
+      stylelint-config-rational-order:
+        specifier: ^0.1.2
+        version: 0.1.2
+      stylelint-config-standard:
+        specifier: ^25.0.0
+        version: 25.0.0(stylelint@14.16.1)
+      stylelint-declaration-block-no-ignored-properties:
+        specifier: ^2.1.0
+        version: 2.8.0(stylelint@14.16.1)
+      stylelint-order:
+        specifier: ^5.0.0
+        version: 5.0.0(stylelint@14.16.1)
+      terser-webpack-plugin:
+        specifier: ^5.1.1
+        version: 5.3.10(esbuild@0.12.29)(webpack@5.91.0)
+      through2:
+        specifier: ^3.0.0
+        version: 3.0.2
+      tinycolor2:
+        specifier: ^1.6.0
+        version: 1.6.0
+      ts-jest:
+        specifier: ^28.0.5
+        version: 28.0.8(@babel/core@7.24.5)(babel-jest@28.1.3)(esbuild@0.12.29)(jest@28.1.3)(typescript@4.9.5)
+      ts-loader:
+        specifier: ^9.1.0
+        version: 9.5.1(typescript@4.9.5)(webpack@5.91.0)
+      tsx:
+        specifier: ^3.12.10
+        version: 3.14.0
+      typedoc:
+        specifier: ^0.23.25
+        version: 0.23.28(typescript@4.9.5)
+      typescript:
+        specifier: ~4.9.3
+        version: 4.9.5
+      umi-request:
+        specifier: ^1.3.5
+        version: 1.4.0
+      unified:
+        specifier: 9.2.2
+        version: 9.2.2
+      url-loader:
+        specifier: ^3.0.0
+        version: 3.0.0(webpack@5.91.0)
+      vanilla-jsoneditor:
+        specifier: ^0.15.1
+        version: 0.15.1
+      vite:
+        specifier: ^3.0.0
+        version: 3.2.10(@types/node@14.18.63)(less@4.2.0)(terser@5.31.0)
+      vue:
+        specifier: ^3.2.0
+        version: 3.4.27(typescript@4.9.5)
+      vue-clipboard2:
+        specifier: 0.3.3
+        version: 0.3.3
+      vue-drag-resize:
+        specifier: ^2.0.3
+        version: 2.0.3
+      vue-eslint-parser:
+        specifier: ^9.3.1
+        version: 9.4.2(eslint@8.57.0)
+      vue-i18n:
+        specifier: ^9.1.7
+        version: 9.13.1(vue@3.4.27)
+      vue-infinite-scroll:
+        specifier: ^2.0.2
+        version: 2.0.2
+      vue-loader:
+        specifier: ^17.0.0
+        version: 17.4.2(vue@3.4.27)(webpack@5.91.0)
+      vue-request:
+        specifier: ^1.0.2
+        version: 1.2.5(vue@3.4.27)
+      vue-router:
+        specifier: ^4.0.0
+        version: 4.3.2(vue@3.4.27)
+      vue-style-loader:
+        specifier: ^4.1.2
+        version: 4.1.3
+      vue-tsc:
+        specifier: ^1.0.6
+        version: 1.8.27(typescript@4.9.5)
+      vuex:
+        specifier: ^4.0.0
+        version: 4.1.0(vue@3.4.27)
+      webpack:
+        specifier: ^5.0.0
+        version: 5.91.0(esbuild@0.12.29)(webpack-cli@4.10.0)
+      webpack-bundle-analyzer:
+        specifier: ^4.4.2
+        version: 4.10.2
+      webpack-cli:
+        specifier: ^4.6.0
+        version: 4.10.0(webpack-bundle-analyzer@4.10.2)(webpack-dev-server@4.15.2)(webpack@5.91.0)
+      webpack-dev-server:
+        specifier: ^4.0.0
+        version: 4.15.2(debug@4.3.4)(webpack-cli@4.10.0)(webpack@5.91.0)
+      webpack-merge:
+        specifier: ^5.0.0
+        version: 5.10.0
+      webpackbar:
+        specifier: ^5.0.2
+        version: 5.0.2(webpack@5.91.0)
+      xhr-mock:
+        specifier: ^2.5.1
+        version: 2.5.1
+
   packages/core:
     devDependencies:
       '@babel/plugin-transform-runtime':
@@ -248,24 +855,9 @@ importers:
 
   packages/vue:
     dependencies:
-      '@ant-design/colors':
-        specifier: ^6.0.0
-        version: 6.0.0
-      '@ant-design/icons-vue':
-        specifier: ^7.0.0
-        version: 7.0.1(vue@3.4.27)
       '@babel/runtime':
         specifier: ^7.10.5
         version: 7.24.5
-      '@ctrl/tinycolor':
-        specifier: ^3.5.0
-        version: 3.6.1
-      '@emotion/hash':
-        specifier: ^0.9.0
-        version: 0.9.1
-      '@emotion/unitless':
-        specifier: ^0.8.0
-        version: 0.8.1
       '@mate-ui/core':
         specifier: workspace:^
         version: link:../core
@@ -275,54 +867,6 @@ importers:
       '@mate-ui/locale':
         specifier: workspace:^
         version: link:../locale
-      '@simonwep/pickr':
-        specifier: ~1.8.0
-        version: 1.8.2
-      array-tree-filter:
-        specifier: ^2.1.0
-        version: 2.1.0
-      async-validator:
-        specifier: ^4.0.0
-        version: 4.2.5
-      csstype:
-        specifier: ^3.1.1
-        version: 3.1.3
-      dayjs:
-        specifier: ^1.10.5
-        version: 1.11.11
-      dom-align:
-        specifier: ^1.12.1
-        version: 1.12.4
-      dom-scroll-into-view:
-        specifier: ^2.0.0
-        version: 2.0.1
-      lodash:
-        specifier: ^4.17.21
-        version: 4.17.21
-      lodash-es:
-        specifier: ^4.17.15
-        version: 4.17.21
-      resize-observer-polyfill:
-        specifier: ^1.5.1
-        version: 1.5.1
-      scroll-into-view-if-needed:
-        specifier: ^2.2.25
-        version: 2.2.31
-      shallow-equal:
-        specifier: ^1.0.0
-        version: 1.2.1
-      stylis:
-        specifier: ^4.1.3
-        version: 4.3.2
-      throttle-debounce:
-        specifier: ^5.0.0
-        version: 5.0.0
-      vue-types:
-        specifier: ^3.0.0
-        version: 3.0.2(vue@3.4.27)
-      warning:
-        specifier: ^4.0.0
-        version: 4.0.3
     devDependencies:
       '@babel/cli':
         specifier: ^7.8.4
@@ -375,33 +919,9 @@ importers:
       '@babel/preset-typescript':
         specifier: ^7.10.4
         version: 7.24.6(@babel/core@7.24.5)
-      '@commitlint/cli':
-        specifier: ^12.0.0
-        version: 12.1.4
-      '@commitlint/config-conventional':
-        specifier: ^12.0.0
-        version: 12.1.4
-      '@octokit/rest':
-        specifier: ^18.0.0
-        version: 18.12.0
-      '@rollup/plugin-babel':
-        specifier: ^5.3.0
-        version: 5.3.1(@babel/core@7.24.5)(rollup@2.79.1)
-      '@types/compression':
-        specifier: ^1.7.0
-        version: 1.7.5
       '@types/fs-extra':
         specifier: ^9.0.8
         version: 9.0.13
-      '@types/jest':
-        specifier: ^28.1.4
-        version: 28.1.8
-      '@types/koa':
-        specifier: ^2.11.6
-        version: 2.15.0
-      '@types/lodash-es':
-        specifier: ^4.17.3
-        version: 4.17.12
       '@types/lru-cache':
         specifier: ^5.1.0
         version: 5.1.1
@@ -411,9 +931,6 @@ importers:
       '@types/node':
         specifier: ^14.0.0
         version: 14.18.63
-      '@types/postcss-load-config':
-        specifier: ^2.0.1
-        version: 2.0.1
       '@typescript-eslint/eslint-plugin':
         specifier: ^5.4.0
         version: 5.62.0(@typescript-eslint/parser@5.62.0)(eslint@8.57.0)(typescript@4.9.5)
@@ -429,42 +946,12 @@ importers:
       '@vitejs/plugin-vue-jsx':
         specifier: ^2.0.0
         version: 2.1.1(vite@3.2.10)(vue@3.4.27)
-      '@vue/babel-plugin-jsx':
-        specifier: ^1.0.0
-        version: 1.2.2(@babel/core@7.24.5)
       '@vue/cli-plugin-eslint':
         specifier: ^5.0.0
-        version: 5.0.8(@vue/cli-service@5.0.8)(esbuild@0.12.29)(eslint@8.57.0)(webpack-cli@4.10.0)
-      '@vue/eslint-config-prettier':
-        specifier: ^8.0.0
-        version: 8.0.0(eslint@8.57.0)(prettier@2.8.8)
+        version: 5.0.8(@vue/cli-service@5.0.8)(eslint@8.57.0)
       '@vue/eslint-config-typescript':
         specifier: ^11.0.0
         version: 11.0.3(eslint-plugin-vue@9.25.0)(eslint@8.57.0)(typescript@4.9.5)
-      '@vue/test-utils':
-        specifier: ^2.0.2
-        version: 2.4.6
-      '@vue/vue3-jest':
-        specifier: '28'
-        version: 28.1.0(@babel/core@7.24.5)(babel-jest@28.1.3)(jest@28.1.3)(typescript@4.9.5)(vue@3.4.27)
-      '@vueuse/core':
-        specifier: ^8.3.1
-        version: 8.9.4(vue@3.4.27)
-      '@webpack-cli/serve':
-        specifier: ^1.3.1
-        version: 1.7.0(webpack-cli@4.10.0)(webpack-dev-server@4.15.2)
-      acorn:
-        specifier: ^8.0.0
-        version: 8.11.3
-      ali-oss:
-        specifier: ^6.16.0
-        version: 6.20.0
-      autoprefixer:
-        specifier: ^10.2.0
-        version: 10.4.19(postcss@8.4.38)
-      axios:
-        specifier: ^0.22.0
-        version: 0.22.0
       babel-eslint:
         specifier: ^10.0.1
         version: 10.1.0(eslint@8.57.0)
@@ -486,72 +973,21 @@ importers:
       babel-plugin-transform-require-context:
         specifier: ^0.1.1
         version: 0.1.1
-      case-sensitive-paths-webpack-plugin:
-        specifier: ^2.1.2
-        version: 2.4.0
       chalk:
         specifier: ^4.1.1
         version: 4.1.2
-      cheerio:
-        specifier: ^1.0.0-rc.2
-        version: 1.0.0-rc.12
-      codecov:
-        specifier: ^3.0.0
-        version: 3.8.3
-      codesandbox:
-        specifier: ^2.2.3
-        version: 2.2.3
-      colorful:
-        specifier: ^2.1.0
-        version: 2.1.0
-      commander:
-        specifier: ^6.1.0
-        version: 6.2.1
-      compare-versions:
-        specifier: ^3.3.0
-        version: 3.6.0
-      cross-env:
-        specifier: ^7.0.0
-        version: 7.0.3
-      css-loader:
-        specifier: ^5.0.0
-        version: 5.2.7(webpack@5.91.0)
-      css-minimizer-webpack-plugin:
-        specifier: ^3.0.0
-        version: 3.4.1(esbuild@0.12.29)(webpack@5.91.0)
       cz-git:
         specifier: ^1.3.8
         version: 1.9.2
-      date-fns:
-        specifier: ^2.24.0
-        version: 2.30.0
       diacritics:
         specifier: ^1.3.0
         version: 1.3.0
-      docsearch.js:
-        specifier: ^2.6.3
-        version: 2.6.3
-      duplicate-package-checker-webpack-plugin:
-        specifier: ^3.0.0
-        version: 3.0.0
-      enquire-js:
-        specifier: ^0.2.1
-        version: 0.2.1
-      esbuild:
-        specifier: ~0.12.29
-        version: 0.12.29
-      esbuild-loader:
-        specifier: ^3.0.0
-        version: 3.2.0(webpack@5.91.0)
       escape-html:
         specifier: ^1.0.3
         version: 1.0.3
       eslint:
         specifier: ^8.3.0
         version: 8.57.0
-      eslint-config-prettier:
-        specifier: ^8.0.0
-        version: 8.10.0(eslint@8.57.0)
       eslint-plugin-html:
         specifier: ^6.0.0
         version: 6.2.0
@@ -567,18 +1003,12 @@ importers:
       eslint-plugin-no-explicit-type-exports:
         specifier: ^0.12.0
         version: 0.12.1(@typescript-eslint/parser@5.62.0)(eslint@8.57.0)(typescript@4.9.5)
-      eslint-plugin-prettier:
-        specifier: ^3.1.0
-        version: 3.4.1(eslint-config-prettier@8.10.0)(eslint@8.57.0)(prettier@2.8.8)
       eslint-plugin-vue:
         specifier: ^9.17.0
         version: 9.25.0(eslint@8.57.0)
       fast-glob:
         specifier: ^3.2.7
         version: 3.3.2
-      fetch-jsonp:
-        specifier: ^1.1.3
-        version: 1.3.0
       fs-extra:
         specifier: ^10.0.0
         version: 10.1.0
@@ -591,69 +1021,6 @@ importers:
       gray-matter:
         specifier: ^4.0.3
         version: 4.0.3
-      gulp:
-        specifier: ^4.0.1
-        version: 4.0.2
-      gulp-babel:
-        specifier: ^8.0.0
-        version: 8.0.0(@babel/core@7.24.5)
-      gulp-strip-code:
-        specifier: ^0.1.4
-        version: 0.1.4
-      gulp-typescript:
-        specifier: ^6.0.0-alpha.1
-        version: 6.0.0-alpha.1(typescript@4.9.5)
-      html-webpack-plugin:
-        specifier: ^5.3.1
-        version: 5.6.0(webpack@5.91.0)
-      ignore-emit-webpack-plugin:
-        specifier: ^2.0.6
-        version: 2.0.6
-      is-windows:
-        specifier: ^1.0.2
-        version: 1.0.2
-      jest:
-        specifier: ^28.1.2
-        version: 28.1.3(@types/node@14.18.63)
-      jest-environment-jsdom:
-        specifier: ^28.0.0
-        version: 28.1.3
-      jest-environment-node:
-        specifier: ^28.0.2
-        version: 28.1.3
-      jest-serializer-vue:
-        specifier: ^2.0.0
-        version: 2.0.2
-      jest-transform-stub:
-        specifier: ^2.0.0
-        version: 2.0.0
-      js-base64:
-        specifier: ^3.0.0
-        version: 3.7.7
-      json-templater:
-        specifier: ^1.2.0
-        version: 1.2.0
-      jsonp:
-        specifier: ^0.2.1
-        version: 0.2.1
-      less:
-        specifier: ^4.0.0
-        version: 4.2.0
-      less-loader:
-        specifier: ^10.0.0
-        version: 10.2.0(less@4.2.0)(webpack@5.91.0)
-      less-plugin-npm-import:
-        specifier: ^2.1.0
-        version: 2.1.0
-      less-vars-to-js:
-        specifier: ^1.3.0
-        version: 1.3.0
-      lint-staged:
-        specifier: ^11.0.0
-        version: 11.2.6
-      majo:
-        specifier: ^0.10.1
-        version: 0.10.1
       markdown-it:
         specifier: ^8.4.2
         version: 8.4.2
@@ -669,117 +1036,15 @@ importers:
       markdown-it-table-of-contents:
         specifier: ^0.5.2
         version: 0.5.2
-      marked:
-        specifier: 0.3.18
-        version: 0.3.18
-      merge2:
-        specifier: ^1.2.1
-        version: 1.4.1
-      mini-css-extract-plugin:
-        specifier: ^2.4.5
-        version: 2.9.0(webpack@5.91.0)
-      minimist:
-        specifier: ^1.2.0
-        version: 1.2.8
-      mkdirp:
-        specifier: ^0.5.1
-        version: 0.5.6
-      mockdate:
-        specifier: ^2.0.2
-        version: 2.0.5
-      moment:
-        specifier: ^2.29.1
-        version: 2.30.1
-      nprogress:
-        specifier: ^0.2.0
-        version: 0.2.0
-      postcss:
-        specifier: ^8.2.12
-        version: 8.4.38
-      postcss-loader:
-        specifier: ^6.0.0
-        version: 6.2.1(postcss@8.4.38)(webpack@5.91.0)
-      prettier:
-        specifier: ^2.2.0
-        version: 2.8.8
-      pretty-quick:
-        specifier: ^3.0.0
-        version: 3.3.1(prettier@2.8.8)
       prismjs:
         specifier: ^1.23.0
         version: 1.29.0
       progress:
         specifier: ^2.0.3
         version: 2.0.3
-      raw-loader:
-        specifier: ^4.0.2
-        version: 4.0.2(webpack@5.91.0)
-      remark-frontmatter:
-        specifier: ^2.0.0
-        version: 2.0.0
-      remark-parse:
-        specifier: ^8.0.0
-        version: 8.0.3
-      remark-stringify:
-        specifier: ^8.0.0
-        version: 8.1.1
-      remark-yaml-config:
-        specifier: ^4.1.0
-        version: 4.1.1
-      remove-files-webpack-plugin:
-        specifier: ^1.5.0
-        version: 1.5.0(esbuild@0.12.29)(webpack-cli@4.10.0)(webpack@5.91.0)
-      reqwest:
-        specifier: ^2.0.5
-        version: 2.0.5
-      rimraf:
-        specifier: ^3.0.0
-        version: 3.0.2
-      rucksack-css:
-        specifier: ^1.0.2
-        version: 1.0.2
-      selenium-server:
-        specifier: ^3.0.1
-        version: 3.141.59
-      semver:
-        specifier: ^7.0.0
-        version: 7.6.0
       slash:
         specifier: ^3.0.0
         version: 3.0.0
-      string-replace-loader:
-        specifier: ^3.1.0
-        version: 3.1.0(webpack@5.91.0)
-      style-loader:
-        specifier: ^3.0.0
-        version: 3.3.4(webpack@5.91.0)
-      stylelint:
-        specifier: ^14.0.0
-        version: 14.16.1
-      stylelint-config-prettier:
-        specifier: ^9.0.0
-        version: 9.0.5(stylelint@14.16.1)
-      stylelint-config-rational-order:
-        specifier: ^0.1.2
-        version: 0.1.2
-      stylelint-config-standard:
-        specifier: ^25.0.0
-        version: 25.0.0(stylelint@14.16.1)
-      stylelint-declaration-block-no-ignored-properties:
-        specifier: ^2.1.0
-        version: 2.8.0(stylelint@14.16.1)
-      stylelint-order:
-        specifier: ^5.0.0
-        version: 5.0.0(stylelint@14.16.1)
-      terser-webpack-plugin:
-        specifier: ^5.1.1
-        version: 5.3.10(esbuild@0.12.29)(webpack@5.91.0)
-      through2:
-        specifier: ^3.0.0
-        version: 3.0.2
-      tinycolor2:
-        specifier: ^1.6.0
-        version: 1.6.0
       ts-jest:
         specifier: ^28.0.5
         version: 28.0.8(@babel/core@7.24.5)(babel-jest@28.1.3)(esbuild@0.12.29)(jest@28.1.3)(typescript@4.9.5)
@@ -795,78 +1060,15 @@ importers:
       typescript:
         specifier: ~4.9.3
         version: 4.9.5
-      umi-request:
-        specifier: ^1.3.5
-        version: 1.4.0
-      unified:
-        specifier: 9.2.2
-        version: 9.2.2
-      url-loader:
-        specifier: ^3.0.0
-        version: 3.0.0(webpack@5.91.0)
-      vanilla-jsoneditor:
-        specifier: ^0.15.1
-        version: 0.15.1
       vite:
         specifier: ^3.0.0
         version: 3.2.10(@types/node@14.18.63)(less@4.2.0)(terser@5.31.0)
       vue:
         specifier: ^3.2.0
         version: 3.4.27(typescript@4.9.5)
-      vue-clipboard2:
-        specifier: 0.3.3
-        version: 0.3.3
-      vue-drag-resize:
-        specifier: ^2.0.3
-        version: 2.0.3
       vue-eslint-parser:
         specifier: ^9.3.1
         version: 9.4.2(eslint@8.57.0)
-      vue-i18n:
-        specifier: ^9.1.7
-        version: 9.13.1(vue@3.4.27)
-      vue-infinite-scroll:
-        specifier: ^2.0.2
-        version: 2.0.2
-      vue-loader:
-        specifier: ^17.0.0
-        version: 17.4.2(vue@3.4.27)(webpack@5.91.0)
-      vue-request:
-        specifier: ^1.0.2
-        version: 1.2.5(vue@3.4.27)
-      vue-router:
-        specifier: ^4.0.0
-        version: 4.3.2(vue@3.4.27)
-      vue-style-loader:
-        specifier: ^4.1.2
-        version: 4.1.3
-      vue-tsc:
-        specifier: ^1.0.6
-        version: 1.8.27(typescript@4.9.5)
-      vuex:
-        specifier: ^4.0.0
-        version: 4.1.0(vue@3.4.27)
-      webpack:
-        specifier: ^5.0.0
-        version: 5.91.0(esbuild@0.12.29)(webpack-cli@4.10.0)
-      webpack-bundle-analyzer:
-        specifier: ^4.4.2
-        version: 4.10.2
-      webpack-cli:
-        specifier: ^4.6.0
-        version: 4.10.0(webpack-bundle-analyzer@4.10.2)(webpack-dev-server@4.15.2)(webpack@5.91.0)
-      webpack-dev-server:
-        specifier: ^4.0.0
-        version: 4.15.2(debug@4.3.4)(webpack-cli@4.10.0)(webpack@5.91.0)
-      webpack-merge:
-        specifier: ^5.0.0
-        version: 5.10.0
-      webpackbar:
-        specifier: ^5.0.2
-        version: 5.0.2(webpack@5.91.0)
-      xhr-mock:
-        specifier: ^2.5.1
-        version: 2.5.1
 
   packages/web:
     dependencies:
@@ -966,11 +1168,6 @@ packages:
     dependencies:
       '@babel/highlight': 7.24.6
       picocolors: 1.0.0
-    dev: true
-
-  /@babel/compat-data@7.24.4:
-    resolution: {integrity: sha512-vg8Gih2MLK+kOkHJp4gBEIkyaIi00jgWot2D9QOmmfLC8jINSOzmCLta6Bvz/JSBCqnegV0L80jhxkol5GWNfQ==}
-    engines: {node: '>=6.9.0'}
     dev: true
 
   /@babel/compat-data@7.24.6:
@@ -1115,13 +1312,6 @@ packages:
       '@babel/types': 7.24.6
     dev: true
 
-  /@babel/helper-module-imports@7.24.3:
-    resolution: {integrity: sha512-viKb0F9f2s0BCS22QSF308z/+1YWKV/76mwt61NBzS5izMzDPwdq1pTrzf+Li3npBWX9KdQbkeCt1jSAM7lZqg==}
-    engines: {node: '>=6.9.0'}
-    dependencies:
-      '@babel/types': 7.24.5
-    dev: true
-
   /@babel/helper-module-imports@7.24.6:
     resolution: {integrity: sha512-a26dmxFJBF62rRO9mmpgrfTLsAuyHk4e1hKTUkD/fcMfynt8gvEKwQPQDVxWhca8dHoDck+55DFt42zV0QMw5g==}
     engines: {node: '>=6.9.0'}
@@ -1148,11 +1338,6 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       '@babel/types': 7.24.6
-    dev: true
-
-  /@babel/helper-plugin-utils@7.24.5:
-    resolution: {integrity: sha512-xjNLDopRzW2o6ba0gKbkZq5YWEBaK3PCyTOY1K2P/O07LGMhMqlMXPxwN4S5/RhWuCobT8z0jrlKGlYmeR1OhQ==}
-    engines: {node: '>=6.9.0'}
     dev: true
 
   /@babel/helper-plugin-utils@7.24.6:
@@ -1203,11 +1388,6 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       '@babel/types': 7.24.6
-    dev: true
-
-  /@babel/helper-string-parser@7.24.1:
-    resolution: {integrity: sha512-2ofRCjnnA9y+wk8b9IAREroeUP02KHp431N2mhKniy2yKIDKpbrHv9eXwm8cBeWQYcJmzv5qKCu65P47eCF7CQ==}
-    engines: {node: '>=6.9.0'}
     dev: true
 
   /@babel/helper-string-parser@7.24.6:
@@ -1537,7 +1717,7 @@ packages:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': 7.24.5
-      '@babel/helper-plugin-utils': 7.24.5
+      '@babel/helper-plugin-utils': 7.24.6
     dev: true
 
   /@babel/plugin-syntax-optional-catch-binding@7.8.3(@babel/core@7.24.5):
@@ -1555,7 +1735,7 @@ packages:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': 7.24.5
-      '@babel/helper-plugin-utils': 7.24.5
+      '@babel/helper-plugin-utils': 7.24.6
     dev: true
 
   /@babel/plugin-syntax-private-property-in-object@7.14.5(@babel/core@7.24.5):
@@ -1575,7 +1755,7 @@ packages:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': 7.24.5
-      '@babel/helper-plugin-utils': 7.24.5
+      '@babel/helper-plugin-utils': 7.24.6
     dev: true
 
   /@babel/plugin-syntax-typescript@7.24.6(@babel/core@7.24.5):
@@ -2277,7 +2457,7 @@ packages:
     dependencies:
       '@babel/core': 7.24.5
       '@babel/helper-plugin-utils': 7.24.6
-      '@babel/types': 7.24.5
+      '@babel/types': 7.24.6
       esutils: 2.0.3
     dev: true
 
@@ -2335,15 +2515,6 @@ packages:
       globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
-    dev: true
-
-  /@babel/types@7.24.5:
-    resolution: {integrity: sha512-6mQNsaLeXTw0nxYUYu+NSa4Hx4BlF1x1x8/PMFbiR+GBSr+2DkECc69b8hgy2frEodNcvPffeH8YfWd3LI6jhQ==}
-    engines: {node: '>=6.9.0'}
-    dependencies:
-      '@babel/helper-string-parser': 7.24.1
-      '@babel/helper-validator-identifier': 7.24.5
-      to-fast-properties: 2.0.0
     dev: true
 
   /@babel/types@7.24.6:
@@ -4142,7 +4313,7 @@ packages:
         optional: true
     dependencies:
       '@babel/core': 7.24.5
-      '@babel/helper-module-imports': 7.24.3
+      '@babel/helper-module-imports': 7.24.6
       '@rollup/pluginutils': 3.1.0(rollup@2.79.1)
       rollup: 2.79.1
     dev: true
@@ -5338,6 +5509,27 @@ packages:
       - webpack-cli
     dev: true
 
+  /@vue/cli-plugin-eslint@5.0.8(@vue/cli-service@5.0.8)(eslint@8.57.0):
+    resolution: {integrity: sha512-d11+I5ONYaAPW1KyZj9GlrV/E6HZePq5L5eAF5GgoVdu6sxr6bDgEoxzhcS1Pk2eh8rn1MxG/FyyR+eCBj/CNg==}
+    peerDependencies:
+      '@vue/cli-service': ^3.0.0 || ^4.0.0 || ^5.0.0-0
+      eslint: '>=7.5.0'
+    dependencies:
+      '@vue/cli-service': 5.0.8(prettier@3.2.5)(vue@3.4.27)
+      '@vue/cli-shared-utils': 5.0.8
+      eslint: 8.57.0
+      eslint-webpack-plugin: 3.2.0(eslint@8.57.0)(webpack@5.91.0)
+      globby: 11.1.0
+      webpack: 5.91.0
+      yorkie: 2.0.0
+    transitivePeerDependencies:
+      - '@swc/core'
+      - encoding
+      - esbuild
+      - uglify-js
+      - webpack-cli
+    dev: true
+
   /@vue/cli-plugin-router@5.0.8(@vue/cli-service@5.0.8):
     resolution: {integrity: sha512-Gmv4dsGdAsWPqVijz3Ux2OS2HkMrWi1ENj2cYL75nUeL+Xj5HEstSqdtfZ0b1q9NCce+BFB6QnHfTBXc/fCvMg==}
     peerDependencies:
@@ -5442,6 +5634,163 @@ packages:
       webpack-bundle-analyzer: 4.10.2
       webpack-chain: 6.5.1
       webpack-dev-server: 4.15.2(debug@4.3.4)(webpack-cli@4.10.0)(webpack@5.91.0)
+      webpack-merge: 5.10.0
+      webpack-virtual-modules: 0.4.6
+      whatwg-fetch: 3.6.20
+    transitivePeerDependencies:
+      - '@parcel/css'
+      - '@rspack/core'
+      - '@swc/core'
+      - '@vue/compiler-sfc'
+      - arc-templates
+      - atpl
+      - babel-core
+      - bracket-template
+      - bufferutil
+      - clean-css
+      - coffee-script
+      - csso
+      - dot
+      - dust
+      - dustjs-helpers
+      - dustjs-linkedin
+      - eco
+      - ect
+      - ejs
+      - encoding
+      - esbuild
+      - haml-coffee
+      - hamlet
+      - hamljs
+      - handlebars
+      - hogan.js
+      - htmling
+      - jade
+      - jazz
+      - jqtpl
+      - just
+      - liquid-node
+      - liquor
+      - lodash
+      - marko
+      - mote
+      - mustache
+      - nunjucks
+      - plates
+      - prettier
+      - pug
+      - qejs
+      - ractive
+      - razor-tmpl
+      - react
+      - react-dom
+      - slm
+      - squirrelly
+      - supports-color
+      - swig
+      - swig-templates
+      - teacup
+      - templayed
+      - then-jade
+      - then-pug
+      - tinyliquid
+      - toffee
+      - twig
+      - twing
+      - uglify-js
+      - underscore
+      - utf-8-validate
+      - vash
+      - velocityjs
+      - vue
+      - walrus
+      - webpack-cli
+      - whiskers
+    dev: true
+
+  /@vue/cli-service@5.0.8(prettier@3.2.5)(vue@3.4.27):
+    resolution: {integrity: sha512-nV7tYQLe7YsTtzFrfOMIHc5N2hp5lHG2rpYr0aNja9rNljdgcPZLyQRb2YRivTHqTv7lI962UXFURcpStHgyFw==}
+    engines: {node: ^12.0.0 || >= 14.0.0}
+    hasBin: true
+    peerDependencies:
+      cache-loader: '*'
+      less-loader: '*'
+      pug-plain-loader: '*'
+      raw-loader: '*'
+      sass-loader: '*'
+      stylus-loader: '*'
+      vue-template-compiler: ^2.0.0
+      webpack-sources: '*'
+    peerDependenciesMeta:
+      cache-loader:
+        optional: true
+      less-loader:
+        optional: true
+      pug-plain-loader:
+        optional: true
+      raw-loader:
+        optional: true
+      sass-loader:
+        optional: true
+      stylus-loader:
+        optional: true
+      vue-template-compiler:
+        optional: true
+      webpack-sources:
+        optional: true
+    dependencies:
+      '@babel/helper-compilation-targets': 7.24.6
+      '@soda/friendly-errors-webpack-plugin': 1.8.1(webpack@5.91.0)
+      '@soda/get-current-script': 1.0.2
+      '@types/minimist': 1.2.5
+      '@vue/cli-overlay': 5.0.8
+      '@vue/cli-plugin-router': 5.0.8(@vue/cli-service@5.0.8)
+      '@vue/cli-plugin-vuex': 5.0.8(@vue/cli-service@5.0.8)
+      '@vue/cli-shared-utils': 5.0.8
+      '@vue/component-compiler-utils': 3.3.0(lodash@4.17.21)
+      '@vue/vue-loader-v15': /vue-loader@15.11.1(css-loader@6.11.0)(prettier@3.2.5)(webpack@5.91.0)
+      '@vue/web-component-wrapper': 1.3.0
+      acorn: 8.11.3
+      acorn-walk: 8.3.2
+      address: 1.2.2
+      autoprefixer: 10.4.19(postcss@8.4.38)
+      browserslist: 4.23.0
+      case-sensitive-paths-webpack-plugin: 2.4.0
+      cli-highlight: 2.1.11
+      clipboardy: 2.3.0
+      cliui: 7.0.4
+      copy-webpack-plugin: 9.1.0(webpack@5.91.0)
+      css-loader: 6.11.0(webpack@5.91.0)
+      css-minimizer-webpack-plugin: 3.4.1(webpack@5.91.0)
+      cssnano: 5.1.15(postcss@8.4.38)
+      debug: 4.3.4(supports-color@8.1.1)
+      default-gateway: 6.0.3
+      dotenv: 10.0.0
+      dotenv-expand: 5.1.0
+      fs-extra: 9.1.0
+      globby: 11.1.0
+      hash-sum: 2.0.0
+      html-webpack-plugin: 5.6.0(webpack@5.91.0)
+      is-file-esm: 1.0.0
+      launch-editor-middleware: 2.6.1
+      lodash.defaultsdeep: 4.6.1
+      lodash.mapvalues: 4.6.0
+      mini-css-extract-plugin: 2.9.0(webpack@5.91.0)
+      minimist: 1.2.8
+      module-alias: 2.2.3
+      portfinder: 1.0.32
+      postcss: 8.4.38
+      postcss-loader: 6.2.1(postcss@8.4.38)(webpack@5.91.0)
+      progress-webpack-plugin: 1.0.16(webpack@5.91.0)
+      ssri: 8.0.1
+      terser-webpack-plugin: 5.3.10(webpack@5.91.0)
+      thread-loader: 3.0.4(webpack@5.91.0)
+      vue-loader: 17.4.2(vue@3.4.27)(webpack@5.91.0)
+      vue-style-loader: 4.1.3
+      webpack: 5.91.0
+      webpack-bundle-analyzer: 4.10.2
+      webpack-chain: 6.5.1
+      webpack-dev-server: 4.15.2(debug@4.3.4)(webpack@5.91.0)
       webpack-merge: 5.10.0
       webpack-virtual-modules: 0.4.6
       whatwg-fetch: 3.6.20
@@ -5642,20 +5991,6 @@ packages:
     resolution: {integrity: sha512-0MiMsFma/HqA6g3KLKn+AGpL1kgKhFWszC9U29NfpWK5LE7bjeXxySWJrOJ77hBz+TBrBQ7o4QJqbPbqbs8rJw==}
     dev: true
 
-  /@vue/eslint-config-prettier@8.0.0(eslint@8.57.0)(prettier@2.8.8):
-    resolution: {integrity: sha512-55dPqtC4PM/yBjhAr+yEw6+7KzzdkBuLmnhBrDfp4I48+wy+Giqqj9yUr5T2uD/BkBROjjmqnLZmXRdOx/VtQg==}
-    peerDependencies:
-      eslint: '>= 8.0.0'
-      prettier: '>= 3.0.0'
-    dependencies:
-      eslint: 8.57.0
-      eslint-config-prettier: 8.10.0(eslint@8.57.0)
-      eslint-plugin-prettier: 5.1.3(eslint-config-prettier@8.10.0)(eslint@8.57.0)(prettier@2.8.8)
-      prettier: 2.8.8
-    transitivePeerDependencies:
-      - '@types/eslint'
-    dev: true
-
   /@vue/eslint-config-prettier@9.0.0(eslint@8.57.0)(prettier@3.2.5):
     resolution: {integrity: sha512-z1ZIAAUS9pKzo/ANEfd2sO+v2IUalz7cM/cTLOZ7vRFOPk5/xuRKQteOu1DErFLAh/lYGXMVZ0IfYKlyInuDVg==}
     peerDependencies:
@@ -5704,7 +6039,7 @@ packages:
       '@vue/compiler-dom': 3.4.27
       '@vue/shared': 3.4.27
       computeds: 0.0.1
-      minimatch: 9.0.3
+      minimatch: 9.0.4
       muggle-string: 0.3.1
       path-browserify: 1.0.1
       typescript: 4.9.5
@@ -6366,7 +6701,6 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       color-convert: 2.0.1
-    dev: true
 
   /ansi-styles@5.2.0:
     resolution: {integrity: sha512-Cxwpt2SfTzTtXcfOlzGEee8O+c+MmUgGrNiBcXnuWxuFJHe6a5Hz7qwhwe5OgaSYI0IJvkLqWX1ASG+cJOkEiA==}
@@ -6949,7 +7283,7 @@ packages:
     peerDependencies:
       '@babel/core': ^7.4.0 || ^8.0.0-0 <8.0.0
     dependencies:
-      '@babel/compat-data': 7.24.4
+      '@babel/compat-data': 7.24.6
       '@babel/core': 7.24.5
       '@babel/helper-define-polyfill-provider': 0.6.2(@babel/core@7.24.5)
       semver: 6.3.1
@@ -7638,11 +7972,11 @@ packages:
     dependencies:
       ansi-styles: 4.3.0
       supports-color: 7.2.0
-    dev: true
 
   /chalk@5.3.0:
     resolution: {integrity: sha512-dLitG79d+GV1Nb/VYcCDFivJeK1hiukt9QjRNVOsUtTy1rR1YJsmpGGTZ3qJos+uw7WmWF4wUwBd9jxjocFC2w==}
     engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
+    dev: true
 
   /char-regex@1.0.2:
     resolution: {integrity: sha512-kWWXztvZ5SBQV+eRgKFeh8q5sLuZY2+8WUIzlxWVTg+oGwY14qylx1KbKzHd8P6ZYkAg0xyIDU9JMHhyJMZ1jw==}
@@ -8087,14 +8421,12 @@ packages:
     engines: {node: '>=7.0.0'}
     dependencies:
       color-name: 1.1.4
-    dev: true
 
   /color-name@1.1.3:
     resolution: {integrity: sha512-72fSenhMw2HZMTVHeCA9KCmpEIbzWiQsjN+BHcBbS9vr1mtt+vJjPdksIBNUmKAW8TFUDPJK5SUU3QhE9NEXDw==}
 
   /color-name@1.1.4:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
-    dev: true
 
   /color-string@0.3.0:
     resolution: {integrity: sha512-sz29j1bmSDfoAxKIEU6zwoIZXN6BrFbAMIhfYCNyiZXBDuU/aiHlN84lp/xDzL2ubyFhLDobHIlU1X70XRrMDA==}
@@ -8840,6 +9172,34 @@ packages:
       serialize-javascript: 6.0.2
       source-map: 0.6.1
       webpack: 5.91.0(esbuild@0.12.29)(webpack-cli@4.10.0)
+    dev: true
+
+  /css-minimizer-webpack-plugin@3.4.1(webpack@5.91.0):
+    resolution: {integrity: sha512-1u6D71zeIfgngN2XNRJefc/hY7Ybsxd74Jm4qngIXyUEk7fss3VUzuHxLAq/R8NAba4QU9OUSaMZlbpRc7bM4Q==}
+    engines: {node: '>= 12.13.0'}
+    peerDependencies:
+      '@parcel/css': '*'
+      clean-css: '*'
+      csso: '*'
+      esbuild: '*'
+      webpack: ^5.0.0
+    peerDependenciesMeta:
+      '@parcel/css':
+        optional: true
+      clean-css:
+        optional: true
+      csso:
+        optional: true
+      esbuild:
+        optional: true
+    dependencies:
+      cssnano: 5.1.15(postcss@8.4.38)
+      jest-worker: 27.5.1
+      postcss: 8.4.38
+      schema-utils: 4.2.0
+      serialize-javascript: 6.0.2
+      source-map: 0.6.1
+      webpack: 5.91.0
     dev: true
 
   /css-select@1.2.0:
@@ -10400,15 +10760,6 @@ packages:
       estraverse: 4.3.0
     dev: true
 
-  /eslint-config-prettier@8.10.0(eslint@8.57.0):
-    resolution: {integrity: sha512-SM8AMJdeQqRYT9O9zguiruQZaN7+z+E4eAP9oiLNGKMtomwaB1E9dcgUD6ZAn/eQAb52USbvezbiljfZUhbJcg==}
-    hasBin: true
-    peerDependencies:
-      eslint: '>=7.0.0'
-    dependencies:
-      eslint: 8.57.0
-    dev: true
-
   /eslint-config-prettier@9.1.0(eslint@8.57.0):
     resolution: {integrity: sha512-NSWl5BFQWEPi1j4TjVNItzYV7dZXZ+wP6I6ZhrBGpChQhZRUaElihE9uRRkcbRnNb76UMKDF3r+WTmNcGPKsqw==}
     hasBin: true
@@ -10730,44 +11081,6 @@ packages:
       is-js-type: 2.0.0
       is-obj-prop: 1.0.0
       is-proto-prop: 1.0.1
-    dev: true
-
-  /eslint-plugin-prettier@3.4.1(eslint-config-prettier@8.10.0)(eslint@8.57.0)(prettier@2.8.8):
-    resolution: {integrity: sha512-htg25EUYUeIhKHXjOinK4BgCcDwtLHjqaxCDsMy5nbnUMkKFvIhMVCp+5GFUXQ4Nr8lBsPqtGAqBenbpFqAA2g==}
-    engines: {node: '>=6.0.0'}
-    peerDependencies:
-      eslint: '>=5.0.0'
-      eslint-config-prettier: '*'
-      prettier: '>=1.13.0'
-    peerDependenciesMeta:
-      eslint-config-prettier:
-        optional: true
-    dependencies:
-      eslint: 8.57.0
-      eslint-config-prettier: 8.10.0(eslint@8.57.0)
-      prettier: 2.8.8
-      prettier-linter-helpers: 1.0.0
-    dev: true
-
-  /eslint-plugin-prettier@5.1.3(eslint-config-prettier@8.10.0)(eslint@8.57.0)(prettier@2.8.8):
-    resolution: {integrity: sha512-C9GCVAs4Eq7ZC/XFQHITLiHJxQngdtraXaM+LoUFoFp/lHNl2Zn8f3WQbe9HvTBBQ9YnKFB0/2Ajdqwo5D1EAw==}
-    engines: {node: ^14.18.0 || >=16.0.0}
-    peerDependencies:
-      '@types/eslint': '>=8.0.0'
-      eslint: '>=8.0.0'
-      eslint-config-prettier: '*'
-      prettier: '>=3.0.0'
-    peerDependenciesMeta:
-      '@types/eslint':
-        optional: true
-      eslint-config-prettier:
-        optional: true
-    dependencies:
-      eslint: 8.57.0
-      eslint-config-prettier: 8.10.0(eslint@8.57.0)
-      prettier: 2.8.8
-      prettier-linter-helpers: 1.0.0
-      synckit: 0.8.8
     dev: true
 
   /eslint-plugin-prettier@5.1.3(eslint-config-prettier@9.1.0)(eslint@8.57.0)(prettier@3.2.5):
@@ -12964,7 +13277,6 @@ packages:
   /has-flag@4.0.0:
     resolution: {integrity: sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==}
     engines: {node: '>=8'}
-    dev: true
 
   /has-gulplog@0.1.0:
     resolution: {integrity: sha512-+F4GzLjwHNNDEAJW2DC1xXfEoPkRDmUdJ7CBYw4MpqtDwOnqdImJl7GWlpqx+Wko6//J8uKTnIe4wZSv7yCqmw==}
@@ -14807,7 +15119,7 @@ packages:
     resolution: {integrity: sha512-GBEV4GRADeP+qtB2+6u61stea8mGcOT4mCtrYISZwfu9/ISHFJ/5zOMXYbpBE9RsS5+Gb63DW4FgmnKJ79Kf6w==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     dependencies:
-      '@babel/code-frame': 7.24.2
+      '@babel/code-frame': 7.24.6
       '@jest/types': 29.6.3
       '@types/stack-utils': 2.0.3
       chalk: 4.1.2
@@ -17633,6 +17945,7 @@ packages:
 
   /osenv@0.1.5:
     resolution: {integrity: sha512-0CWcCECdMVc2Rw3U5w9ZjqX6ga6ubk1xDVKxtBQPK7wis/0F2r9T6k4ydGYhecl7YUBxBVxhL5oisPsNxAPe2g==}
+    deprecated: This package is no longer supported.
     dependencies:
       os-homedir: 1.0.2
       os-tmpdir: 1.0.2
@@ -19600,6 +19913,10 @@ packages:
   /q@1.5.1:
     resolution: {integrity: sha512-kV/CThkXo6xyFEZUugw/+pIOywXcDbFYgSct5cT3gqlbkBE1SJdwy6UQoZvodiWF/ckQLZyDE/Bu1M6gVu5lVw==}
     engines: {node: '>=0.6.0', teleport: '>=0.2.0'}
+    deprecated: |-
+      You or someone you depend on is using Q, the JavaScript Promise library that gave JavaScript developers strong feelings about promises. They can almost certainly migrate to the native JavaScript promise now. Thank you literally everyone for joining me in this bet against the odds. Be excellent to each other.
+
+      (For a CapTP with native promises, see @endo/eventual-send and @endo/captp)
     dev: true
 
   /qs@6.11.0:
@@ -20584,7 +20901,7 @@ packages:
     resolution: {integrity: sha512-Tg9gjmNPLMAMF9bIf7W4m+HtLBy1KrChbdIbxhLS+MTIUQ76cMxlzNs4OqbfNSTuiRU4jAWLZZrYBd3uzM+b1g==}
     engines: {node: '>= 0.8.0'}
     dependencies:
-      chalk: 5.3.0
+      chalk: 4.1.2
       gulp-util: 3.0.8
     dev: false
 
@@ -21762,16 +22079,6 @@ packages:
       postcss-selector-parser: 6.0.16
     dev: true
 
-  /stylelint-config-prettier@9.0.5(stylelint@14.16.1):
-    resolution: {integrity: sha512-U44lELgLZhbAD/xy/vncZ2Pq8sh2TnpiPvo38Ifg9+zeioR+LAkHu0i6YORIOxFafZoVg0xqQwex6e6F25S5XA==}
-    engines: {node: '>= 12'}
-    hasBin: true
-    peerDependencies:
-      stylelint: '>= 11.x < 15'
-    dependencies:
-      stylelint: 14.16.1
-    dev: true
-
   /stylelint-config-rational-order@0.1.2:
     resolution: {integrity: sha512-Qo7ZQaihCwTqijfZg4sbdQQHtugOX/B1/fYh018EiDZHW+lkqH9uHOnsDwDPGZrYJuB6CoyI7MZh2ecw2dOkew==}
     dependencies:
@@ -21969,7 +22276,6 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       has-flag: 4.0.0
-    dev: true
 
   /supports-color@8.1.1:
     resolution: {integrity: sha512-MpUEN2OodtUzxvKQl72cUF7RQ5EiHsGvSsVG0ia9c5RbWGL2CI4C7EpPS8UTBIplnlzZiNuV56w+FuNxy3ty2Q==}
@@ -22194,6 +22500,30 @@ packages:
       serialize-javascript: 6.0.2
       terser: 5.31.0
       webpack: 5.91.0(esbuild@0.12.29)(webpack-cli@4.10.0)
+    dev: true
+
+  /terser-webpack-plugin@5.3.10(webpack@5.91.0):
+    resolution: {integrity: sha512-BKFPWlPDndPs+NGGCr1U59t0XScL5317Y0UReNrHaw9/FwhPENlq6bfgs+4yPfyP51vqC1bQ4rp1EfXW5ZSH9w==}
+    engines: {node: '>= 10.13.0'}
+    peerDependencies:
+      '@swc/core': '*'
+      esbuild: '*'
+      uglify-js: '*'
+      webpack: ^5.1.0
+    peerDependenciesMeta:
+      '@swc/core':
+        optional: true
+      esbuild:
+        optional: true
+      uglify-js:
+        optional: true
+    dependencies:
+      '@jridgewell/trace-mapping': 0.3.25
+      jest-worker: 27.5.1
+      schema-utils: 3.3.0
+      serialize-javascript: 6.0.2
+      terser: 5.31.0
+      webpack: 5.91.0
     dev: true
 
   /terser@5.31.0:
@@ -23745,6 +24075,89 @@ packages:
       - whiskers
     dev: true
 
+  /vue-loader@15.11.1(css-loader@6.11.0)(prettier@3.2.5)(webpack@5.91.0):
+    resolution: {integrity: sha512-0iw4VchYLePqJfJu9s62ACWUXeSqM30SQqlIftbYWM3C+jpPcEHKSPUZBLjSF9au4HTHQ/naF6OGnO3Q/qGR3Q==}
+    peerDependencies:
+      '@vue/compiler-sfc': ^3.0.8
+      cache-loader: '*'
+      css-loader: '*'
+      prettier: '*'
+      vue-template-compiler: '*'
+      webpack: ^3.0.0 || ^4.1.0 || ^5.0.0-0
+    peerDependenciesMeta:
+      '@vue/compiler-sfc':
+        optional: true
+      cache-loader:
+        optional: true
+      prettier:
+        optional: true
+      vue-template-compiler:
+        optional: true
+    dependencies:
+      '@vue/component-compiler-utils': 3.3.0(lodash@4.17.21)
+      css-loader: 6.11.0(webpack@5.91.0)
+      hash-sum: 1.0.2
+      loader-utils: 1.4.2
+      prettier: 3.2.5
+      vue-hot-reload-api: 2.3.4
+      vue-style-loader: 4.1.3
+      webpack: 5.91.0
+    transitivePeerDependencies:
+      - arc-templates
+      - atpl
+      - babel-core
+      - bracket-template
+      - coffee-script
+      - dot
+      - dust
+      - dustjs-helpers
+      - dustjs-linkedin
+      - eco
+      - ect
+      - ejs
+      - haml-coffee
+      - hamlet
+      - hamljs
+      - handlebars
+      - hogan.js
+      - htmling
+      - jade
+      - jazz
+      - jqtpl
+      - just
+      - liquid-node
+      - liquor
+      - lodash
+      - marko
+      - mote
+      - mustache
+      - nunjucks
+      - plates
+      - pug
+      - qejs
+      - ractive
+      - razor-tmpl
+      - react
+      - react-dom
+      - slm
+      - squirrelly
+      - swig
+      - swig-templates
+      - teacup
+      - templayed
+      - then-jade
+      - then-pug
+      - tinyliquid
+      - toffee
+      - twig
+      - twing
+      - underscore
+      - vash
+      - velocityjs
+      - walrus
+      - whiskers
+    dev: true
+
   /vue-loader@17.4.2(vue@3.4.27)(webpack@5.91.0):
     resolution: {integrity: sha512-yTKOA4R/VN4jqjw4y5HrynFL8AK0Z3/Jt7eOJXEitsm0GMRHDBjCfCiuTiLP7OESvsZYo2pATCWhDqxC5ZrM6w==}
     peerDependencies:
@@ -24041,6 +24454,57 @@ packages:
       - utf-8-validate
     dev: true
 
+  /webpack-dev-server@4.15.2(debug@4.3.4)(webpack@5.91.0):
+    resolution: {integrity: sha512-0XavAZbNJ5sDrCbkpWL8mia0o5WPOd2YGtxrEiZkBK9FjLppIUK2TgxK6qGD2P3hUXTJNNPVibrerKcx5WkR1g==}
+    engines: {node: '>= 12.13.0'}
+    hasBin: true
+    peerDependencies:
+      webpack: ^4.37.0 || ^5.0.0
+      webpack-cli: '*'
+    peerDependenciesMeta:
+      webpack:
+        optional: true
+      webpack-cli:
+        optional: true
+    dependencies:
+      '@types/bonjour': 3.5.13
+      '@types/connect-history-api-fallback': 1.5.4
+      '@types/express': 4.17.21
+      '@types/serve-index': 1.9.4
+      '@types/serve-static': 1.15.7
+      '@types/sockjs': 0.3.36
+      '@types/ws': 8.5.10
+      ansi-html-community: 0.0.8
+      bonjour-service: 1.2.1
+      chokidar: 3.6.0
+      colorette: 2.0.20
+      compression: 1.7.4
+      connect-history-api-fallback: 2.0.0
+      default-gateway: 6.0.3
+      express: 4.19.2
+      graceful-fs: 4.2.11
+      html-entities: 2.5.2
+      http-proxy-middleware: 2.0.6(@types/express@4.17.21)(debug@4.3.4)
+      ipaddr.js: 2.2.0
+      launch-editor: 2.6.1
+      open: 8.4.2
+      p-retry: 4.6.2
+      rimraf: 3.0.2
+      schema-utils: 4.2.0
+      selfsigned: 2.4.1
+      serve-index: 1.9.1
+      sockjs: 0.3.24
+      spdy: 4.0.2
+      webpack: 5.91.0
+      webpack-dev-middleware: 5.3.4(webpack@5.91.0)
+      ws: 8.16.0
+    transitivePeerDependencies:
+      - bufferutil
+      - debug
+      - supports-color
+      - utf-8-validate
+    dev: true
+
   /webpack-merge@5.10.0:
     resolution: {integrity: sha512-+4zXKdx7UnO+1jaN4l2lHVD+mFvnlZQP/6ljaJVb4SZiwIKeUnrT5l0gkT8z+n4hKpC+jpOv6O9R+gLtag7pSA==}
     engines: {node: '>=10.0.0'}
@@ -24064,6 +24528,46 @@ packages:
 
   /webpack-virtual-modules@0.4.6:
     resolution: {integrity: sha512-5tyDlKLqPfMqjT3Q9TAqf2YqjwmnUleZwzJi1A5qXnlBCdj2AtOJ6wAWdglTIDOPgOiOrXeBeFcsQ8+aGQ6QbA==}
+    dev: true
+
+  /webpack@5.91.0:
+    resolution: {integrity: sha512-rzVwlLeBWHJbmgTC/8TvAcu5vpJNII+MelQpylD4jNERPwpBJOE2lEcko1zJX3QJeLjTTAnQxn/OJ8bjDzVQaw==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
+    peerDependencies:
+      webpack-cli: '*'
+    peerDependenciesMeta:
+      webpack-cli:
+        optional: true
+    dependencies:
+      '@types/eslint-scope': 3.7.7
+      '@types/estree': 1.0.5
+      '@webassemblyjs/ast': 1.12.1
+      '@webassemblyjs/wasm-edit': 1.12.1
+      '@webassemblyjs/wasm-parser': 1.12.1
+      acorn: 8.11.3
+      acorn-import-assertions: 1.9.0(acorn@8.11.3)
+      browserslist: 4.23.0
+      chrome-trace-event: 1.0.4
+      enhanced-resolve: 5.16.1
+      es-module-lexer: 1.5.3
+      eslint-scope: 5.1.1
+      events: 3.3.0
+      glob-to-regexp: 0.4.1
+      graceful-fs: 4.2.11
+      json-parse-even-better-errors: 2.3.1
+      loader-runner: 4.3.0
+      mime-types: 2.1.35
+      neo-async: 2.6.2
+      schema-utils: 3.3.0
+      tapable: 2.2.1
+      terser-webpack-plugin: 5.3.10(webpack@5.91.0)
+      watchpack: 2.4.1
+      webpack-sources: 3.2.3
+    transitivePeerDependencies:
+      - '@swc/core'
+      - esbuild
+      - uglify-js
     dev: true
 
   /webpack@5.91.0(esbuild@0.12.29)(webpack-cli@4.10.0):
