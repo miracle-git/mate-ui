@@ -26,10 +26,5 @@
     "build": "vite build",
     "gen": "node script/transfer.mjs"
   },
-  "devDependencies": {
-    "svgo": "^3.0.4",
-    "terser": "^5.24.0",
-    "vite": "^5.0.2"
-  },
   "license": "MIT"
 }

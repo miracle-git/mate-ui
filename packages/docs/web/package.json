@@ -1,0 +1,30 @@
+{
+  "name": "@mate-ui/docs",
+  "version": "1.0.0",
+  "description": "Mate-UI icon web component library.",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.js",
+  "unpkg": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:miracle-git/mate-ui.git"
+  },
+  "files": [
+    "dist/",
+    "package.json",
+    "README.md"
+  ],
+  "keywords": [
+    "mate-ui",
+    "frontend",
+    "icon",
+    "web-component",
+    "svg"
+  ],
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "gen": "node script/transfer.mjs"
+  },
+  "license": "MIT"
+}
