@@ -37,9 +37,6 @@
     "node": ">=0.12.0"
   },
   "license": "MIT",
-  "peerDependencies": {
-    "@mate-ui/theme-grace": "*"
-  },
   "dependencies": {
     "commander": "^2.9.0",
     "gulp": "^3.9.1",
@@ -51,7 +48,6 @@
     "run-sequence": "^1.2.2"
   },
   "devDependencies": {
-    "@mate-ui/theme-grace": "^1.0.0",
     "xo": "^0.17.0"
   }
 }

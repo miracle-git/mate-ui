@@ -24,8 +24,8 @@
     "gen:icon": "pnpm --filter @mate-ui/icon run gen",
     "build:core": "pnpm --filter @mate-ui/core run build",
     "test:core": "pnpm --filter @mate-ui/core run test",
-    "dev:vue": "pnpm --filter @mate-ui/vue run dev",
-    "lint:vue": "pnpm --filter @mate-ui/vue run lint"
+    "dev:vue": "pnpm --filter @mate-ui/vue-docs run dev",
+    "lint:vue": "pnpm --filter @mate-ui/vue-docs run lint"
   },
   "keywords": [
     "frontend",
