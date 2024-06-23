@@ -1,0 +1,35 @@
+{
+  "name": "@mate-ui/ohos",
+  "version": "1.0.0",
+  "description": "Mate-UI icon web component library.",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.js",
+  "unpkg": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:miracle-git/mate-ui.git"
+  },
+  "files": [
+    "dist/",
+    "package.json",
+    "README.md"
+  ],
+  "keywords": [
+    "mate-ui",
+    "frontend",
+    "icon",
+    "web-component",
+    "svg"
+  ],
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "gen": "node script/transfer.mjs"
+  },
+  "devDependencies": {
+    "svgo": "^3.0.4",
+    "terser": "^5.24.0",
+    "vite": "^5.0.2"
+  },
+  "license": "MIT"
+}

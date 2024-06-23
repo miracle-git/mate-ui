@@ -5,8 +5,8 @@
 
 <script lang="ts">
   import { defineComponent } from 'vue'
-  import Header from './header'
-  import Footer from './footer'
+  import Header from './header/index.vue'
+  import Footer from './footer/index.vue'
 
   export default defineComponent({
     name: 'mt-demo-layout',

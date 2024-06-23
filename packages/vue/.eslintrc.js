@@ -22,6 +22,13 @@ module.exports = {
     h: true,
     defineProps: 'readonly'
   },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.vue', '.json']
+      }
+    }
+  },
   overrides: [
     {
       files: ['*.md'],
@@ -71,7 +78,7 @@ module.exports = {
     'import/no-named-as-default': 'off',
     'import/namespace': [2, { allowComputed: true }],
     'import/no-named-as-default-member': 'off',
-    'import/no-unresolved': [2, { ignore: ['@'] }],
+    'import/no-unresolved': [2, { ignore: ['@', 'lru*'] }],
     'comma-dangle': 'off',
     'no-var': 'error',
     'no-console': [2, { allow: ['warn', 'error'] }],
