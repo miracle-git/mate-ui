@@ -1,10 +1,11 @@
 {
   "name": "@mate-ui/locale",
   "version": "1.0.0",
-  "description": "Mate-UI i18n localization base on i18next.",
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.js",
-  "unpkg": "dist/index.js",
+  "description": "Mate-UI i18n localization.",
+  "main": "index.ts",
+  "module": "index.ts",
+  "unpkg": "index.ts",
+  "jsdelivr": "index.ts",
   "repository": {
     "type": "git",
     "url": "git@github.com:miracle-git/mate-ui.git"
@@ -18,13 +19,8 @@
     "mate-ui",
     "frontend",
     "i18n",
-    "i18next",
     "localization"
   ],
   "scripts": {},
-  "license": "MIT",
-  "dependencies": {
-    "i18next": "^23.11.5",
-    "i18next-browser-languagedetector": "^8.0.0"
-  }
+  "license": "MIT"
 }

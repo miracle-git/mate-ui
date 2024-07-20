@@ -22,8 +22,8 @@
     "svg"
   ],
   "scripts": {
-    "start": "vite",
-    "build": "vite build",
+    "dev": "pnpm run gen && vite",
+    "build": "pnpm run gen && vite build",
     "gen": "node script/transfer.mjs"
   },
   "devDependencies": {

@@ -1,27 +1,15 @@
 {
   "name": "@mate-ui/theme",
   "version": "1.0.0",
-  "description": "Theme generator cli tool for Mate-UI",
+  "description": "Mate-UI Theme for Vue, React, Angular & Web Component",
   "bin": {
     "mate-ui-theme": "./bin/mate-ui-theme",
     "mt": "./bin/mate-ui-theme"
   },
-  "files": [
-    "bin",
-    "lib"
-  ],
-  "main": "index.js",
-  "scripts": {
-    "test": "xo"
-  },
-  "xo": {
-    "space": true,
-    "rule": {
-      "semi": 0,
-      "unicorn/no-process-exit": 0,
-      "import/no-dynamic-require": 0
-    }
-  },
+  "main": "index.css",
+  "unpkg": "index.css",
+  "jsdelivr": "index.css",
+  "style": "index.css",
   "repository": {
     "type": "git",
     "url": "git@github.com:miracle-git/mate-ui.git"
@@ -29,25 +17,29 @@
   "keywords": [
     "mate-ui",
     "vue",
+    "react",
+    "angular",
     "theme",
-    "cli"
+    "style"
   ],
   "author": "Miracle He <hmiinyu@sina.com> (https://github.com/miracle-git)",
   "engines": {
     "node": ">=0.12.0"
   },
   "license": "MIT",
-  "dependencies": {
-    "commander": "^2.9.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-cssmin": "^0.1.7",
-    "gulp-nop": "0.0.3",
-    "gulp-less": "^5.0.0",
-    "ora": "^0.3.0",
-    "run-sequence": "^1.2.2"
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "gulp --require @esbuild-kit/cjs-loader"
   },
   "devDependencies": {
-    "xo": "^0.17.0"
+    "@esbuild-kit/cjs-loader": "^2.2.1",
+    "@types/gulp-autoprefixer": "^0.0.33",
+    "@types/gulp-clean-css": "^4.3.0",
+    "@types/gulp-rename": "^2.0.1",
+    "@types/gulp-sass": "^5.0.0",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0"
   }
 }
