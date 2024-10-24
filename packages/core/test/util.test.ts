@@ -60,6 +60,9 @@ test('测试：数组工具类', () => {
   expect(ArrayUtil.pick(arr, ['id', 'name'])).toEqual([{ id: 1, name: 'Miracle' }, { id: 2, name: 'Jack' }])
   expect(ArrayUtil.draw(arr, 'id', 'name')).toEqual([{ age: 20 }, { age: 32 }])
   expect(ArrayUtil.draw(arr, ['id', 'name'])).toEqual([{ age: 20 }, { age: 32 }])
+  expect(ArrayUtil.magic([80, 24, 32, 35, 48, 54])).toEqual({ max: 100, min: 0, step: 25 })
+  expect(ArrayUtil.magic([80, 24, 32, 35, 48, 54],{ splitNumber: 5 })).toEqual({ max: 100, min: 0, step: 20 })
+  expect(ArrayUtil.magic([95.24, 86.45, 91.23, 95.17, 92.12, 88.64])).toEqual({ max: 96, min: 80, step: 4 })
 })
 
 test('测试：对象工具类', () => {

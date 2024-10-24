@@ -1,0 +1,13 @@
+node_modules/
+**/*.spec.*
+**/style/
+*.html
+/demos/test/*
+es/
+lib/
+_sites/
+dist/
+sites/dist/
+demos/version/version.ts
+sites/src/router/generate-routes.js
+locales/

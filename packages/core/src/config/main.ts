@@ -280,3 +280,17 @@ export const DEFAULT_RESPONSE_OPTIONS = {
     other: { message: '系统异常，请稍后再试' }
   }
 }
+
+/**
+ * @constant 默认魔数配置
+ */
+export const DEFAULT_MAGIC_NUMBER_CONFIG = {
+  // 是否要求正负数刻度对称，默认为false
+  symmetry: false,
+  // 是否允许误差，即实际分出的段数不等于splitNumber
+  deviation: false,
+  // 理想的刻度间隔段数，即希望刻度区间有多少段
+  splitNumber: 4,
+  // 魔数数组经过扩充，放宽魔数限制避免出现取不到魔数的情况
+  magic: [10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100]
+}
