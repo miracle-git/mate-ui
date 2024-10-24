@@ -61,7 +61,7 @@ export default class ArrayUtil {
     return items.map((item) => _drawProps(item, _props))
   }
   /**
-   * @method 获取指定对象排除指定动态列对应的对象
+   * @method 获取魔数刻度最优间隔算法，基于魔数数组[10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100]
    * @param { Object } items 当前数组
    * @param { Object } config 魔数配置
    * @returns { Object } 返回计算后的最大值，最小值和间隔
